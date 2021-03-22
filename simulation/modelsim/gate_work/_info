@@ -1,0 +1,59 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/simulation/modelsim
+vhard_block
+Z1 !s110 1616415157
+!i10b 1
+!s100 M[7CN8?jX9QS[^_OJlnWO0
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IoJC]R5>bjc[G22KQSGOzO0
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z4 w1616415041
+Z5 8Processor.vo
+Z6 FProcessor.vo
+!i122 0
+L0 1043 34
+Z7 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z8 !s108 1616415157.000000
+!s107 Processor.vo|
+Z9 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|Processor.vo|
+!i113 1
+Z10 o-vlog01compat -work work
+Z11 !s92 -vlog01compat -work work +incdir+.
+Z12 tCvgOpt 0
+vtop_layer
+R1
+!i10b 1
+!s100 I^b2feJAD2c7mRfoAPUg00
+R2
+IH<lg=^7@7>]MkNLlTbdVZ2
+R3
+R0
+R4
+R5
+R6
+!i122 0
+L0 32 1010
+R7
+r1
+!s85 0
+31
+R8
+Z13 !s107 Processor.vo|
+R9
+!i113 1
+R10
+R11
+R12

@@ -1,0 +1,47 @@
+module state_machine(clock, start, IR, state);
+
+input clock;
+input start;
+input[15:0] IR;
+output[5:0] reg state;
+
+parameter idle = 6'd0;
+parameter fetch1 = 6'd1;
+parameter fetch2 = 6'd2;
+parameter fetch3 = 6'd3;
+parameter ldac1 = 6'd4
+
+parameter ldac = 16'd20;
+
+parameter next_state;
+
+always @(posedge clock)
+begin
+
+if (state == idle && start == 1)
+
+begin
+next_state = fetch1
+end
+
+
+if(state == fetch3)
+begin
+
+case(IR)
+
+ldac: ldac1
+
+endcase
+
+end
+
+state <= next_state
+
+end
+
+endmodule
+
+
+
+

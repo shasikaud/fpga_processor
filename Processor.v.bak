@@ -1,0 +1,10 @@
+module processor(clock, data_in, data_out, write_en);
+input clock;
+input[15:0] data_in;
+input write_en;
+output reg[15:0] data_out;
+
+register(clock, data_in, data_out, write_en)
+
+endmodule  
+

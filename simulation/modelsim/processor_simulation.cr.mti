@@ -1,0 +1,81 @@
+{D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/Processor_datapath.v} {1 {vlog -work work -stats=none {D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/Processor_datapath.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module datapath
+
+Top level modules:
+	datapath
+
+} {} {}} {D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/top_layer.v} {1 {vlog -work work -stats=none {D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/top_layer.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module top_layer
+
+Top level modules:
+	top_layer
+
+} {} {}} {D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/ALU.v} {1 {vlog -work work -stats=none {D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/ALU.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module ALU
+
+Top level modules:
+	ALU
+
+} {} {}} {D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/BUS.v} {1 {vlog -work work -stats=none {D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/BUS.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module BUS
+
+Top level modules:
+	BUS
+
+} {} {}} {D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/IR.v} {1 {vlog -work work -stats=none {D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/IR.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module IR
+
+Top level modules:
+	IR
+
+} {} {}} {D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/PC.v} {1 {vlog -work work -stats=none {D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/PC.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module PC
+
+Top level modules:
+	PC
+
+} {} {}} {D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/clock.v} {1 {vlog -work work -stats=none {D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/clock.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module clock
+
+Top level modules:
+	clock
+
+} {} {}} {D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/Processor.v} {1 {vlog -work work -stats=none {D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/Processor.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Processor
+
+Top level modules:
+	Processor
+
+} {} {}} {D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/Control_Unit.v} {1 {vlog -work work -stats=none {D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/Control_Unit.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module control_unit
+
+Top level modules:
+	control_unit
+
+} {} {}} {D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/test.v} {1 {vlog -work work -stats=none {D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/test.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+
+} {} {}} {D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/AC.v} {1 {vlog -work work -stats=none {D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/AC.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module AC
+
+Top level modules:
+	AC
+
+} {} {}} {D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/Register.v} {1 {vlog -work work -stats=none {D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/Register.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module register
+
+Top level modules:
+	register
+
+} {} {}}

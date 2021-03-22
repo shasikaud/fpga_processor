@@ -1,0 +1,17 @@
+module register(clock, data_in, data_out, write_en)
+
+input clock;
+input[15:0] data_in;
+input write_en;
+output[15:0] data_out;
+
+always (@posedge clock)
+begin
+
+if(write_en == 1)
+
+data_out <= data_in ;
+
+end
+
+endmodule  

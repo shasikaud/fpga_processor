@@ -1,0 +1,316 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/simulation/modelsim
+vAC
+Z1 !s110 1616415568
+!i10b 1
+!s100 I``j=N`7Q?lDFH:Tl@de^2
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IgV;RYl>`UK@d44h_GIobo0
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1602602535
+8D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/AC.v
+FD:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/AC.v
+!i122 3
+Z4 L0 1 24
+Z5 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z6 !s108 1616415568.000000
+!s107 D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/AC.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/AC.v|
+!i113 1
+Z7 o-work work
+Z8 tCvgOpt 0
+n@a@c
+vALU
+R1
+!i10b 1
+!s100 mGXn<@J21hO0bG>E3AO=V0
+R2
+IZ]5h`_`bRKHHWo7hD<<al1
+R3
+R0
+Z9 w1602691312
+8D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/ALU.v
+FD:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/ALU.v
+!i122 4
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/ALU.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/ALU.v|
+!i113 1
+R7
+R8
+n@a@l@u
+vBUS
+R1
+!i10b 1
+!s100 Gl4inN5dP[_RabPzN>_383
+R2
+ILD;B;0fP2O6=z`_W2F;ES2
+R3
+R0
+w1603036767
+8D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/BUS.v
+FD:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/BUS.v
+!i122 5
+L0 1 33
+R5
+r1
+!s85 0
+31
+R6
+!s107 D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/BUS.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/BUS.v|
+!i113 1
+R7
+R8
+n@b@u@s
+vclock
+R1
+!i10b 1
+!s100 l5QiE1>0AEJ8Bj]1R10KW2
+R2
+Ia>dMX8ClH]?Xn?NU4oo011
+R3
+R0
+w1602956226
+8D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/clock.v
+FD:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/clock.v
+!i122 6
+L0 1 11
+R5
+r1
+!s85 0
+31
+R6
+!s107 D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/clock.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/clock.v|
+!i113 1
+R7
+R8
+vcontrol_unit
+R1
+!i10b 1
+!s100 P?iGcSY1ZE?kLI:5EVZ:b1
+R2
+IC7UB?:GoO`=;K88;b3izO3
+R3
+R0
+w1604286761
+8D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/Control_Unit.v
+FD:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/Control_Unit.v
+!i122 7
+L0 1 150
+R5
+r1
+!s85 0
+31
+R6
+!s107 D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/Control_Unit.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/Control_Unit.v|
+!i113 1
+R7
+R8
+vdatapath
+Z10 !s110 1616415569
+!i10b 1
+!s100 D8XI>GBIcRaoBe4Z`Ag820
+R2
+Ic6NMd8NRQBjlTWFklfB>n3
+R3
+R0
+w1602956548
+8D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/Processor_datapath.v
+FD:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/Processor_datapath.v
+!i122 10
+L0 1 30
+R5
+r1
+!s85 0
+31
+Z11 !s108 1616415569.000000
+!s107 D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/Processor_datapath.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/Processor_datapath.v|
+!i113 1
+R7
+R8
+vhard_block
+!s110 1616415367
+!i10b 1
+!s100 :EiaOTHDlVGWHEWCUlHVQ3
+R2
+IdRRP6@;Z?Znj]>`]ZGc_33
+R3
+R0
+w1616415041
+8D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/simulation/modelsim/Processor.vo
+FD:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/simulation/modelsim/Processor.vo
+!i122 0
+L0 1043 34
+R5
+r1
+!s85 0
+31
+!s108 1616415367.000000
+!s107 D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/simulation/modelsim/Processor.vo|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/simulation/modelsim/Processor.vo|
+!i113 1
+R7
+R8
+vIR
+R10
+!i10b 1
+!s100 Yz>V4k]7Zbba;mNQ>lISz1
+R2
+IALH6kaYHIehXn>EHijdYl0
+R3
+R0
+w1602691281
+8D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/IR.v
+FD:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/IR.v
+!i122 8
+Z12 L0 1 17
+R5
+r1
+!s85 0
+31
+R11
+!s107 D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/IR.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/IR.v|
+!i113 1
+R7
+R8
+n@i@r
+vPC
+R10
+!i10b 1
+!s100 o6][DVzJcg1gdG3hAX^MZ2
+R2
+IRfk6CeL6=:6HUOk?TFe`C3
+R3
+R0
+w1603036769
+8D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/PC.v
+FD:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/PC.v
+!i122 9
+L0 1 23
+R5
+r1
+!s85 0
+31
+R11
+!s107 D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/PC.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/PC.v|
+!i113 1
+R7
+R8
+n@p@c
+vProcessor
+R1
+!i10b 1
+!s100 39EbKS@zKX[lSYPm5P`dL0
+R2
+I9KW2=aYY:TM6a_dFz]A?<2
+R3
+R0
+w1602952070
+8D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/Processor.v
+FD:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/Processor.v
+!i122 2
+L0 1 20
+R5
+r1
+!s85 0
+31
+R6
+!s107 D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/Processor.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/Processor.v|
+!i113 1
+R7
+R8
+n@processor
+vregister
+R10
+!i10b 1
+!s100 OHDSkh@fmTMnZG;_?`GNZ3
+R2
+IozMWUR=HRf`dWM^30T41c3
+R3
+R0
+R9
+8D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/Register.v
+FD:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/Register.v
+!i122 11
+R12
+R5
+r1
+!s85 0
+31
+R11
+!s107 D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/Register.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/Register.v|
+!i113 1
+R7
+R8
+vstate_machine
+R10
+!i10b 1
+!s100 FnWgP>Ug:UdSKknI=nNYC2
+R2
+IL0naR88:nB;9[I_RMAi^23
+R3
+R0
+w1604677338
+8D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/state_machine.v
+FD:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/state_machine.v
+!i122 12
+L0 4 78
+R5
+r1
+!s85 0
+31
+R11
+!s107 D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/state_machine.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/state_machine.v|
+!i113 1
+R7
+R8
+vtop_layer
+!s110 1616415570
+!i10b 1
+!s100 V`AARoM]9L3=kBI[QazGm0
+R2
+IKe3l:z]1^eSijKC7zInlo1
+R3
+R0
+w1603443588
+8D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/top_layer.v
+FD:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/top_layer.v
+!i122 13
+L0 2 20
+R5
+r1
+!s85 0
+31
+!s108 1616415570.000000
+!s107 D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/top_layer.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/top_layer.v|
+!i113 1
+R7
+R8

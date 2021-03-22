@@ -1,0 +1,15 @@
+module control_unit(clock, state, control_out);
+
+input clock;
+input[5:0] state;
+output reg[15:0] control_out;
+
+always@(posedge clock)
+
+case(state)
+
+6'd0: control_out <= 16'd0;
+
+endcase
+
+endmodule 
