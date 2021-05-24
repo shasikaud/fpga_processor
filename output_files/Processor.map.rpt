@@ -1,6 +1,6 @@
 Analysis & Synthesis report for Processor
-Mon Mar 22 18:42:15 2021
-Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Sun May 23 10:22:32 2021
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
 ---------------------
@@ -29,9 +29,9 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2020  Intel Corporation. All rights reserved.
+Copyright (C) 2018  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
-and other software and tools, and any partner logic 
+and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
@@ -41,16 +41,15 @@ the Intel FPGA IP License Agreement, or other applicable license
 agreement, including, without limitation, that your use is for
 the sole purpose of programming logic devices manufactured by
 Intel and sold by Intel or its authorized distributors.  Please
-refer to the applicable agreement for further details, at
-https://fpgasoftware.intel.com/eula.
+refer to the applicable agreement for further details.
 
 
 
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Mar 22 18:42:15 2021       ;
-; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Analysis & Synthesis Status        ; Successful - Sun May 23 10:22:31 2021       ;
+; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Processor                                   ;
 ; Top-level Entity Name              ; top_layer                                   ;
 ; Family                             ; Cyclone IV E                                ;
@@ -160,8 +159,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -171,24 +170,24 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                        ;
-+----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                          ; Library ;
-+----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------------+---------+
-; Register.v                       ; yes             ; User Verilog HDL File  ; D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/Register.v           ;         ;
-; Processor.v                      ; yes             ; User Verilog HDL File  ; D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/Processor.v          ;         ;
-; PC.v                             ; yes             ; User Verilog HDL File  ; D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/PC.v                 ;         ;
-; AC.v                             ; yes             ; User Verilog HDL File  ; D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/AC.v                 ;         ;
-; IR.v                             ; yes             ; User Verilog HDL File  ; D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/IR.v                 ;         ;
-; ALU.v                            ; yes             ; User Verilog HDL File  ; D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/ALU.v                ;         ;
-; BUS.v                            ; yes             ; User Verilog HDL File  ; D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/BUS.v                ;         ;
-; Control_Unit.v                   ; yes             ; User Verilog HDL File  ; D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/Control_Unit.v       ;         ;
-; Processor_datapath.v             ; yes             ; User Verilog HDL File  ; D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/Processor_datapath.v ;         ;
-; state_machine.v                  ; yes             ; User Verilog HDL File  ; D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/state_machine.v      ;         ;
-; top_layer.v                      ; yes             ; User Verilog HDL File  ; D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/top_layer.v          ;         ;
-; clock.v                          ; yes             ; User Verilog HDL File  ; D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/clock.v              ;         ;
-+----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                  ; Library ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------+---------+
+; Register.v                       ; yes             ; User Verilog HDL File  ; E:/GIthub/fpga_processor/Register.v           ;         ;
+; Processor.v                      ; yes             ; User Verilog HDL File  ; E:/GIthub/fpga_processor/Processor.v          ;         ;
+; PC.v                             ; yes             ; User Verilog HDL File  ; E:/GIthub/fpga_processor/PC.v                 ;         ;
+; AC.v                             ; yes             ; User Verilog HDL File  ; E:/GIthub/fpga_processor/AC.v                 ;         ;
+; IR.v                             ; yes             ; User Verilog HDL File  ; E:/GIthub/fpga_processor/IR.v                 ;         ;
+; ALU.v                            ; yes             ; User Verilog HDL File  ; E:/GIthub/fpga_processor/ALU.v                ;         ;
+; BUS.v                            ; yes             ; User Verilog HDL File  ; E:/GIthub/fpga_processor/BUS.v                ;         ;
+; Control_Unit.v                   ; yes             ; User Verilog HDL File  ; E:/GIthub/fpga_processor/Control_Unit.v       ;         ;
+; Processor_datapath.v             ; yes             ; User Verilog HDL File  ; E:/GIthub/fpga_processor/Processor_datapath.v ;         ;
+; state_machine.v                  ; yes             ; User Verilog HDL File  ; E:/GIthub/fpga_processor/state_machine.v      ;         ;
+; top_layer.v                      ; yes             ; User Verilog HDL File  ; E:/GIthub/fpga_processor/top_layer.v          ;         ;
+; clock.v                          ; yes             ; User Verilog HDL File  ; E:/GIthub/fpga_processor/clock.v              ;         ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -369,7 +368,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -378,137 +377,137 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Mon Mar 22 18:42:05 2021
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Sun May 23 10:22:06 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Processor -c Processor
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file register.v
-    Info (12023): Found entity 1: register File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/Register.v Line: 1
+    Info (12023): Found entity 1: register File: E:/GIthub/fpga_processor/Register.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file processor.v
-    Info (12023): Found entity 1: Processor File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/Processor.v Line: 1
+    Info (12023): Found entity 1: Processor File: E:/GIthub/fpga_processor/Processor.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file pc.v
-    Info (12023): Found entity 1: PC File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/PC.v Line: 1
+    Info (12023): Found entity 1: PC File: E:/GIthub/fpga_processor/PC.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file ac.v
-    Info (12023): Found entity 1: AC File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/AC.v Line: 1
+    Info (12023): Found entity 1: AC File: E:/GIthub/fpga_processor/AC.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file ir.v
-    Info (12023): Found entity 1: IR File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/IR.v Line: 1
+    Info (12023): Found entity 1: IR File: E:/GIthub/fpga_processor/IR.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu.v
-    Info (12023): Found entity 1: ALU File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/ALU.v Line: 1
+    Info (12023): Found entity 1: ALU File: E:/GIthub/fpga_processor/ALU.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file bus.v
-    Info (12023): Found entity 1: BUS File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/BUS.v Line: 1
-Warning (10229): Verilog HDL Expression warning at Control_Unit.v(66): truncated literal to match 16 bits File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/Control_Unit.v Line: 66
+    Info (12023): Found entity 1: BUS File: E:/GIthub/fpga_processor/BUS.v Line: 1
+Warning (10229): Verilog HDL Expression warning at Control_Unit.v(66): truncated literal to match 16 bits File: E:/GIthub/fpga_processor/Control_Unit.v Line: 66
 Info (12021): Found 1 design units, including 1 entities, in source file control_unit.v
-    Info (12023): Found entity 1: control_unit File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/Control_Unit.v Line: 1
+    Info (12023): Found entity 1: control_unit File: E:/GIthub/fpga_processor/Control_Unit.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file processor_datapath.v
-    Info (12023): Found entity 1: datapath File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/Processor_datapath.v Line: 1
+    Info (12023): Found entity 1: datapath File: E:/GIthub/fpga_processor/Processor_datapath.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file state_machine.v
-    Info (12023): Found entity 1: state_machine File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/state_machine.v Line: 4
+    Info (12023): Found entity 1: state_machine File: E:/GIthub/fpga_processor/state_machine.v Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file top_layer.v
-    Info (12023): Found entity 1: top_layer File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/top_layer.v Line: 2
+    Info (12023): Found entity 1: top_layer File: E:/GIthub/fpga_processor/top_layer.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file clock.v
-    Info (12023): Found entity 1: clock File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/clock.v Line: 1
+    Info (12023): Found entity 1: clock File: E:/GIthub/fpga_processor/clock.v Line: 1
 Info (12021): Found 0 design units, including 0 entities, in source file test.v
 Info (12127): Elaborating entity "top_layer" for the top level hierarchy
-Info (12128): Elaborating entity "clock" for hierarchy "clock:clock" File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/top_layer.v Line: 15
-Info (12128): Elaborating entity "state_machine" for hierarchy "state_machine:state_machine" File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/top_layer.v Line: 17
-Info (12128): Elaborating entity "Processor" for hierarchy "Processor:Processor" File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/top_layer.v Line: 19
-Info (12128): Elaborating entity "control_unit" for hierarchy "Processor:Processor|control_unit:control_unit" File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/Processor.v Line: 14
-Info (12128): Elaborating entity "datapath" for hierarchy "Processor:Processor|datapath:datapath" File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/Processor.v Line: 17
-Info (12128): Elaborating entity "BUS" for hierarchy "Processor:Processor|datapath:datapath|BUS:BUS" File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/Processor_datapath.v Line: 14
-Info (12128): Elaborating entity "register" for hierarchy "Processor:Processor|datapath:datapath|register:R" File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/Processor_datapath.v Line: 16
-Info (12128): Elaborating entity "AC" for hierarchy "Processor:Processor|datapath:datapath|AC:AC" File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/Processor_datapath.v Line: 22
-Info (12128): Elaborating entity "PC" for hierarchy "Processor:Processor|datapath:datapath|PC:PC" File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/Processor_datapath.v Line: 24
-Info (12128): Elaborating entity "IR" for hierarchy "Processor:Processor|datapath:datapath|IR:IR" File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/Processor_datapath.v Line: 26
-Info (12128): Elaborating entity "ALU" for hierarchy "Processor:Processor|datapath:datapath|ALU:ALU" File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/Processor_datapath.v Line: 28
-Info (10264): Verilog HDL Case Statement information at ALU.v(14): all case item expressions in this case statement are onehot File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/ALU.v Line: 14
+Info (12128): Elaborating entity "clock" for hierarchy "clock:clock" File: E:/GIthub/fpga_processor/top_layer.v Line: 15
+Info (12128): Elaborating entity "state_machine" for hierarchy "state_machine:state_machine" File: E:/GIthub/fpga_processor/top_layer.v Line: 17
+Info (12128): Elaborating entity "Processor" for hierarchy "Processor:Processor" File: E:/GIthub/fpga_processor/top_layer.v Line: 19
+Info (12128): Elaborating entity "control_unit" for hierarchy "Processor:Processor|control_unit:control_unit" File: E:/GIthub/fpga_processor/Processor.v Line: 14
+Info (12128): Elaborating entity "datapath" for hierarchy "Processor:Processor|datapath:datapath" File: E:/GIthub/fpga_processor/Processor.v Line: 17
+Info (12128): Elaborating entity "BUS" for hierarchy "Processor:Processor|datapath:datapath|BUS:BUS" File: E:/GIthub/fpga_processor/Processor_datapath.v Line: 14
+Info (12128): Elaborating entity "register" for hierarchy "Processor:Processor|datapath:datapath|register:R" File: E:/GIthub/fpga_processor/Processor_datapath.v Line: 16
+Info (12128): Elaborating entity "AC" for hierarchy "Processor:Processor|datapath:datapath|AC:AC" File: E:/GIthub/fpga_processor/Processor_datapath.v Line: 22
+Info (12128): Elaborating entity "PC" for hierarchy "Processor:Processor|datapath:datapath|PC:PC" File: E:/GIthub/fpga_processor/Processor_datapath.v Line: 24
+Info (12128): Elaborating entity "IR" for hierarchy "Processor:Processor|datapath:datapath|IR:IR" File: E:/GIthub/fpga_processor/Processor_datapath.v Line: 26
+Info (12128): Elaborating entity "ALU" for hierarchy "Processor:Processor|datapath:datapath|ALU:ALU" File: E:/GIthub/fpga_processor/Processor_datapath.v Line: 28
+Info (10264): Verilog HDL Case Statement information at ALU.v(14): all case item expressions in this case statement are onehot File: E:/GIthub/fpga_processor/ALU.v Line: 14
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "data_out[0]" is stuck at GND File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/top_layer.v Line: 8
-    Warning (13410): Pin "data_out[1]" is stuck at GND File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/top_layer.v Line: 8
-    Warning (13410): Pin "data_out[2]" is stuck at GND File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/top_layer.v Line: 8
-    Warning (13410): Pin "data_out[3]" is stuck at GND File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/top_layer.v Line: 8
-    Warning (13410): Pin "data_out[4]" is stuck at GND File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/top_layer.v Line: 8
-    Warning (13410): Pin "data_out[5]" is stuck at GND File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/top_layer.v Line: 8
-    Warning (13410): Pin "data_out[6]" is stuck at GND File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/top_layer.v Line: 8
-    Warning (13410): Pin "data_out[7]" is stuck at GND File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/top_layer.v Line: 8
-    Warning (13410): Pin "data_out[8]" is stuck at GND File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/top_layer.v Line: 8
-    Warning (13410): Pin "data_out[9]" is stuck at GND File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/top_layer.v Line: 8
-    Warning (13410): Pin "data_out[10]" is stuck at GND File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/top_layer.v Line: 8
-    Warning (13410): Pin "data_out[11]" is stuck at GND File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/top_layer.v Line: 8
-    Warning (13410): Pin "data_out[12]" is stuck at GND File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/top_layer.v Line: 8
-    Warning (13410): Pin "data_out[13]" is stuck at GND File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/top_layer.v Line: 8
-    Warning (13410): Pin "data_out[14]" is stuck at GND File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/top_layer.v Line: 8
-    Warning (13410): Pin "data_out[15]" is stuck at GND File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/top_layer.v Line: 8
-    Warning (13410): Pin "addr_out[0]" is stuck at GND File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/top_layer.v Line: 9
-    Warning (13410): Pin "addr_out[1]" is stuck at GND File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/top_layer.v Line: 9
-    Warning (13410): Pin "addr_out[2]" is stuck at GND File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/top_layer.v Line: 9
-    Warning (13410): Pin "addr_out[3]" is stuck at GND File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/top_layer.v Line: 9
-    Warning (13410): Pin "addr_out[4]" is stuck at GND File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/top_layer.v Line: 9
-    Warning (13410): Pin "addr_out[5]" is stuck at GND File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/top_layer.v Line: 9
-    Warning (13410): Pin "addr_out[6]" is stuck at GND File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/top_layer.v Line: 9
-    Warning (13410): Pin "addr_out[7]" is stuck at GND File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/top_layer.v Line: 9
-    Warning (13410): Pin "addr_out[8]" is stuck at GND File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/top_layer.v Line: 9
-    Warning (13410): Pin "addr_out[9]" is stuck at GND File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/top_layer.v Line: 9
-    Warning (13410): Pin "addr_out[10]" is stuck at GND File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/top_layer.v Line: 9
-    Warning (13410): Pin "addr_out[11]" is stuck at GND File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/top_layer.v Line: 9
-    Warning (13410): Pin "addr_out[12]" is stuck at GND File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/top_layer.v Line: 9
-    Warning (13410): Pin "addr_out[13]" is stuck at GND File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/top_layer.v Line: 9
-    Warning (13410): Pin "addr_out[14]" is stuck at GND File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/top_layer.v Line: 9
-    Warning (13410): Pin "addr_out[15]" is stuck at GND File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/top_layer.v Line: 9
-    Warning (13410): Pin "mem_write[0]" is stuck at GND File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/top_layer.v Line: 10
-    Warning (13410): Pin "mem_write[1]" is stuck at GND File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/top_layer.v Line: 10
+    Warning (13410): Pin "data_out[0]" is stuck at GND File: E:/GIthub/fpga_processor/top_layer.v Line: 8
+    Warning (13410): Pin "data_out[1]" is stuck at GND File: E:/GIthub/fpga_processor/top_layer.v Line: 8
+    Warning (13410): Pin "data_out[2]" is stuck at GND File: E:/GIthub/fpga_processor/top_layer.v Line: 8
+    Warning (13410): Pin "data_out[3]" is stuck at GND File: E:/GIthub/fpga_processor/top_layer.v Line: 8
+    Warning (13410): Pin "data_out[4]" is stuck at GND File: E:/GIthub/fpga_processor/top_layer.v Line: 8
+    Warning (13410): Pin "data_out[5]" is stuck at GND File: E:/GIthub/fpga_processor/top_layer.v Line: 8
+    Warning (13410): Pin "data_out[6]" is stuck at GND File: E:/GIthub/fpga_processor/top_layer.v Line: 8
+    Warning (13410): Pin "data_out[7]" is stuck at GND File: E:/GIthub/fpga_processor/top_layer.v Line: 8
+    Warning (13410): Pin "data_out[8]" is stuck at GND File: E:/GIthub/fpga_processor/top_layer.v Line: 8
+    Warning (13410): Pin "data_out[9]" is stuck at GND File: E:/GIthub/fpga_processor/top_layer.v Line: 8
+    Warning (13410): Pin "data_out[10]" is stuck at GND File: E:/GIthub/fpga_processor/top_layer.v Line: 8
+    Warning (13410): Pin "data_out[11]" is stuck at GND File: E:/GIthub/fpga_processor/top_layer.v Line: 8
+    Warning (13410): Pin "data_out[12]" is stuck at GND File: E:/GIthub/fpga_processor/top_layer.v Line: 8
+    Warning (13410): Pin "data_out[13]" is stuck at GND File: E:/GIthub/fpga_processor/top_layer.v Line: 8
+    Warning (13410): Pin "data_out[14]" is stuck at GND File: E:/GIthub/fpga_processor/top_layer.v Line: 8
+    Warning (13410): Pin "data_out[15]" is stuck at GND File: E:/GIthub/fpga_processor/top_layer.v Line: 8
+    Warning (13410): Pin "addr_out[0]" is stuck at GND File: E:/GIthub/fpga_processor/top_layer.v Line: 9
+    Warning (13410): Pin "addr_out[1]" is stuck at GND File: E:/GIthub/fpga_processor/top_layer.v Line: 9
+    Warning (13410): Pin "addr_out[2]" is stuck at GND File: E:/GIthub/fpga_processor/top_layer.v Line: 9
+    Warning (13410): Pin "addr_out[3]" is stuck at GND File: E:/GIthub/fpga_processor/top_layer.v Line: 9
+    Warning (13410): Pin "addr_out[4]" is stuck at GND File: E:/GIthub/fpga_processor/top_layer.v Line: 9
+    Warning (13410): Pin "addr_out[5]" is stuck at GND File: E:/GIthub/fpga_processor/top_layer.v Line: 9
+    Warning (13410): Pin "addr_out[6]" is stuck at GND File: E:/GIthub/fpga_processor/top_layer.v Line: 9
+    Warning (13410): Pin "addr_out[7]" is stuck at GND File: E:/GIthub/fpga_processor/top_layer.v Line: 9
+    Warning (13410): Pin "addr_out[8]" is stuck at GND File: E:/GIthub/fpga_processor/top_layer.v Line: 9
+    Warning (13410): Pin "addr_out[9]" is stuck at GND File: E:/GIthub/fpga_processor/top_layer.v Line: 9
+    Warning (13410): Pin "addr_out[10]" is stuck at GND File: E:/GIthub/fpga_processor/top_layer.v Line: 9
+    Warning (13410): Pin "addr_out[11]" is stuck at GND File: E:/GIthub/fpga_processor/top_layer.v Line: 9
+    Warning (13410): Pin "addr_out[12]" is stuck at GND File: E:/GIthub/fpga_processor/top_layer.v Line: 9
+    Warning (13410): Pin "addr_out[13]" is stuck at GND File: E:/GIthub/fpga_processor/top_layer.v Line: 9
+    Warning (13410): Pin "addr_out[14]" is stuck at GND File: E:/GIthub/fpga_processor/top_layer.v Line: 9
+    Warning (13410): Pin "addr_out[15]" is stuck at GND File: E:/GIthub/fpga_processor/top_layer.v Line: 9
+    Warning (13410): Pin "mem_write[0]" is stuck at GND File: E:/GIthub/fpga_processor/top_layer.v Line: 10
+    Warning (13410): Pin "mem_write[1]" is stuck at GND File: E:/GIthub/fpga_processor/top_layer.v Line: 10
 Info (17049): 1 registers lost all their fanouts during netlist optimizations.
-Info (144001): Generated suppressed messages file D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/output_files/Processor.map.smsg
+Info (144001): Generated suppressed messages file E:/GIthub/fpga_processor/output_files/Processor.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 33 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "start" File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/top_layer.v Line: 5
-    Warning (15610): No output dependent on input pin "dram_in[0]" File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/top_layer.v Line: 6
-    Warning (15610): No output dependent on input pin "dram_in[1]" File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/top_layer.v Line: 6
-    Warning (15610): No output dependent on input pin "dram_in[2]" File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/top_layer.v Line: 6
-    Warning (15610): No output dependent on input pin "dram_in[3]" File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/top_layer.v Line: 6
-    Warning (15610): No output dependent on input pin "dram_in[4]" File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/top_layer.v Line: 6
-    Warning (15610): No output dependent on input pin "dram_in[5]" File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/top_layer.v Line: 6
-    Warning (15610): No output dependent on input pin "dram_in[6]" File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/top_layer.v Line: 6
-    Warning (15610): No output dependent on input pin "dram_in[7]" File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/top_layer.v Line: 6
-    Warning (15610): No output dependent on input pin "dram_in[8]" File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/top_layer.v Line: 6
-    Warning (15610): No output dependent on input pin "dram_in[9]" File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/top_layer.v Line: 6
-    Warning (15610): No output dependent on input pin "dram_in[10]" File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/top_layer.v Line: 6
-    Warning (15610): No output dependent on input pin "dram_in[11]" File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/top_layer.v Line: 6
-    Warning (15610): No output dependent on input pin "dram_in[12]" File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/top_layer.v Line: 6
-    Warning (15610): No output dependent on input pin "dram_in[13]" File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/top_layer.v Line: 6
-    Warning (15610): No output dependent on input pin "dram_in[14]" File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/top_layer.v Line: 6
-    Warning (15610): No output dependent on input pin "dram_in[15]" File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/top_layer.v Line: 6
-    Warning (15610): No output dependent on input pin "iram_in[0]" File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/top_layer.v Line: 7
-    Warning (15610): No output dependent on input pin "iram_in[1]" File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/top_layer.v Line: 7
-    Warning (15610): No output dependent on input pin "iram_in[2]" File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/top_layer.v Line: 7
-    Warning (15610): No output dependent on input pin "iram_in[3]" File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/top_layer.v Line: 7
-    Warning (15610): No output dependent on input pin "iram_in[4]" File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/top_layer.v Line: 7
-    Warning (15610): No output dependent on input pin "iram_in[5]" File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/top_layer.v Line: 7
-    Warning (15610): No output dependent on input pin "iram_in[6]" File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/top_layer.v Line: 7
-    Warning (15610): No output dependent on input pin "iram_in[7]" File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/top_layer.v Line: 7
-    Warning (15610): No output dependent on input pin "iram_in[8]" File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/top_layer.v Line: 7
-    Warning (15610): No output dependent on input pin "iram_in[9]" File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/top_layer.v Line: 7
-    Warning (15610): No output dependent on input pin "iram_in[10]" File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/top_layer.v Line: 7
-    Warning (15610): No output dependent on input pin "iram_in[11]" File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/top_layer.v Line: 7
-    Warning (15610): No output dependent on input pin "iram_in[12]" File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/top_layer.v Line: 7
-    Warning (15610): No output dependent on input pin "iram_in[13]" File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/top_layer.v Line: 7
-    Warning (15610): No output dependent on input pin "iram_in[14]" File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/top_layer.v Line: 7
-    Warning (15610): No output dependent on input pin "iram_in[15]" File: D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/top_layer.v Line: 7
+    Warning (15610): No output dependent on input pin "start" File: E:/GIthub/fpga_processor/top_layer.v Line: 5
+    Warning (15610): No output dependent on input pin "dram_in[0]" File: E:/GIthub/fpga_processor/top_layer.v Line: 6
+    Warning (15610): No output dependent on input pin "dram_in[1]" File: E:/GIthub/fpga_processor/top_layer.v Line: 6
+    Warning (15610): No output dependent on input pin "dram_in[2]" File: E:/GIthub/fpga_processor/top_layer.v Line: 6
+    Warning (15610): No output dependent on input pin "dram_in[3]" File: E:/GIthub/fpga_processor/top_layer.v Line: 6
+    Warning (15610): No output dependent on input pin "dram_in[4]" File: E:/GIthub/fpga_processor/top_layer.v Line: 6
+    Warning (15610): No output dependent on input pin "dram_in[5]" File: E:/GIthub/fpga_processor/top_layer.v Line: 6
+    Warning (15610): No output dependent on input pin "dram_in[6]" File: E:/GIthub/fpga_processor/top_layer.v Line: 6
+    Warning (15610): No output dependent on input pin "dram_in[7]" File: E:/GIthub/fpga_processor/top_layer.v Line: 6
+    Warning (15610): No output dependent on input pin "dram_in[8]" File: E:/GIthub/fpga_processor/top_layer.v Line: 6
+    Warning (15610): No output dependent on input pin "dram_in[9]" File: E:/GIthub/fpga_processor/top_layer.v Line: 6
+    Warning (15610): No output dependent on input pin "dram_in[10]" File: E:/GIthub/fpga_processor/top_layer.v Line: 6
+    Warning (15610): No output dependent on input pin "dram_in[11]" File: E:/GIthub/fpga_processor/top_layer.v Line: 6
+    Warning (15610): No output dependent on input pin "dram_in[12]" File: E:/GIthub/fpga_processor/top_layer.v Line: 6
+    Warning (15610): No output dependent on input pin "dram_in[13]" File: E:/GIthub/fpga_processor/top_layer.v Line: 6
+    Warning (15610): No output dependent on input pin "dram_in[14]" File: E:/GIthub/fpga_processor/top_layer.v Line: 6
+    Warning (15610): No output dependent on input pin "dram_in[15]" File: E:/GIthub/fpga_processor/top_layer.v Line: 6
+    Warning (15610): No output dependent on input pin "iram_in[0]" File: E:/GIthub/fpga_processor/top_layer.v Line: 7
+    Warning (15610): No output dependent on input pin "iram_in[1]" File: E:/GIthub/fpga_processor/top_layer.v Line: 7
+    Warning (15610): No output dependent on input pin "iram_in[2]" File: E:/GIthub/fpga_processor/top_layer.v Line: 7
+    Warning (15610): No output dependent on input pin "iram_in[3]" File: E:/GIthub/fpga_processor/top_layer.v Line: 7
+    Warning (15610): No output dependent on input pin "iram_in[4]" File: E:/GIthub/fpga_processor/top_layer.v Line: 7
+    Warning (15610): No output dependent on input pin "iram_in[5]" File: E:/GIthub/fpga_processor/top_layer.v Line: 7
+    Warning (15610): No output dependent on input pin "iram_in[6]" File: E:/GIthub/fpga_processor/top_layer.v Line: 7
+    Warning (15610): No output dependent on input pin "iram_in[7]" File: E:/GIthub/fpga_processor/top_layer.v Line: 7
+    Warning (15610): No output dependent on input pin "iram_in[8]" File: E:/GIthub/fpga_processor/top_layer.v Line: 7
+    Warning (15610): No output dependent on input pin "iram_in[9]" File: E:/GIthub/fpga_processor/top_layer.v Line: 7
+    Warning (15610): No output dependent on input pin "iram_in[10]" File: E:/GIthub/fpga_processor/top_layer.v Line: 7
+    Warning (15610): No output dependent on input pin "iram_in[11]" File: E:/GIthub/fpga_processor/top_layer.v Line: 7
+    Warning (15610): No output dependent on input pin "iram_in[12]" File: E:/GIthub/fpga_processor/top_layer.v Line: 7
+    Warning (15610): No output dependent on input pin "iram_in[13]" File: E:/GIthub/fpga_processor/top_layer.v Line: 7
+    Warning (15610): No output dependent on input pin "iram_in[14]" File: E:/GIthub/fpga_processor/top_layer.v Line: 7
+    Warning (15610): No output dependent on input pin "iram_in[15]" File: E:/GIthub/fpga_processor/top_layer.v Line: 7
 Info (21057): Implemented 67 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 33 input pins
     Info (21059): Implemented 34 output pins
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 72 warnings
-    Info: Peak virtual memory: 4729 megabytes
-    Info: Processing ended: Mon Mar 22 18:42:15 2021
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:25
+    Info: Peak virtual memory: 4730 megabytes
+    Info: Processing ended: Sun May 23 10:22:32 2021
+    Info: Elapsed time: 00:00:26
+    Info: Total CPU time (on all processors): 00:00:34
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in D:/Academics/FPGA Processor Project/Shashika Ayya/FPGA Processor/output_files/Processor.map.smsg.
+The suppressed messages can be found in E:/GIthub/fpga_processor/output_files/Processor.map.smsg.
 
 
