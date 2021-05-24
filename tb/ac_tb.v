@@ -1,3 +1,4 @@
+//test bench module for ACCUMULATOR
 `timescale 1ns/1ps
 module ac_tb();
 	reg clock;
@@ -18,41 +19,41 @@ module ac_tb();
 	initial begin
 
 		
-		 write_en    <= 0;
-		 data_in     <= 16'd10;
-		 data_in_alu <= 16'd0; 
-		 alu_out	    <= 0;
+		write_en     <= 0;
+		data_in      <= 16'd10;
+		data_in_alu  <= 16'd0; 
+		alu_out	     <= 0;
 		#50;
 		
-		 write_en    <= 1;
-		 data_in     <= 16'd10;
-		 data_in_alu <= 16'd15; 
-		 alu_out	   <= 0;
+		write_en     <= 1;
+		data_in      <= 16'd10;
+		data_in_alu  <= 16'd15; 
+		alu_out	     <= 0;
 		#50;
 		
-		 write_en    <= 0;
-		 data_in     <= 16'd12;
-		 data_in_alu <= 16'd15;
-		 alu_out	   <= 0;	
+		write_en     <= 0;
+		data_in      <= 16'd12;
+		data_in_alu  <= 16'd15;
+		alu_out	     <= 0;	
 		#50;
 		
 		
-		 write_en    <= 0;
-		 data_in     <= 16'd1;
-		 data_in_alu <= 16'd15;
-		 alu_out	   <= 1;	
+		write_en     <= 0;
+		data_in      <= 16'd1;
+		data_in_alu  <= 16'd15;
+		alu_out	     <= 1;	
 		#50;
 		
-		 write_en    <= 0;
-		 data_in     <= 0;
-		 data_in_alu <= 16'd15;
-		 alu_out	   <= 1;
+		write_en     <= 0;
+		data_in      <= 0;
+		data_in_alu  <= 16'd15;
+		alu_out	     <= 1;
 		#50;
 		
-		 write_en    <= 0;
-		 data_in     <= 16'd20;
-		 data_in_alu <= 16'd12;
-		 alu_out	   <= 0;
+		write_en     <= 0;
+		data_in      <= 16'd20;
+		data_in_alu  <= 16'd12;
+		alu_out	     <= 0;
 		#50;
 	end
 	
