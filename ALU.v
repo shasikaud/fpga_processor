@@ -11,14 +11,18 @@ always @(posedge clock)
 
 begin
 
+
+//data_out <= ac_in + bus_in;
+//data_out = ac_in*bus_in ;
 case(control)
 
-2'd1: data_out <= ac_in + bus_in;
-2'd2: data_out <= ac_in*bus_in ;
+2'd1: data_out = ac_in + bus_in;
+2'd2: data_out = ac_in*bus_in ;
 
 endcase
 
 
 end
+
 
 endmodule
