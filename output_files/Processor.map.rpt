@@ -1,6 +1,6 @@
 Analysis & Synthesis report for Processor
-Mon May 24 14:29:03 2021
-Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Mon May 24 15:09:52 2021
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
 ---------------------
@@ -10,24 +10,17 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Multiplexer Restructuring Statistics (Restructuring Performed)
- 10. Post-Synthesis Netlist Statistics for Top Partition
- 11. Elapsed Time Per Partition
- 12. Analysis & Synthesis Messages
- 13. Analysis & Synthesis Suppressed Messages
+  5. Analysis & Synthesis Messages
+  6. Analysis & Synthesis Suppressed Messages
 
 
 
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2018  Intel Corporation. All rights reserved.
+Copyright (C) 2020  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
-and other software and tools, and its AMPP partner logic 
+and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
@@ -37,27 +30,28 @@ the Intel FPGA IP License Agreement, or other applicable license
 agreement, including, without limitation, that your use is for
 the sole purpose of programming logic devices manufactured by
 Intel and sold by Intel or its authorized distributors.  Please
-refer to the applicable agreement for further details.
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
 
 
 
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon May 24 14:29:03 2021       ;
-; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Analysis & Synthesis Status        ; Failed - Mon May 24 15:09:52 2021           ;
+; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; Processor                                   ;
-; Top-level Entity Name              ; BUS                                         ;
+; Top-level Entity Name              ; memory                                      ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 83                                          ;
-;     Total combinational functions  ; 83                                          ;
-;     Dedicated logic registers      ; 0                                           ;
-; Total registers                    ; 0                                           ;
-; Total pins                         ; 164                                         ;
-; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 0                                           ;
-; Embedded Multiplier 9-bit elements ; 0                                           ;
-; Total PLLs                         ; 0                                           ;
+; Total logic elements               ; N/A until Partition Merge                   ;
+;     Total combinational functions  ; N/A until Partition Merge                   ;
+;     Dedicated logic registers      ; N/A until Partition Merge                   ;
+; Total registers                    ; N/A until Partition Merge                   ;
+; Total pins                         ; N/A until Partition Merge                   ;
+; Total virtual pins                 ; N/A until Partition Merge                   ;
+; Total memory bits                  ; N/A until Partition Merge                   ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
+; Total PLLs                         ; N/A until Partition Merge                   ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -66,7 +60,7 @@ refer to the applicable agreement for further details.
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
-; Top-level entity name                                            ; BUS                ; Processor          ;
+; Top-level entity name                                            ; memory             ; Processor          ;
 ; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
 ; Type of Retiming Performed During Resynthesis                    ; Full               ;                    ;
 ; Resynthesis Optimization Effort                                  ; Normal             ;                    ;
@@ -166,193 +160,63 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                       ;
-+----------------------------------+-----------------+------------------------+------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                         ; Library ;
-+----------------------------------+-----------------+------------------------+------------------------------------------------------+---------+
-; BUS.v                            ; yes             ; User Verilog HDL File  ; C:/Users/ravin/Documents/GitHub/fpga_processor/BUS.v ;         ;
-+----------------------------------+-----------------+------------------------+------------------------------------------------------+---------+
-
-
-+----------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                    ;
-+---------------------------------------------+------------------+
-; Resource                                    ; Usage            ;
-+---------------------------------------------+------------------+
-; Estimated Total logic elements              ; 83               ;
-;                                             ;                  ;
-; Total combinational functions               ; 83               ;
-; Logic element usage by number of LUT inputs ;                  ;
-;     -- 4 input functions                    ; 64               ;
-;     -- 3 input functions                    ; 2                ;
-;     -- <=2 input functions                  ; 17               ;
-;                                             ;                  ;
-; Logic elements by mode                      ;                  ;
-;     -- normal mode                          ; 83               ;
-;     -- arithmetic mode                      ; 0                ;
-;                                             ;                  ;
-; Total registers                             ; 0                ;
-;     -- Dedicated logic registers            ; 0                ;
-;     -- I/O registers                        ; 0                ;
-;                                             ;                  ;
-; I/O pins                                    ; 164              ;
-;                                             ;                  ;
-; Embedded Multiplier 9-bit elements          ; 0                ;
-;                                             ;                  ;
-; Maximum fan-out node                        ; control[1]~input ;
-; Maximum fan-out                             ; 28               ;
-; Total fan-out                               ; 492              ;
-; Average fan-out                             ; 1.20             ;
-+---------------------------------------------+------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                      ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; |BUS                       ; 83 (83)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 164  ; 0            ; |BUS                ; BUS         ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 0     ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 16:1               ; 16 bits   ; 160 LEs       ; 80 LEs               ; 80 LEs                 ; No         ; |BUS|Mux15                 ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-
-
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; boundary_port         ; 164                         ;
-; cycloneiii_lcell_comb ; 83                          ;
-;     normal            ; 83                          ;
-;         2 data inputs ; 17                          ;
-;         3 data inputs ; 2                           ;
-;         4 data inputs ; 64                          ;
-;                       ;                             ;
-; Max LUT depth         ; 5.00                        ;
-; Average LUT depth     ; 4.15                        ;
-+-----------------------+-----------------------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:01     ;
-+----------------+--------------+
-
-
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Mon May 24 14:28:35 2021
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Mon May 24 15:09:05 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Processor -c Processor
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file tb/bus_tb.v
-    Info (12023): Found entity 1: BUS_tb File: C:/Users/ravin/Documents/GitHub/fpga_processor/tb/BUS_tb.v Line: 2
+    Info (12023): Found entity 1: BUS_tb File: D:/OLD ACA/FPGA/Project/Test_project/fpga_processor/tb/BUS_tb.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file tb/ac_tb.v
-    Info (12023): Found entity 1: ac_tb File: C:/Users/ravin/Documents/GitHub/fpga_processor/tb/ac_tb.v Line: 2
+    Info (12023): Found entity 1: ac_tb File: D:/OLD ACA/FPGA/Project/Test_project/fpga_processor/tb/ac_tb.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file tb/alu_tb.v
-    Info (12023): Found entity 1: ALU_tb File: C:/Users/ravin/Documents/GitHub/fpga_processor/tb/ALU_tb.v Line: 2
+    Info (12023): Found entity 1: ALU_tb File: D:/OLD ACA/FPGA/Project/Test_project/fpga_processor/tb/ALU_tb.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file register.v
-    Info (12023): Found entity 1: register File: C:/Users/ravin/Documents/GitHub/fpga_processor/Register.v Line: 1
+    Info (12023): Found entity 1: register File: D:/OLD ACA/FPGA/Project/Test_project/fpga_processor/Register.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file processor.v
-    Info (12023): Found entity 1: Processor File: C:/Users/ravin/Documents/GitHub/fpga_processor/Processor.v Line: 1
+    Info (12023): Found entity 1: Processor File: D:/OLD ACA/FPGA/Project/Test_project/fpga_processor/Processor.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file pc.v
-    Info (12023): Found entity 1: PC File: C:/Users/ravin/Documents/GitHub/fpga_processor/PC.v Line: 1
+    Info (12023): Found entity 1: PC File: D:/OLD ACA/FPGA/Project/Test_project/fpga_processor/PC.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file ac.v
-    Info (12023): Found entity 1: AC File: C:/Users/ravin/Documents/GitHub/fpga_processor/AC.v Line: 1
+    Info (12023): Found entity 1: AC File: D:/OLD ACA/FPGA/Project/Test_project/fpga_processor/AC.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file ir.v
-    Info (12023): Found entity 1: IR File: C:/Users/ravin/Documents/GitHub/fpga_processor/IR.v Line: 1
+    Info (12023): Found entity 1: IR File: D:/OLD ACA/FPGA/Project/Test_project/fpga_processor/IR.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu.v
-    Info (12023): Found entity 1: ALU File: C:/Users/ravin/Documents/GitHub/fpga_processor/ALU.v Line: 1
+    Info (12023): Found entity 1: ALU File: D:/OLD ACA/FPGA/Project/Test_project/fpga_processor/ALU.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file bus.v
-    Info (12023): Found entity 1: BUS File: C:/Users/ravin/Documents/GitHub/fpga_processor/BUS.v Line: 1
-Warning (10229): Verilog HDL Expression warning at Control_Unit.v(66): truncated literal to match 16 bits File: C:/Users/ravin/Documents/GitHub/fpga_processor/Control_Unit.v Line: 66
+    Info (12023): Found entity 1: BUS File: D:/OLD ACA/FPGA/Project/Test_project/fpga_processor/BUS.v Line: 1
+Warning (10229): Verilog HDL Expression warning at Control_Unit.v(66): truncated literal to match 16 bits File: D:/OLD ACA/FPGA/Project/Test_project/fpga_processor/Control_Unit.v Line: 66
 Info (12021): Found 1 design units, including 1 entities, in source file control_unit.v
-    Info (12023): Found entity 1: control_unit File: C:/Users/ravin/Documents/GitHub/fpga_processor/Control_Unit.v Line: 1
+    Info (12023): Found entity 1: control_unit File: D:/OLD ACA/FPGA/Project/Test_project/fpga_processor/Control_Unit.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file processor_datapath.v
-    Info (12023): Found entity 1: datapath File: C:/Users/ravin/Documents/GitHub/fpga_processor/Processor_datapath.v Line: 1
+    Info (12023): Found entity 1: datapath File: D:/OLD ACA/FPGA/Project/Test_project/fpga_processor/Processor_datapath.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file state_machine.v
-    Info (12023): Found entity 1: state_machine File: C:/Users/ravin/Documents/GitHub/fpga_processor/state_machine.v Line: 4
+    Info (12023): Found entity 1: state_machine File: D:/OLD ACA/FPGA/Project/Test_project/fpga_processor/state_machine.v Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file top_layer.v
-    Info (12023): Found entity 1: top_layer File: C:/Users/ravin/Documents/GitHub/fpga_processor/top_layer.v Line: 2
+    Info (12023): Found entity 1: top_layer File: D:/OLD ACA/FPGA/Project/Test_project/fpga_processor/top_layer.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file clock.v
-    Info (12023): Found entity 1: clock File: C:/Users/ravin/Documents/GitHub/fpga_processor/clock.v Line: 3
+    Info (12023): Found entity 1: clock File: D:/OLD ACA/FPGA/Project/Test_project/fpga_processor/clock.v Line: 3
 Info (12021): Found 0 design units, including 0 entities, in source file test.v
-Info (12127): Elaborating entity "BUS" for the top level hierarchy
-Warning (10235): Verilog HDL Always Construct warning at BUS.v(18): variable "ar" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/ravin/Documents/GitHub/fpga_processor/BUS.v Line: 18
-Warning (10235): Verilog HDL Always Construct warning at BUS.v(19): variable "ac" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/ravin/Documents/GitHub/fpga_processor/BUS.v Line: 19
-Warning (10235): Verilog HDL Always Construct warning at BUS.v(20): variable "pc" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/ravin/Documents/GitHub/fpga_processor/BUS.v Line: 20
-Warning (10235): Verilog HDL Always Construct warning at BUS.v(21): variable "dr" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/ravin/Documents/GitHub/fpga_processor/BUS.v Line: 21
-Warning (10235): Verilog HDL Always Construct warning at BUS.v(22): variable "r" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/ravin/Documents/GitHub/fpga_processor/BUS.v Line: 22
-Warning (10235): Verilog HDL Always Construct warning at BUS.v(23): variable "iram" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/ravin/Documents/GitHub/fpga_processor/BUS.v Line: 23
-Warning (10235): Verilog HDL Always Construct warning at BUS.v(24): variable "dram" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/ravin/Documents/GitHub/fpga_processor/BUS.v Line: 24
-Warning (10235): Verilog HDL Always Construct warning at BUS.v(29): variable "ar" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/ravin/Documents/GitHub/fpga_processor/BUS.v Line: 29
-Info (286030): Timing-Driven Synthesis is running
-Info (144001): Generated suppressed messages file C:/Users/ravin/Documents/GitHub/fpga_processor/output_files/Processor.map.smsg
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 16 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "ir[0]" File: C:/Users/ravin/Documents/GitHub/fpga_processor/BUS.v Line: 4
-    Warning (15610): No output dependent on input pin "ir[1]" File: C:/Users/ravin/Documents/GitHub/fpga_processor/BUS.v Line: 4
-    Warning (15610): No output dependent on input pin "ir[2]" File: C:/Users/ravin/Documents/GitHub/fpga_processor/BUS.v Line: 4
-    Warning (15610): No output dependent on input pin "ir[3]" File: C:/Users/ravin/Documents/GitHub/fpga_processor/BUS.v Line: 4
-    Warning (15610): No output dependent on input pin "ir[4]" File: C:/Users/ravin/Documents/GitHub/fpga_processor/BUS.v Line: 4
-    Warning (15610): No output dependent on input pin "ir[5]" File: C:/Users/ravin/Documents/GitHub/fpga_processor/BUS.v Line: 4
-    Warning (15610): No output dependent on input pin "ir[6]" File: C:/Users/ravin/Documents/GitHub/fpga_processor/BUS.v Line: 4
-    Warning (15610): No output dependent on input pin "ir[7]" File: C:/Users/ravin/Documents/GitHub/fpga_processor/BUS.v Line: 4
-    Warning (15610): No output dependent on input pin "ir[8]" File: C:/Users/ravin/Documents/GitHub/fpga_processor/BUS.v Line: 4
-    Warning (15610): No output dependent on input pin "ir[9]" File: C:/Users/ravin/Documents/GitHub/fpga_processor/BUS.v Line: 4
-    Warning (15610): No output dependent on input pin "ir[10]" File: C:/Users/ravin/Documents/GitHub/fpga_processor/BUS.v Line: 4
-    Warning (15610): No output dependent on input pin "ir[11]" File: C:/Users/ravin/Documents/GitHub/fpga_processor/BUS.v Line: 4
-    Warning (15610): No output dependent on input pin "ir[12]" File: C:/Users/ravin/Documents/GitHub/fpga_processor/BUS.v Line: 4
-    Warning (15610): No output dependent on input pin "ir[13]" File: C:/Users/ravin/Documents/GitHub/fpga_processor/BUS.v Line: 4
-    Warning (15610): No output dependent on input pin "ir[14]" File: C:/Users/ravin/Documents/GitHub/fpga_processor/BUS.v Line: 4
-    Warning (15610): No output dependent on input pin "ir[15]" File: C:/Users/ravin/Documents/GitHub/fpga_processor/BUS.v Line: 4
-Info (21057): Implemented 247 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 132 input pins
-    Info (21059): Implemented 32 output pins
-    Info (21061): Implemented 83 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 27 warnings
-    Info: Peak virtual memory: 4730 megabytes
-    Info: Processing ended: Mon May 24 14:29:03 2021
-    Info: Elapsed time: 00:00:28
-    Info: Total CPU time (on all processors): 00:00:40
+Error (10170): Verilog HDL syntax error at memory.v(20) near text: "end";  expecting ";". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: D:/OLD ACA/FPGA/Project/Test_project/fpga_processor/memory.v Line: 20
+Error (10170): Verilog HDL syntax error at memory.v(25) near text: "end"; "end" without "begin" . Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: D:/OLD ACA/FPGA/Project/Test_project/fpga_processor/memory.v Line: 25
+Error (10170): Verilog HDL syntax error at memory.v(26) near text: "end"; "end" without "begin" . Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: D:/OLD ACA/FPGA/Project/Test_project/fpga_processor/memory.v Line: 26
+Info (12021): Found 0 design units, including 0 entities, in source file memory.v
+Info (144001): Generated suppressed messages file D:/OLD ACA/FPGA/Project/Test_project/fpga_processor/output_files/Processor.map.smsg
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 3 errors, 3 warnings
+    Error: Peak virtual memory: 4721 megabytes
+    Error: Processing ended: Mon May 24 15:09:52 2021
+    Error: Elapsed time: 00:00:47
+    Error: Total CPU time (on all processors): 00:00:52
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/Users/ravin/Documents/GitHub/fpga_processor/output_files/Processor.map.smsg.
+The suppressed messages can be found in D:/OLD ACA/FPGA/Project/Test_project/fpga_processor/output_files/Processor.map.smsg.
 
 
