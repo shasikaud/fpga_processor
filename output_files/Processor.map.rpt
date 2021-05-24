@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Processor
-Mon May 24 14:15:30 2021
+Mon May 24 14:29:03 2021
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -44,16 +44,16 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon May 24 14:15:30 2021       ;
+; Analysis & Synthesis Status        ; Successful - Mon May 24 14:29:03 2021       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Processor                                   ;
-; Top-level Entity Name              ; AC                                          ;
+; Top-level Entity Name              ; BUS                                         ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 17                                          ;
-;     Total combinational functions  ; 17                                          ;
-;     Dedicated logic registers      ; 16                                          ;
-; Total registers                    ; 16                                          ;
-; Total pins                         ; 51                                          ;
+; Total logic elements               ; 83                                          ;
+;     Total combinational functions  ; 83                                          ;
+;     Dedicated logic registers      ; 0                                           ;
+; Total registers                    ; 0                                           ;
+; Total pins                         ; 164                                         ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -66,7 +66,7 @@ refer to the applicable agreement for further details.
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
-; Top-level entity name                                            ; AC                 ; Processor          ;
+; Top-level entity name                                            ; BUS                ; Processor          ;
 ; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
 ; Type of Retiming Performed During Resynthesis                    ; Full               ;                    ;
 ; Resynthesis Optimization Effort                                  ; Normal             ;                    ;
@@ -166,45 +166,45 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                      ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                        ; Library ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------------+---------+
-; AC.v                             ; yes             ; User Verilog HDL File  ; C:/Users/ravin/Documents/GitHub/fpga_processor/AC.v ;         ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                       ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                         ; Library ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------+---------+
+; BUS.v                            ; yes             ; User Verilog HDL File  ; C:/Users/ravin/Documents/GitHub/fpga_processor/BUS.v ;         ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------+---------+
 
 
-+-------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                 ;
-+---------------------------------------------+---------------+
-; Resource                                    ; Usage         ;
-+---------------------------------------------+---------------+
-; Estimated Total logic elements              ; 17            ;
-;                                             ;               ;
-; Total combinational functions               ; 17            ;
-; Logic element usage by number of LUT inputs ;               ;
-;     -- 4 input functions                    ; 0             ;
-;     -- 3 input functions                    ; 16            ;
-;     -- <=2 input functions                  ; 1             ;
-;                                             ;               ;
-; Logic elements by mode                      ;               ;
-;     -- normal mode                          ; 17            ;
-;     -- arithmetic mode                      ; 0             ;
-;                                             ;               ;
-; Total registers                             ; 16            ;
-;     -- Dedicated logic registers            ; 16            ;
-;     -- I/O registers                        ; 0             ;
-;                                             ;               ;
-; I/O pins                                    ; 51            ;
-;                                             ;               ;
-; Embedded Multiplier 9-bit elements          ; 0             ;
-;                                             ;               ;
-; Maximum fan-out node                        ; alu_out~input ;
-; Maximum fan-out                             ; 17            ;
-; Total fan-out                               ; 165           ;
-; Average fan-out                             ; 1.22          ;
-+---------------------------------------------+---------------+
++----------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                    ;
++---------------------------------------------+------------------+
+; Resource                                    ; Usage            ;
++---------------------------------------------+------------------+
+; Estimated Total logic elements              ; 83               ;
+;                                             ;                  ;
+; Total combinational functions               ; 83               ;
+; Logic element usage by number of LUT inputs ;                  ;
+;     -- 4 input functions                    ; 64               ;
+;     -- 3 input functions                    ; 2                ;
+;     -- <=2 input functions                  ; 17               ;
+;                                             ;                  ;
+; Logic elements by mode                      ;                  ;
+;     -- normal mode                          ; 83               ;
+;     -- arithmetic mode                      ; 0                ;
+;                                             ;                  ;
+; Total registers                             ; 0                ;
+;     -- Dedicated logic registers            ; 0                ;
+;     -- I/O registers                        ; 0                ;
+;                                             ;                  ;
+; I/O pins                                    ; 164              ;
+;                                             ;                  ;
+; Embedded Multiplier 9-bit elements          ; 0                ;
+;                                             ;                  ;
+; Maximum fan-out node                        ; control[1]~input ;
+; Maximum fan-out                             ; 28               ;
+; Total fan-out                               ; 492              ;
+; Average fan-out                             ; 1.20             ;
++---------------------------------------------+------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -212,7 +212,7 @@ refer to the applicable agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; |AC                        ; 17 (17)             ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 51   ; 0            ; |AC                 ; AC          ; work         ;
+; |BUS                       ; 83 (83)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 164  ; 0            ; |BUS                ; BUS         ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -222,12 +222,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 16    ;
+; Total registers                              ; 0     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 16    ;
+; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -237,7 +237,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |AC|data_out[0]~reg0       ;
+; 16:1               ; 16 bits   ; 160 LEs       ; 80 LEs               ; 80 LEs                 ; No         ; |BUS|Mux15                 ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
@@ -246,16 +246,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 51                          ;
-; cycloneiii_ff         ; 16                          ;
-;     ENA               ; 16                          ;
-; cycloneiii_lcell_comb ; 17                          ;
-;     normal            ; 17                          ;
-;         2 data inputs ; 1                           ;
-;         3 data inputs ; 16                          ;
+; boundary_port         ; 164                         ;
+; cycloneiii_lcell_comb ; 83                          ;
+;     normal            ; 83                          ;
+;         2 data inputs ; 17                          ;
+;         3 data inputs ; 2                           ;
+;         4 data inputs ; 64                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 1.00                        ;
-; Average LUT depth     ; 0.75                        ;
+; Max LUT depth         ; 5.00                        ;
+; Average LUT depth     ; 4.15                        ;
 +-----------------------+-----------------------------+
 
 
@@ -264,7 +263,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -274,10 +273,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Mon May 24 14:15:09 2021
+    Info: Processing started: Mon May 24 14:28:35 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Processor -c Processor
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file tb/bus_tb.v
+    Info (12023): Found entity 1: BUS_tb File: C:/Users/ravin/Documents/GitHub/fpga_processor/tb/BUS_tb.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file tb/ac_tb.v
     Info (12023): Found entity 1: ac_tb File: C:/Users/ravin/Documents/GitHub/fpga_processor/tb/ac_tb.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file tb/alu_tb.v
@@ -308,20 +309,45 @@ Info (12021): Found 1 design units, including 1 entities, in source file top_lay
 Info (12021): Found 1 design units, including 1 entities, in source file clock.v
     Info (12023): Found entity 1: clock File: C:/Users/ravin/Documents/GitHub/fpga_processor/clock.v Line: 3
 Info (12021): Found 0 design units, including 0 entities, in source file test.v
-Info (12127): Elaborating entity "AC" for the top level hierarchy
+Info (12127): Elaborating entity "BUS" for the top level hierarchy
+Warning (10235): Verilog HDL Always Construct warning at BUS.v(18): variable "ar" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/ravin/Documents/GitHub/fpga_processor/BUS.v Line: 18
+Warning (10235): Verilog HDL Always Construct warning at BUS.v(19): variable "ac" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/ravin/Documents/GitHub/fpga_processor/BUS.v Line: 19
+Warning (10235): Verilog HDL Always Construct warning at BUS.v(20): variable "pc" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/ravin/Documents/GitHub/fpga_processor/BUS.v Line: 20
+Warning (10235): Verilog HDL Always Construct warning at BUS.v(21): variable "dr" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/ravin/Documents/GitHub/fpga_processor/BUS.v Line: 21
+Warning (10235): Verilog HDL Always Construct warning at BUS.v(22): variable "r" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/ravin/Documents/GitHub/fpga_processor/BUS.v Line: 22
+Warning (10235): Verilog HDL Always Construct warning at BUS.v(23): variable "iram" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/ravin/Documents/GitHub/fpga_processor/BUS.v Line: 23
+Warning (10235): Verilog HDL Always Construct warning at BUS.v(24): variable "dram" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/ravin/Documents/GitHub/fpga_processor/BUS.v Line: 24
+Warning (10235): Verilog HDL Always Construct warning at BUS.v(29): variable "ar" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/ravin/Documents/GitHub/fpga_processor/BUS.v Line: 29
 Info (286030): Timing-Driven Synthesis is running
 Info (144001): Generated suppressed messages file C:/Users/ravin/Documents/GitHub/fpga_processor/output_files/Processor.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 68 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 35 input pins
-    Info (21059): Implemented 16 output pins
-    Info (21061): Implemented 17 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4734 megabytes
-    Info: Processing ended: Mon May 24 14:15:30 2021
-    Info: Elapsed time: 00:00:21
-    Info: Total CPU time (on all processors): 00:00:38
+Warning (21074): Design contains 16 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "ir[0]" File: C:/Users/ravin/Documents/GitHub/fpga_processor/BUS.v Line: 4
+    Warning (15610): No output dependent on input pin "ir[1]" File: C:/Users/ravin/Documents/GitHub/fpga_processor/BUS.v Line: 4
+    Warning (15610): No output dependent on input pin "ir[2]" File: C:/Users/ravin/Documents/GitHub/fpga_processor/BUS.v Line: 4
+    Warning (15610): No output dependent on input pin "ir[3]" File: C:/Users/ravin/Documents/GitHub/fpga_processor/BUS.v Line: 4
+    Warning (15610): No output dependent on input pin "ir[4]" File: C:/Users/ravin/Documents/GitHub/fpga_processor/BUS.v Line: 4
+    Warning (15610): No output dependent on input pin "ir[5]" File: C:/Users/ravin/Documents/GitHub/fpga_processor/BUS.v Line: 4
+    Warning (15610): No output dependent on input pin "ir[6]" File: C:/Users/ravin/Documents/GitHub/fpga_processor/BUS.v Line: 4
+    Warning (15610): No output dependent on input pin "ir[7]" File: C:/Users/ravin/Documents/GitHub/fpga_processor/BUS.v Line: 4
+    Warning (15610): No output dependent on input pin "ir[8]" File: C:/Users/ravin/Documents/GitHub/fpga_processor/BUS.v Line: 4
+    Warning (15610): No output dependent on input pin "ir[9]" File: C:/Users/ravin/Documents/GitHub/fpga_processor/BUS.v Line: 4
+    Warning (15610): No output dependent on input pin "ir[10]" File: C:/Users/ravin/Documents/GitHub/fpga_processor/BUS.v Line: 4
+    Warning (15610): No output dependent on input pin "ir[11]" File: C:/Users/ravin/Documents/GitHub/fpga_processor/BUS.v Line: 4
+    Warning (15610): No output dependent on input pin "ir[12]" File: C:/Users/ravin/Documents/GitHub/fpga_processor/BUS.v Line: 4
+    Warning (15610): No output dependent on input pin "ir[13]" File: C:/Users/ravin/Documents/GitHub/fpga_processor/BUS.v Line: 4
+    Warning (15610): No output dependent on input pin "ir[14]" File: C:/Users/ravin/Documents/GitHub/fpga_processor/BUS.v Line: 4
+    Warning (15610): No output dependent on input pin "ir[15]" File: C:/Users/ravin/Documents/GitHub/fpga_processor/BUS.v Line: 4
+Info (21057): Implemented 247 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 132 input pins
+    Info (21059): Implemented 32 output pins
+    Info (21061): Implemented 83 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 27 warnings
+    Info: Peak virtual memory: 4730 megabytes
+    Info: Processing ended: Mon May 24 14:29:03 2021
+    Info: Elapsed time: 00:00:28
+    Info: Total CPU time (on all processors): 00:00:40
 
 
 +------------------------------------------+

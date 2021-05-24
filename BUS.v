@@ -9,8 +9,8 @@ output reg[15:0] data_out;
 
 output reg[15:0] addr;
 
-always @(ar or pc or dr or ir or r or ac or dram or iram or control) //control
-
+// always @(ar or pc or dr or ir or r or ac or dram or iram or control) //control
+always @(control)
 begin
 
 case(control)
@@ -22,6 +22,7 @@ case(control)
 4'd5: data_out <= r;
 4'd6: data_out <= iram;
 4'd7: data_out <= dram;
+4'd8: data_out <= ir;
 default: data_out <= 16'd0;
 
 endcase
