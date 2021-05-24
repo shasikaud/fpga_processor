@@ -8,69 +8,48 @@ z2
 !i10f 100
 cModel Technology
 Z0 dC:/Users/ravin/Documents/GitHub/fpga_processor/simulation/modelsim
-vAC
-!s110 1621845975
+vBUS
+!s110 1621846781
 !i10b 1
-!s100 5ZEbY^io[W:^SnDVPdP2R0
-I25fjn[_;BeKIE9:B1@lEO3
+!s100 `YGfiNfEmNzYHdSG1CU[m1
+IMc>LZJJ2nL8f9g;zm@:fD1
 Z1 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1621842369
-8C:/Users/ravin/Documents/GitHub/fpga_processor/AC.v
-FC:/Users/ravin/Documents/GitHub/fpga_processor/AC.v
+w1621846642
+8C:/Users/ravin/Documents/GitHub/fpga_processor/BUS.v
+FC:/Users/ravin/Documents/GitHub/fpga_processor/BUS.v
 L0 1
 Z2 OV;L;10.5b;63
 r1
 !s85 0
 31
-!s108 1621845975.000000
-!s107 C:/Users/ravin/Documents/GitHub/fpga_processor/AC.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/ravin/Documents/GitHub/fpga_processor|C:/Users/ravin/Documents/GitHub/fpga_processor/AC.v|
+!s108 1621846781.000000
+!s107 C:/Users/ravin/Documents/GitHub/fpga_processor/BUS.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/ravin/Documents/GitHub/fpga_processor|C:/Users/ravin/Documents/GitHub/fpga_processor/BUS.v|
 !i113 1
 o-vlog01compat -work work
 !s92 -vlog01compat -work work +incdir+C:/Users/ravin/Documents/GitHub/fpga_processor
 Z3 tCvgOpt 0
-n@a@c
-vac_tb
-!s110 1621845995
+n@b@u@s
+vBUS_tb
+!s110 1621846792
 !i10b 1
-!s100 =`7[m>O0=:zg:8ZjWeE]51
-I9H2AG2ND9_`92NPdkGlcD0
+!s100 Q_CWdZY^4NO^Yh3ONV5RG1
+IDCE`8[QnKMgf=lUC14^Oj3
 R1
 R0
-w1621845901
-8C:/Users/ravin/Documents/GitHub/fpga_processor/tb/ac_tb.v
-FC:/Users/ravin/Documents/GitHub/fpga_processor/tb/ac_tb.v
+w1621846690
+8C:/Users/ravin/Documents/GitHub/fpga_processor/tb/BUS_tb.v
+FC:/Users/ravin/Documents/GitHub/fpga_processor/tb/BUS_tb.v
 L0 2
 R2
 r1
 !s85 0
 31
-!s108 1621845995.000000
-!s107 C:/Users/ravin/Documents/GitHub/fpga_processor/tb/ac_tb.v|
-!s90 -reportprogress|300|-work|work|C:/Users/ravin/Documents/GitHub/fpga_processor/tb/ac_tb.v|
+!s108 1621846792.000000
+!s107 C:/Users/ravin/Documents/GitHub/fpga_processor/tb/BUS_tb.v|
+!s90 -reportprogress|300|-work|work|C:/Users/ravin/Documents/GitHub/fpga_processor/tb/BUS_tb.v|
 !i113 1
-Z4 o-work work
+o-work work
 R3
-vALU_tb
-!s110 1621845994
-!i10b 1
-!s100 Da?z20FA_YkD6GOT@eH?g2
-I?VZNj3ZmAEm>@@cO_?0l43
-R1
-R0
-w1621844928
-8C:/Users/ravin/Documents/GitHub/fpga_processor/tb/ALU_tb.v
-FC:/Users/ravin/Documents/GitHub/fpga_processor/tb/ALU_tb.v
-L0 2
-R2
-r1
-!s85 0
-31
-!s108 1621845993.000000
-!s107 C:/Users/ravin/Documents/GitHub/fpga_processor/tb/ALU_tb.v|
-!s90 -reportprogress|300|-work|work|C:/Users/ravin/Documents/GitHub/fpga_processor/tb/ALU_tb.v|
-!i113 1
-R4
-R3
-n@a@l@u_tb
+n@b@u@s_tb
