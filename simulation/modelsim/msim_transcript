@@ -12,50 +12,64 @@
 # 
 # vlog -vlog01compat -work work +incdir+D:/OLD\ ACA/FPGA/Project/Test_project/fpga_processor {D:/OLD ACA/FPGA/Project/Test_project/fpga_processor/memory_ip.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:44:03 on May 25,2021
+# Start time: 15:32:20 on May 25,2021
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/OLD ACA/FPGA/Project/Test_project/fpga_processor" D:/OLD ACA/FPGA/Project/Test_project/fpga_processor/memory_ip.v 
 # -- Compiling module memory_ip
 # 
 # Top level modules:
 # 	memory_ip
-# End time: 14:44:03 on May 25,2021, Elapsed time: 0:00:00
+# End time: 15:32:20 on May 25,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 vlog -reportprogress 300 -work work {D:/OLD ACA/FPGA/Project/Test_project/fpga_processor/tb/memory_ip_tb.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:44:16 on May 25,2021
+# Start time: 15:32:36 on May 25,2021
 # vlog -reportprogress 300 -work work D:/OLD ACA/FPGA/Project/Test_project/fpga_processor/tb/memory_ip_tb.v 
 # -- Compiling module memory_ip_tb
 # 
 # Top level modules:
 # 	memory_ip_tb
-# End time: 14:44:16 on May 25,2021, Elapsed time: 0:00:00
+# End time: 15:32:36 on May 25,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-vcom -reportprogress 300 -work work C:/intelFPGA_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf
-# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:47:02 on May 25,2021
-# vcom -reportprogress 300 -work work C:/intelFPGA_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf 
-# -- Loading package STANDARD
-# ** Error: C:/intelFPGA_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf(20): near "OPTIONS": syntax error
-# End time: 14:47:02 on May 25,2021, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-vcom -reportprogress 300 -work work {D:/OLD ACA/FPGA/Project/Test_project/fpga_processor/db/altsyncram_2gh1.tdf}
-# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:48:25 on May 25,2021
-# vcom -reportprogress 300 -work work D:/OLD ACA/FPGA/Project/Test_project/fpga_processor/db/altsyncram_2gh1.tdf 
-# -- Loading package STANDARD
-# ** Error: D:/OLD ACA/FPGA/Project/Test_project/fpga_processor/db/altsyncram_2gh1.tdf(21): near "FUNCTION": syntax error
-# End time: 14:48:25 on May 25,2021, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-vsim work.memory_ip_tb
-# vsim work.memory_ip_tb 
-# Start time: 14:48:33 on May 25,2021
+#  Trace back: can't read "_clients()": no such variable
+#     while executing
+# "set _currObj    $_clients($cid)"
+#     (object "::.bookmarkmgr" method "::vsimwidgets::bookmarkmgr::_setcurrent" body line 11)
+#     invoked from within
+# "_setcurrent $cid"
+#     (object "::.bookmarkmgr" method "::vsimwidgets::bookmarkmgr::_menu_prepost" body line 16)
+#     invoked from within
+# "::.bookmarkmgr _menu_prepost .mBar.bookmarks 1 {} 1"
+#     (in namespace inscope "::vsimwidgets::bookmarkmgr" script line 1)
+#     invoked from within
+# "namespace inscope ::vsimwidgets::bookmarkmgr {::.bookmarkmgr _menu_prepost .mBar.bookmarks 1 {} 1}"
+#     ("eval" body line 1)
+#     invoked from within
+# "eval $post_cmd"
+#     (procedure "::Vsimmenu::DefaultMenuPostCmd" line 41)
+#     invoked from within
+# "::Vsimmenu::DefaultMenuPostCmd .mBar.bookmarks {namespace inscope ::vsimwidgets::bookmarkmgr {::.bookmarkmgr _menu_prepost .mBar.bookmarks 1 {} 1}} Se..."
+#     (menu preprocess)
+#    <2:C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/tk8.6/bgerror.tcl:106: ::tkerror {can't read "_clients()": no such variable}
+#    <1:eval:1: ::tk::dialog::error::bgerror {can't read "_clients()": no such variable}
+vsim -gui -l msim_transcript work.memory_ip_tb -Lf altera_mf_ver
+# vsim -gui -l msim_transcript work.memory_ip_tb -Lf altera_mf_ver 
+# Start time: 15:33:33 on May 25,2021
 # Loading work.memory_ip_tb
 # Loading work.memory_ip
-# ** Error: (vsim-3033) Instantiation of 'altsyncram' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /memory_ip_tb/memory_ip_inst File: D:/OLD ACA/FPGA/Project/Test_project/fpga_processor/memory_ip.v Line: 66
-#         Searched libraries:
-#             D:/OLD ACA/FPGA/Project/Test_project/fpga_processor/simulation/modelsim/rtl_work
-# Error loading design
-# End time: 14:48:34 on May 25,2021, Elapsed time: 0:00:01
-# Errors: 1, Warnings: 0
+# Loading altera_mf_ver.altsyncram
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# Break key hit
+add wave -position insertpoint  \
+sim:/memory_ip_tb/memory_ip_inst/address \
+sim:/memory_ip_tb/memory_ip_inst/clock \
+sim:/memory_ip_tb/memory_ip_inst/data \
+sim:/memory_ip_tb/memory_ip_inst/rden \
+sim:/memory_ip_tb/memory_ip_inst/wren \
+sim:/memory_ip_tb/memory_ip_inst/q \
+sim:/memory_ip_tb/memory_ip_inst/sub_wire0
+run -all
+# End time: 15:38:42 on May 25,2021, Elapsed time: 0:05:09
+# Errors: 0, Warnings: 0
