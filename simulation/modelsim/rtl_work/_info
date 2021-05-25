@@ -1,55 +1,58 @@
 m255
 K4
 z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
 13
 !s112 1.1
 !i10d 8192
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/ravin/Documents/GitHub/fpga_processor/simulation/modelsim
-vBUS
-!s110 1621846781
+Z0 dD:/OLD ACA/FPGA/Project/Test_project/fpga_processor/simulation/modelsim
+vmemory_ip
+!s110 1621934043
 !i10b 1
-!s100 `YGfiNfEmNzYHdSG1CU[m1
-IMc>LZJJ2nL8f9g;zm@:fD1
-Z1 VDg1SIo80bB@j0V0VzS_@n1
+!s100 DYiRMCVDl5A`2=D6lS1hW2
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IZSnEX<DW6DQMG1<ULceM@1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1621846642
-8C:/Users/ravin/Documents/GitHub/fpga_processor/BUS.v
-FC:/Users/ravin/Documents/GitHub/fpga_processor/BUS.v
-L0 1
-Z2 OV;L;10.5b;63
+w1621930701
+8D:/OLD ACA/FPGA/Project/Test_project/fpga_processor/memory_ip.v
+FD:/OLD ACA/FPGA/Project/Test_project/fpga_processor/memory_ip.v
+!i122 0
+L0 40 69
+Z3 OV;L;2020.1;71
 r1
 !s85 0
 31
-!s108 1621846781.000000
-!s107 C:/Users/ravin/Documents/GitHub/fpga_processor/BUS.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/ravin/Documents/GitHub/fpga_processor|C:/Users/ravin/Documents/GitHub/fpga_processor/BUS.v|
+!s108 1621934043.000000
+!s107 D:/OLD ACA/FPGA/Project/Test_project/fpga_processor/memory_ip.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/OLD ACA/FPGA/Project/Test_project/fpga_processor|D:/OLD ACA/FPGA/Project/Test_project/fpga_processor/memory_ip.v|
 !i113 1
 o-vlog01compat -work work
-!s92 -vlog01compat -work work +incdir+C:/Users/ravin/Documents/GitHub/fpga_processor
-Z3 tCvgOpt 0
-n@b@u@s
-vBUS_tb
-!s110 1621846792
+!s92 -vlog01compat -work work {+incdir+D:/OLD ACA/FPGA/Project/Test_project/fpga_processor}
+Z4 tCvgOpt 0
+vmemory_ip_tb
+!s110 1621934056
 !i10b 1
-!s100 Q_CWdZY^4NO^Yh3ONV5RG1
-IDCE`8[QnKMgf=lUC14^Oj3
+!s100 Se69j<aLT_5P54T0d0QlI3
 R1
-R0
-w1621846690
-8C:/Users/ravin/Documents/GitHub/fpga_processor/tb/BUS_tb.v
-FC:/Users/ravin/Documents/GitHub/fpga_processor/tb/BUS_tb.v
-L0 2
+IaelGDb7E4K?D=He6?`@h50
 R2
+R0
+w1621933227
+8D:/OLD ACA/FPGA/Project/Test_project/fpga_processor/tb/memory_ip_tb.v
+FD:/OLD ACA/FPGA/Project/Test_project/fpga_processor/tb/memory_ip_tb.v
+!i122 1
+L0 2 69
+R3
 r1
 !s85 0
 31
-!s108 1621846792.000000
-!s107 C:/Users/ravin/Documents/GitHub/fpga_processor/tb/BUS_tb.v|
-!s90 -reportprogress|300|-work|work|C:/Users/ravin/Documents/GitHub/fpga_processor/tb/BUS_tb.v|
+!s108 1621934056.000000
+!s107 D:/OLD ACA/FPGA/Project/Test_project/fpga_processor/tb/memory_ip_tb.v|
+!s90 -reportprogress|300|-work|work|D:/OLD ACA/FPGA/Project/Test_project/fpga_processor/tb/memory_ip_tb.v|
 !i113 1
 o-work work
-R3
-n@b@u@s_tb
+R4
