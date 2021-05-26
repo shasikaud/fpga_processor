@@ -10,42 +10,68 @@
 # Copying E:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -vlog01compat -work work +incdir+E:/GIthub/Processor {E:/GIthub/Processor/AC.v}
+# vlog -vlog01compat -work work +incdir+E:/GIthub/Processor {E:/GIthub/Processor/ALU.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 11:43:30 on May 26,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/GIthub/Processor" E:/GIthub/Processor/AC.v 
-# -- Compiling module AC
+# Start time: 12:40:46 on May 26,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/GIthub/Processor" E:/GIthub/Processor/ALU.v 
+# -- Compiling module ALU
 # 
 # Top level modules:
-# 	AC
-# End time: 11:43:30 on May 26,2021, Elapsed time: 0:00:00
+# 	ALU
+# End time: 12:40:46 on May 26,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-step
-# Active dataset is not in simulation mode
-vlog -reportprogress 300 -work work E:/GIthub/Processor/tb/read_file_tb.v
+vlog -reportprogress 300 -work work E:/GIthub/Processor/memory_ip.v
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 11:43:44 on May 26,2021
-# vlog -reportprogress 300 -work work E:/GIthub/Processor/tb/read_file_tb.v 
-# -- Compiling module read_file_tb
+# Start time: 12:40:53 on May 26,2021
+# vlog -reportprogress 300 -work work E:/GIthub/Processor/memory_ip.v 
+# -- Compiling module memory_ip
 # 
 # Top level modules:
-# 	read_file_tb
-# End time: 11:43:44 on May 26,2021, Elapsed time: 0:00:00
+# 	memory_ip
+# End time: 12:40:53 on May 26,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-vsim work.read_file_tb
-# vsim work.read_file_tb 
-# Start time: 11:43:47 on May 26,2021
-# Loading work.read_file_tb
+vlog -reportprogress 300 -work work E:/GIthub/Processor/memory_ip.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:40:54 on May 26,2021
+# vlog -reportprogress 300 -work work E:/GIthub/Processor/memory_ip.v 
+# -- Compiling module memory_ip
+# 
+# Top level modules:
+# 	memory_ip
+# End time: 12:40:54 on May 26,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work E:/GIthub/Processor/tb/test_tb1.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:40:58 on May 26,2021
+# vlog -reportprogress 300 -work work E:/GIthub/Processor/tb/test_tb1.v 
+# -- Compiling module test1_tb
+# 
+# Top level modules:
+# 	test1_tb
+# End time: 12:40:58 on May 26,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -gui -l msim_transcript work.test1_tb -Lf altera_mf_ver
+# vsim -gui -l msim_transcript work.test1_tb -Lf altera_mf_ver 
+# Start time: 12:41:17 on May 26,2021
+# Loading work.test1_tb
+# Loading work.memory_ip
+# Loading altera_mf_ver.altsyncram
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
 add wave -position insertpoint  \
-sim:/read_file_tb/clock \
-sim:/read_file_tb/data_file \
-sim:/read_file_tb/scan_file \
-sim:/read_file_tb/captured_data \
-sim:/read_file_tb/data_
+sim:/test1_tb/write_en \
+sim:/test1_tb/scan_file \
+sim:/test1_tb/read_en \
+sim:/test1_tb/q_sig \
+sim:/test1_tb/data_file \
+sim:/test1_tb/data_address \
+sim:/test1_tb/data_ \
+sim:/test1_tb/clock \
+sim:/test1_tb/captured_data
 run -all
-#     x
 # Break key hit
-# Simulation stop requested.
-# End time: 11:47:05 on May 26,2021, Elapsed time: 0:03:18
+# Break in Module test1_tb at E:/GIthub/Processor/tb/test_tb1.v line 21
+# End time: 12:45:12 on May 26,2021, Elapsed time: 0:03:55
 # Errors: 0, Warnings: 0
