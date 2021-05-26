@@ -7,6 +7,9 @@ input[15:0] bus_in;
 
 output reg [15:0] data_out;
 
+
+
+
 always @(posedge clock)
 
 begin

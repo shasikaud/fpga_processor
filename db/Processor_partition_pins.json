@@ -4,75 +4,79 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "q[0]",
+					"name" : "data_out[0]",
 					"strict" : false
 				},
 				{
-					"name" : "q[1]",
+					"name" : "data_out[1]",
 					"strict" : false
 				},
 				{
-					"name" : "q[2]",
+					"name" : "data_out[2]",
 					"strict" : false
 				},
 				{
-					"name" : "q[3]",
+					"name" : "data_out[3]",
 					"strict" : false
 				},
 				{
-					"name" : "q[4]",
+					"name" : "data_out[4]",
 					"strict" : false
 				},
 				{
-					"name" : "q[5]",
+					"name" : "data_out[5]",
 					"strict" : false
 				},
 				{
-					"name" : "q[6]",
+					"name" : "data_out[6]",
 					"strict" : false
 				},
 				{
-					"name" : "q[7]",
+					"name" : "data_out[7]",
 					"strict" : false
 				},
 				{
-					"name" : "q[8]",
+					"name" : "data_out[8]",
 					"strict" : false
 				},
 				{
-					"name" : "q[9]",
+					"name" : "data_out[9]",
 					"strict" : false
 				},
 				{
-					"name" : "q[10]",
+					"name" : "data_out[10]",
 					"strict" : false
 				},
 				{
-					"name" : "q[11]",
+					"name" : "data_out[11]",
 					"strict" : false
 				},
 				{
-					"name" : "q[12]",
+					"name" : "data_out[12]",
 					"strict" : false
 				},
 				{
-					"name" : "q[13]",
+					"name" : "data_out[13]",
 					"strict" : false
 				},
 				{
-					"name" : "q[14]",
+					"name" : "data_out[14]",
 					"strict" : false
 				},
 				{
-					"name" : "q[15]",
+					"name" : "data_out[15]",
 					"strict" : false
 				},
 				{
-					"name" : "wren",
+					"name" : "data_in_alu[0]",
 					"strict" : false
 				},
 				{
-					"name" : "rden",
+					"name" : "data_in[0]",
+					"strict" : false
+				},
+				{
+					"name" : "alu_out",
 					"strict" : false
 				},
 				{
@@ -80,103 +84,127 @@
 					"strict" : false
 				},
 				{
-					"name" : "data[0]",
+					"name" : "write_en",
 					"strict" : false
 				},
 				{
-					"name" : "address[0]",
+					"name" : "data_in_alu[1]",
 					"strict" : false
 				},
 				{
-					"name" : "address[1]",
+					"name" : "data_in[1]",
 					"strict" : false
 				},
 				{
-					"name" : "address[2]",
+					"name" : "data_in_alu[2]",
 					"strict" : false
 				},
 				{
-					"name" : "address[3]",
+					"name" : "data_in[2]",
 					"strict" : false
 				},
 				{
-					"name" : "address[4]",
+					"name" : "data_in_alu[3]",
 					"strict" : false
 				},
 				{
-					"name" : "address[5]",
+					"name" : "data_in[3]",
 					"strict" : false
 				},
 				{
-					"name" : "address[6]",
+					"name" : "data_in_alu[4]",
 					"strict" : false
 				},
 				{
-					"name" : "address[7]",
+					"name" : "data_in[4]",
 					"strict" : false
 				},
 				{
-					"name" : "address[8]",
+					"name" : "data_in_alu[5]",
 					"strict" : false
 				},
 				{
-					"name" : "data[1]",
+					"name" : "data_in[5]",
 					"strict" : false
 				},
 				{
-					"name" : "data[2]",
+					"name" : "data_in_alu[6]",
 					"strict" : false
 				},
 				{
-					"name" : "data[3]",
+					"name" : "data_in[6]",
 					"strict" : false
 				},
 				{
-					"name" : "data[4]",
+					"name" : "data_in_alu[7]",
 					"strict" : false
 				},
 				{
-					"name" : "data[5]",
+					"name" : "data_in[7]",
 					"strict" : false
 				},
 				{
-					"name" : "data[6]",
+					"name" : "data_in_alu[8]",
 					"strict" : false
 				},
 				{
-					"name" : "data[7]",
+					"name" : "data_in[8]",
 					"strict" : false
 				},
 				{
-					"name" : "data[8]",
+					"name" : "data_in_alu[9]",
 					"strict" : false
 				},
 				{
-					"name" : "data[9]",
+					"name" : "data_in[9]",
 					"strict" : false
 				},
 				{
-					"name" : "data[10]",
+					"name" : "data_in_alu[10]",
 					"strict" : false
 				},
 				{
-					"name" : "data[11]",
+					"name" : "data_in[10]",
 					"strict" : false
 				},
 				{
-					"name" : "data[12]",
+					"name" : "data_in_alu[11]",
 					"strict" : false
 				},
 				{
-					"name" : "data[13]",
+					"name" : "data_in[11]",
 					"strict" : false
 				},
 				{
-					"name" : "data[14]",
+					"name" : "data_in_alu[12]",
 					"strict" : false
 				},
 				{
-					"name" : "data[15]",
+					"name" : "data_in[12]",
+					"strict" : false
+				},
+				{
+					"name" : "data_in_alu[13]",
+					"strict" : false
+				},
+				{
+					"name" : "data_in[13]",
+					"strict" : false
+				},
+				{
+					"name" : "data_in_alu[14]",
+					"strict" : false
+				},
+				{
+					"name" : "data_in[14]",
+					"strict" : false
+				},
+				{
+					"name" : "data_in_alu[15]",
+					"strict" : false
+				},
+				{
+					"name" : "data_in[15]",
 					"strict" : false
 				}
 			]
