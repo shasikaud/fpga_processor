@@ -16,22 +16,26 @@ clock clock(clk);  //clock module
 
 state_machine state_machine(clk, start, ir_out, state);
 
-memory_ip  memory_ip_data (
+memory_ip  memory_ip_data (         // instantiate data memory
+
 	.address(addr_out[8:0]) ,	// input [8:0] address_sig
 	.clock(clk) ,	// input  clock_sig
 	.data(dram_in) ,	// input [15:0] data_sig
 	.rden(rden_sig) ,	// input  rden_sig
-	.wren(mem_write) ,	// input  wren_sig
+	.wren(mem_write_data) ,	// input  wren_sig
 	.q(data_out) 	// output [15:0] q_sig
+
 );
 
-memory_ip  memory_ip_inst(
-	.address(ir_out[8:0]) ,	// input [8:0] address_sig
+memory_ip  memory_ip_inst(          // instantiate instruction memory
+	
+    .address(ir_out[8:0]) ,	// input [8:0] address_sig
 	.clock(clk) ,	// input  clock_sig
 	.data(iram_in) ,	// input [15:0] data_sig
 	.rden(rden_sig) ,	// input  rden_sig
-	.wren(mem_write) ,	// input  wren_sig
+	.wren(mem_write_ins) ,	// input  wren_sig
 	.q(iram_in) 	// output [15:0] q_sig
+    
 );
 
 Processor Processor(clk, dram_in, iram_in, state,ir_out, data_out, addr_out,mem_write);
