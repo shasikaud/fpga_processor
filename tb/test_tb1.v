@@ -58,11 +58,12 @@ initial begin
         read_en <= 0;
         #10;
         scan_file = $fscanf(data_file, "%d\n", captured_data); 
-		  #20;
+		#20;
         write_en <= 0;
         read_en <= 0;
-		  #10;
+		#10;
         data_address <= data_address + 1'd1;
+
             // if (!$feof(data_file)) begin
             //     $display(data_);
         //use captured_data as you would any other wire or reg value;
