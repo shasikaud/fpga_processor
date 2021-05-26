@@ -1,3 +1,11 @@
+/*
+This module defines the control unit of the processors
+inputs  :   clock, 
+            state, from the state machine
+            
+outputs :   countrol out,
+            mem_write
+*/
 module control_unit(clock, state, control_out, mem_write);
 
 input clock;
