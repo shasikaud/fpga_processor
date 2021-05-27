@@ -2,8 +2,8 @@
 
 ## Fetch
 * Fetch 1 : AR <= PC; read
-* Fetch 2 : PC <= PC + 1
-* Fetch 3 : IR <= I_M[t]
+* Fetch 2 : PC <= PC + 1  
+* Fetch 3 : IR <= I_M[t]  
 
 ## CLAC
 * CLAC 1 : AC <= 0;
@@ -16,7 +16,7 @@
 
 ## STAC
 * STAC 1: AR <= PC;
-* STAC 2: DR <= AC; PC <= PC +1 ; mem_write
+* STAC 2: DR <= AC; PC <= PC +1 ; mem_write 
 * STAC 3: D_M[t] <= DR
 * STAC 4: ??? check latency
 
