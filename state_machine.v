@@ -11,7 +11,8 @@ module state_machine(clock, start, IR, state);
 input clock;           // clock of the state machine
 input start;           // Start signal to start the state machine from its idle state
 input[15:0] IR;        // 16 bit instruction register input
-output reg[5:0] state; // 6 bit output to the conntrol units
+output reg[5:0] state = 6'd0; // 6 bit output to the conntrol units
+// reg[5:0] next_state = 6'd0;
 
 // Define the possible states
 parameter idle = 6'd0;
@@ -31,67 +32,69 @@ parameter add = 6'd13;
 parameter mul = 6'd14;
 
 
-reg[5:0] next_state = 6'd0;
+//reg[5:0] next_state = 6'd0;
 
 
+//state = idle;
 
 always @(posedge clock)
 
-begin
-state<= next_state;     // assign the next state for the control unit
-
-
-if(state == idle && start == 0) // remains in the idle state till the start signal is received
     begin
-    next_state <= 6'd0;
+//    state<= next_state;     // assign the next state for the control unit
+
+
+        if(state == idle && start == 0) // remains in the idle state till the start signal is received
+            begin
+            state <= 6'd0;
+            end
+
+        // start == 1 
+        // fetch cycle
+        if (state == idle && start == 1)
+            begin
+            state  <= fetch1;
+            end
+
+        else if (state == fetch1 && start == 1)
+            begin
+            state  <= fetch2;
+            end
+
+        else if (state == fetch2 && start == 1)
+            begin
+            state  <= fetch3;
+            end
+
+        else if(state == fetch3 && start == 1)  
+            begin
+            case(IR[15:0])   
+
+            16'b0: state  <= idle;
+            16'b1: state  <= add;
+            
+
+        //i_clac: state  <= clac;
+
+        //more cases
+        //how to jump back to fetch1 at end
+
+            endcase
+
+            end
+
+        else if(state == add && start == 1)
+            begin
+            state <=idle;
+            end
+
+        else if(start == 1)
+            begin
+
+            state  <= state + 6'd1;  //whats's this?
+
+            end
+
     end
-
-// start == 1 
-// fetch cycle
-if (state == idle && start == 1)
-    begin
-    next_state <= fetch1;
-    end
-
-else if (state == fetch1 && start == 1)
-    begin
-    next_state <= fetch2;
-    end
-
-else if (state == fetch2 && start == 1)
-    begin
-    next_state <= fetch3;
-    end
-
-else if(state == fetch3 && start == 1)  
-    begin
-    case(IR[15:0])   
-
-    16'b0: next_state <= idle;
-    16'b1: next_state <= add;
-
-//i_clac: next_state <= clac;
-
-//more cases
-//how to jump back to fetch1 at end
-
-endcase
-
-end
-
-else if(state == add)
-begin
-next_state<=idle;
-end
-
-else
-begin
-
-next_state <= state + 6'd1;  //whats's this?
-
-end
-
-end
 
 endmodule
 

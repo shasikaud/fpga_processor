@@ -8,68 +8,46 @@ z2
 !i10f 100
 cModel Technology
 Z0 dE:/GIthub/Processor/simulation/modelsim
-vALU
-!s110 1622013046
+vstate_machine
+!s110 1622098099
 !i10b 1
-!s100 ^F>zGA?L@7a1XbA2O^BHh2
-IABbI=6E^i`<IgFz_od0M30
+!s100 1dnP87SH5V@<O0J<B<EY;3
+IPelY3oe6D6LC`[[D698i41
 Z1 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1622008339
-8E:/GIthub/Processor/ALU.v
-FE:/GIthub/Processor/ALU.v
-L0 1
+w1622098055
+8E:/GIthub/Processor/state_machine.v
+FE:/GIthub/Processor/state_machine.v
+L0 9
 Z2 OV;L;10.5b;63
 r1
 !s85 0
 31
-!s108 1622013046.000000
-!s107 E:/GIthub/Processor/ALU.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/GIthub/Processor|E:/GIthub/Processor/ALU.v|
+!s108 1622098099.000000
+!s107 E:/GIthub/Processor/state_machine.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/GIthub/Processor|E:/GIthub/Processor/state_machine.v|
 !i113 1
 o-vlog01compat -work work
 !s92 -vlog01compat -work work +incdir+E:/GIthub/Processor
 Z3 tCvgOpt 0
-n@a@l@u
-vmemory_ip
-!s110 1622013054
+vstate_machine_tb
+!s110 1622098102
 !i10b 1
-!s100 m3KQBG6cFB:KW:9E=mn;z2
-IIMZd2N[6?0R;<RkLn?`PO0
+!s100 Dc?JFI3j;RMOK46J`X:gj3
+IQjlek3;AYLMQ;<KB<o3fE3
 R1
 R0
-w1622004691
-8E:/GIthub/Processor/memory_ip.v
-FE:/GIthub/Processor/memory_ip.v
-L0 40
+w1622097892
+8E:/GIthub/Processor/tb/state_machine_tb.v
+FE:/GIthub/Processor/tb/state_machine_tb.v
+L0 2
 R2
 r1
 !s85 0
 31
-!s108 1622013054.000000
-!s107 E:/GIthub/Processor/memory_ip.v|
-!s90 -reportprogress|300|-work|work|E:/GIthub/Processor/memory_ip.v|
+!s108 1622098102.000000
+!s107 E:/GIthub/Processor/tb/state_machine_tb.v|
+!s90 -reportprogress|300|-work|work|E:/GIthub/Processor/tb/state_machine_tb.v|
 !i113 1
-Z4 o-work work
-R3
-vtest1_tb
-!s110 1622013058
-!i10b 1
-!s100 6B@aZ=FCSa_`d:iKUUdFg2
-IRQZ08of50ToE>MAOS1<o43
-R1
-R0
-w1622012784
-8E:/GIthub/Processor/tb/test_tb1.v
-FE:/GIthub/Processor/tb/test_tb1.v
-L0 8
-R2
-r1
-!s85 0
-31
-!s108 1622013058.000000
-!s107 E:/GIthub/Processor/tb/test_tb1.v|
-!s90 -reportprogress|300|-work|work|E:/GIthub/Processor/tb/test_tb1.v|
-!i113 1
-R4
+o-work work
 R3
