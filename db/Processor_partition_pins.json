@@ -4,67 +4,27 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "data_out[0]",
+					"name" : "state[0]",
 					"strict" : false
 				},
 				{
-					"name" : "data_out[1]",
+					"name" : "state[1]",
 					"strict" : false
 				},
 				{
-					"name" : "data_out[2]",
+					"name" : "state[2]",
 					"strict" : false
 				},
 				{
-					"name" : "data_out[3]",
+					"name" : "state[3]",
 					"strict" : false
 				},
 				{
-					"name" : "data_out[4]",
+					"name" : "state[4]",
 					"strict" : false
 				},
 				{
-					"name" : "data_out[5]",
-					"strict" : false
-				},
-				{
-					"name" : "data_out[6]",
-					"strict" : false
-				},
-				{
-					"name" : "data_out[7]",
-					"strict" : false
-				},
-				{
-					"name" : "data_out[8]",
-					"strict" : false
-				},
-				{
-					"name" : "data_out[9]",
-					"strict" : false
-				},
-				{
-					"name" : "data_out[10]",
-					"strict" : false
-				},
-				{
-					"name" : "data_out[11]",
-					"strict" : false
-				},
-				{
-					"name" : "data_out[12]",
-					"strict" : false
-				},
-				{
-					"name" : "data_out[13]",
-					"strict" : false
-				},
-				{
-					"name" : "data_out[14]",
-					"strict" : false
-				},
-				{
-					"name" : "data_out[15]",
+					"name" : "state[5]",
 					"strict" : false
 				},
 				{
@@ -72,139 +32,71 @@
 					"strict" : false
 				},
 				{
-					"name" : "bus_in[0]",
+					"name" : "IR[0]",
 					"strict" : false
 				},
 				{
-					"name" : "ac_in[0]",
+					"name" : "IR[1]",
 					"strict" : false
 				},
 				{
-					"name" : "control[1]",
+					"name" : "IR[2]",
 					"strict" : false
 				},
 				{
-					"name" : "control[0]",
+					"name" : "IR[3]",
 					"strict" : false
 				},
 				{
-					"name" : "bus_in[1]",
+					"name" : "IR[4]",
 					"strict" : false
 				},
 				{
-					"name" : "ac_in[1]",
+					"name" : "IR[5]",
 					"strict" : false
 				},
 				{
-					"name" : "bus_in[2]",
+					"name" : "IR[6]",
 					"strict" : false
 				},
 				{
-					"name" : "ac_in[2]",
+					"name" : "IR[7]",
 					"strict" : false
 				},
 				{
-					"name" : "bus_in[3]",
+					"name" : "IR[8]",
 					"strict" : false
 				},
 				{
-					"name" : "ac_in[3]",
+					"name" : "IR[9]",
 					"strict" : false
 				},
 				{
-					"name" : "bus_in[4]",
+					"name" : "IR[10]",
 					"strict" : false
 				},
 				{
-					"name" : "ac_in[4]",
+					"name" : "IR[11]",
 					"strict" : false
 				},
 				{
-					"name" : "bus_in[5]",
+					"name" : "IR[12]",
 					"strict" : false
 				},
 				{
-					"name" : "ac_in[5]",
+					"name" : "IR[13]",
 					"strict" : false
 				},
 				{
-					"name" : "bus_in[6]",
+					"name" : "IR[14]",
 					"strict" : false
 				},
 				{
-					"name" : "ac_in[6]",
+					"name" : "IR[15]",
 					"strict" : false
 				},
 				{
-					"name" : "bus_in[7]",
-					"strict" : false
-				},
-				{
-					"name" : "ac_in[7]",
-					"strict" : false
-				},
-				{
-					"name" : "bus_in[8]",
-					"strict" : false
-				},
-				{
-					"name" : "ac_in[8]",
-					"strict" : false
-				},
-				{
-					"name" : "bus_in[9]",
-					"strict" : false
-				},
-				{
-					"name" : "ac_in[9]",
-					"strict" : false
-				},
-				{
-					"name" : "bus_in[10]",
-					"strict" : false
-				},
-				{
-					"name" : "ac_in[10]",
-					"strict" : false
-				},
-				{
-					"name" : "bus_in[11]",
-					"strict" : false
-				},
-				{
-					"name" : "ac_in[11]",
-					"strict" : false
-				},
-				{
-					"name" : "bus_in[12]",
-					"strict" : false
-				},
-				{
-					"name" : "ac_in[12]",
-					"strict" : false
-				},
-				{
-					"name" : "bus_in[13]",
-					"strict" : false
-				},
-				{
-					"name" : "ac_in[13]",
-					"strict" : false
-				},
-				{
-					"name" : "bus_in[14]",
-					"strict" : false
-				},
-				{
-					"name" : "ac_in[14]",
-					"strict" : false
-				},
-				{
-					"name" : "bus_in[15]",
-					"strict" : false
-				},
-				{
-					"name" : "ac_in[15]",
+					"name" : "start",
 					"strict" : false
 				}
 			]
