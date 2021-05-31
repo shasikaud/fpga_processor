@@ -1,7 +1,7 @@
 `timescale 1ns/1ps
 module state_machine_tb();
     reg clock, start;
-    reg [15:0] IR;
+    reg [15:0] IR = 16'd0;
     wire [5:0] state;
     // wire [5:0] next_state
 
@@ -20,47 +20,47 @@ module state_machine_tb();
 
     initial begin
         start = 0;
-        IR = 16'd0;
+        IR[15:10] = 6'd0; //
 
         #100;
 //
        start = 0;
-       IR = 16'd1;
+       IR[15:10] = 6'd1;
 
        #100;
 
        start = 1;
-       IR = 16'd1;
+       IR[15:10] = 6'd1;
 
        #100;
 
        start = 1;
-       IR = 16'd2;
+       IR[15:10] = 6'd2;
 
        #100;
 
        start = 1;
-       IR = 16'd3;
+       IR[15:10] = 6'd3;
 
        #100;
 
        start = 1;
-       IR = 16'd4;
+       IR[15:10] = 6'd4;
 
        #100;
 
        start = 1;
-       IR = 16'd5;
+       IR[15:10] = 6'd5;
 
        #100;
 
        start = 1;
-       IR = 16'd6;
+       IR[15:10] = 6'd6;
 
        #100;
 
        start = 1;
-       IR = 16'd7;
+       IR[15:10] = 6'd7;
 
        #100;
     end

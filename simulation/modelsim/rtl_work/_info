@@ -9,13 +9,13 @@ z2
 cModel Technology
 Z0 dE:/GIthub/Processor/simulation/modelsim
 vstate_machine
-!s110 1622453325
+!s110 1622455105
 !i10b 1
-!s100 N5;@Snj_^jMf1K4@z=eSe1
-IHV>TDI9ZL_kz7SQ_;RzKd2
+!s100 R^0ISb^CDC><G2JiKLLO;0
+IY316c7P_BdhK[=KV3D?RV2
 Z1 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1622452872
+w1622454864
 8E:/GIthub/Processor/state_machine.v
 FE:/GIthub/Processor/state_machine.v
 L0 9
@@ -23,7 +23,7 @@ Z2 OV;L;10.5b;63
 r1
 !s85 0
 31
-!s108 1622453324.000000
+!s108 1622455105.000000
 !s107 E:/GIthub/Processor/state_machine.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/GIthub/Processor|E:/GIthub/Processor/state_machine.v|
 !i113 1
@@ -31,13 +31,13 @@ o-vlog01compat -work work
 !s92 -vlog01compat -work work +incdir+E:/GIthub/Processor
 Z3 tCvgOpt 0
 vstate_machine_tb
-!s110 1622453350
+!s110 1622455118
 !i10b 1
-!s100 DJ2Ml^BzQhAA>fc3:0D4E2
-I>Mc1k6IZ<77aKiG9?zdC92
+!s100 a;iHP3Q1HSA58Ym@k]cV31
+IQ_?8<5^h`8B[9^D8XcfYo3
 R1
 R0
-w1622453099
+w1622455055
 8E:/GIthub/Processor/tb/state_machine_tb.v
 FE:/GIthub/Processor/tb/state_machine_tb.v
 L0 2
@@ -45,7 +45,7 @@ R2
 r1
 !s85 0
 31
-!s108 1622453350.000000
+!s108 1622455118.000000
 !s107 E:/GIthub/Processor/tb/state_machine_tb.v|
 !s90 -reportprogress|300|-work|work|E:/GIthub/Processor/tb/state_machine_tb.v|
 !i113 1
