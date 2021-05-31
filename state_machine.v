@@ -23,13 +23,15 @@ parameter clac = 6'd4;
 parameter ldac1 = 6'd5;
 parameter ldac2 = 6'd6;
 parameter ldac3 = 6'd7;
-parameter stac1 = 6'd8;
-parameter stac2 = 6'd9;
-parameter stac3 = 6'd10;
-parameter mvacr = 16'd11;
-parameter mvrac = 16'd12;
-parameter add = 6'd13;
-parameter mul = 6'd14;
+parameter ldac4 = 6'd8;
+parameter stac1 = 6'd9;
+parameter stac2 = 6'd10;
+parameter stac3 = 6'd11;
+parameter stac4 = 6'd12;
+parameter mvacr = 6'd13;
+parameter mvrac = 6'd14;
+parameter add = 6'd15;
+parameter mul = 6'd16;
 
 
 //reg[5:0] next_state = 6'd0;
@@ -45,12 +47,12 @@ always @(posedge clock)
 
         if(state == idle && start == 0) // remains in the idle state till the start signal is received
             begin
-            state <= 6'd0;
+            state <=  idle;
             end
 
         // start == 1 
         // fetch cycle
-        if (state == idle && start == 1)
+        else if (state == idle && start == 1)
             begin
             state  <= fetch1;
             end
@@ -69,9 +71,20 @@ always @(posedge clock)
             begin
             case(IR[15:0])   
 
-            16'b0: state  <= idle;
-            16'b1: state  <= add;
-            
+            16'd0: state  <= idle;
+            16'd1: state  <= clac;
+            16'd2: state  <= ldac1;
+            16'd3: state  <= stac1;
+            16'd4: state  <= mvacr;
+            16'd5: state  <= mvrac;
+            16'd6: state  <= add;
+            16'd7: state  <= mul;
+            // 16'd14: state  <= idle;
+            // 16'd15: state  <= add;
+            // 16'd16: state  <= idle;
+            // 16'd17: state  <= add;
+            // 16'd18: state  <= idle;
+            // 16'd19: state  <= add;
 
         //i_clac: state  <= clac;
 
@@ -82,7 +95,7 @@ always @(posedge clock)
 
             end
 
-        else if(state == add && start == 1)
+        else if((state == add || state == ldac4 || state == stac4 || state == clac || state == mvacr || state == mvrac || state == mul ) && start == 1 )
             begin
             state <=idle;
             end
