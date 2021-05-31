@@ -22,32 +22,47 @@ module state_machine_tb();
         start = 0;
         IR = 16'd0;
 
-        #50;
+        #100;
 //
        start = 0;
        IR = 16'd1;
 
-       #50;
+       #100;
 
        start = 1;
        IR = 16'd1;
 
-       #50;
-//
-//        start = 1;
-//        IR = 16'd2;
-//
-//        #50; 
-//
-//        start = 1;
-//        IR = 16'd3;
-//
-//        #50; 
-//
-//        start = 1;
-//        IR = 16'd4;
-//
-//        #50; 
+       #100;
+
+       start = 1;
+       IR = 16'd2;
+
+       #100;
+
+       start = 1;
+       IR = 16'd3;
+
+       #100;
+
+       start = 1;
+       IR = 16'd4;
+
+       #100;
+
+       start = 1;
+       IR = 16'd5;
+
+       #100;
+
+       start = 1;
+       IR = 16'd6;
+
+       #100;
+
+       start = 1;
+       IR = 16'd7;
+
+       #100;
     end
 
 endmodule        
