@@ -1,3 +1,8 @@
+
+# Instruction format
+IR[15:10] operation
+IR[9:0] operand address
+
 # Micro-instructions
 
 ## Fetch
