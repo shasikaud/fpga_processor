@@ -7,7 +7,8 @@ IR[9:0] operand address
 
 ## Fetch
 * Fetch 1 : AR <= PC; read
-* Fetch 2 : PC <= PC + 1  
+* Fetch 2 : PC <= PC + 1 
+<!-- * Fetch 2.5 : add latency-->
 * Fetch 3 : IR <= I_M[t]  
 
 ## CLAC
