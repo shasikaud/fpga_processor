@@ -28,9 +28,9 @@ module test_tb2();
 
 reg clock, start, mem_write_ins, mem_write_data_ext;
 reg [15:0] iram_in_ext,data_in_ext;
-reg[15:0] addr_ext, mem_write; 
-reg[1:0]  read_en;
-wire[15:0] iram_in, dram_in, data_out;
+wire[15:0] addr_ext, mem_write, dram_in, data_out; 
+wire[1:0]  read_en;
+wire[15:0] iram_in;
 
 integer               data_file    ; // file handler
 integer               scan_file    ; // file handler
@@ -46,7 +46,7 @@ top_layer u_top_layer(
     .addr_ext           ( addr_ext           ),
     .mem_write_data_ext ( mem_write_data_ext ),
     .mem_write_ins      ( mem_write_ins      ),
-    .read_en_ext        ( read_en            ),
+    .read_en            ( read_en            ),
     .data_in_ext        ( data_in_ext        ),
     .iram_in            ( iram_in            )
 );

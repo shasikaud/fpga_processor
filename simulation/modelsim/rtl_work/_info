@@ -8,26 +8,295 @@ z2
 !i10f 100
 cModel Technology
 Z0 dE:/GIthub/Processor/simulation/modelsim
-vControl_Unit
-!s110 1623746315
+vAC
+Z1 !s110 1623756152
 !i10b 1
-!s100 @Dl8^>j4AoMX2Y@e5HH=`3
-Ik2i8_1Xm3eNV^61dzC;9>2
-VDg1SIo80bB@j0V0VzS_@n1
+!s100 5ZEbY^io[W:^SnDVPdP2R0
+IzoS5>`0cWD2d_=DhOT7VG0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1623745862
-8E:/GIthub/Processor/Control_Unit.v
-FE:/GIthub/Processor/Control_Unit.v
-L0 9
-OV;L;10.5b;63
+Z3 w1623745862
+8E:/GIthub/Processor/AC.v
+FE:/GIthub/Processor/AC.v
+L0 1
+Z4 OV;L;10.5b;63
 r1
 !s85 0
 31
-!s108 1623746313.000000
+Z5 !s108 1623756152.000000
+!s107 E:/GIthub/Processor/AC.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/GIthub/Processor|E:/GIthub/Processor/AC.v|
+!i113 1
+Z6 o-vlog01compat -work work
+Z7 !s92 -vlog01compat -work work +incdir+E:/GIthub/Processor
+Z8 tCvgOpt 0
+n@a@c
+vALU
+R1
+!i10b 1
+!s100 ^F>zGA?L@7a1XbA2O^BHh2
+IABbI=6E^i`<IgFz_od0M30
+R2
+R0
+R3
+8E:/GIthub/Processor/ALU.v
+FE:/GIthub/Processor/ALU.v
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 E:/GIthub/Processor/ALU.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/GIthub/Processor|E:/GIthub/Processor/ALU.v|
+!i113 1
+R6
+R7
+R8
+n@a@l@u
+vBUS
+R1
+!i10b 1
+!s100 zD9=z70>WGObSzhlIA^lB3
+IT=UOBD69?3F>_zSoUJbEb3
+R2
+R0
+R3
+8E:/GIthub/Processor/BUS.v
+FE:/GIthub/Processor/BUS.v
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 E:/GIthub/Processor/BUS.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/GIthub/Processor|E:/GIthub/Processor/BUS.v|
+!i113 1
+R6
+R7
+R8
+n@b@u@s
+vControl_Unit
+R1
+!i10b 1
+!s100 a8Q^g60L7oY<_^Ln7MAWc0
+Ik<zFe3Kj4dRAAdOJSChBI3
+R2
+R0
+w1623748101
+8E:/GIthub/Processor/Control_Unit.v
+FE:/GIthub/Processor/Control_Unit.v
+L0 9
+R4
+r1
+!s85 0
+31
+R5
 !s107 E:/GIthub/Processor/Control_Unit.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/GIthub/Processor|E:/GIthub/Processor/Control_Unit.v|
 !i113 1
-o-vlog01compat -work work
-!s92 -vlog01compat -work work +incdir+E:/GIthub/Processor
-tCvgOpt 0
+R6
+R7
+R8
 n@control_@unit
+vdatapath
+!s110 1623756153
+!i10b 1
+!s100 <l5?K[:7TD:3[ZbYNX;N<3
+IK]O;S]_@g8MSIoZ3:F];]3
+R2
+R0
+w1623749835
+8E:/GIthub/Processor/datapath.v
+FE:/GIthub/Processor/datapath.v
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 E:/GIthub/Processor/datapath.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/GIthub/Processor|E:/GIthub/Processor/datapath.v|
+!i113 1
+R6
+R7
+R8
+vIR
+R1
+!i10b 1
+!s100 E>R><kzc0QWAdX>HK_;^G1
+II@ghlZO[UFH4LA@R=0UY@3
+R2
+R0
+R3
+8E:/GIthub/Processor/IR.v
+FE:/GIthub/Processor/IR.v
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 E:/GIthub/Processor/IR.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/GIthub/Processor|E:/GIthub/Processor/IR.v|
+!i113 1
+R6
+R7
+R8
+n@i@r
+vmemory_ip
+Z9 !s110 1623756151
+!i10b 1
+!s100 m3KQBG6cFB:KW:9E=mn;z2
+IO=;aEg`PnCVSHZk:YAL>[2
+R2
+R0
+R3
+8E:/GIthub/Processor/memory_ip.v
+FE:/GIthub/Processor/memory_ip.v
+L0 40
+R4
+r1
+!s85 0
+31
+Z10 !s108 1623756151.000000
+!s107 E:/GIthub/Processor/memory_ip.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/GIthub/Processor|E:/GIthub/Processor/memory_ip.v|
+!i113 1
+R6
+R7
+R8
+vPC
+R1
+!i10b 1
+!s100 dn85@iCJUmol3[3kgoSbI3
+IEB<ciB<1U`G?>^WGm_eg@1
+R2
+R0
+R3
+8E:/GIthub/Processor/PC.v
+FE:/GIthub/Processor/PC.v
+L0 1
+R4
+r1
+!s85 0
+31
+R10
+!s107 E:/GIthub/Processor/PC.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/GIthub/Processor|E:/GIthub/Processor/PC.v|
+!i113 1
+R6
+R7
+R8
+n@p@c
+vProcessor
+R9
+!i10b 1
+!s100 N=Z4NTU>QJB4dNEmzd;8J0
+IV]b5i`Eb[NB1J1em`38zK3
+R2
+R0
+w1623754928
+8E:/GIthub/Processor/Processor.v
+FE:/GIthub/Processor/Processor.v
+L0 1
+R4
+r1
+!s85 0
+31
+R10
+!s107 E:/GIthub/Processor/Processor.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/GIthub/Processor|E:/GIthub/Processor/Processor.v|
+!i113 1
+R6
+R7
+R8
+n@processor
+vregister
+R9
+!i10b 1
+!s100 O2@edOc6SB[YHDAgZ4JNG2
+IiL;c[Zol@]@CP:OA16jDE3
+R2
+R0
+R3
+8E:/GIthub/Processor/Register.v
+FE:/GIthub/Processor/Register.v
+L0 1
+R4
+r1
+!s85 0
+31
+R10
+!s107 E:/GIthub/Processor/Register.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/GIthub/Processor|E:/GIthub/Processor/Register.v|
+!i113 1
+R6
+R7
+R8
+vstate_machine
+R1
+!i10b 1
+!s100 R^0ISb^CDC><G2JiKLLO;0
+IY316c7P_BdhK[=KV3D?RV2
+R2
+R0
+R3
+8E:/GIthub/Processor/state_machine.v
+FE:/GIthub/Processor/state_machine.v
+L0 9
+R4
+r1
+!s85 0
+31
+R5
+!s107 E:/GIthub/Processor/state_machine.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/GIthub/Processor|E:/GIthub/Processor/state_machine.v|
+!i113 1
+R6
+R7
+R8
+vtest_tb2
+!s110 1623756177
+!i10b 1
+!s100 k^h[[lIGf>R5X74HbPFSD2
+IV`;JPZ]Q]]gQ?]5d0M5:z2
+R2
+R0
+w1623755438
+8E:/GIthub/Processor/tb/test_tb2.v
+FE:/GIthub/Processor/tb/test_tb2.v
+L0 27
+R4
+r1
+!s85 0
+31
+!s108 1623756177.000000
+!s107 E:/GIthub/Processor/tb/test_tb2.v|
+!s90 -reportprogress|300|-work|work|E:/GIthub/Processor/tb/test_tb2.v|
+!i113 1
+o-work work
+R8
+vtop_layer
+R1
+!i10b 1
+!s100 oB6oWE@zK>oS8b:;8eXN83
+IzY<0SIFD7ckg@]am7felS3
+R2
+R0
+w1623755970
+8E:/GIthub/Processor/top_layer.v
+FE:/GIthub/Processor/top_layer.v
+L0 2
+R4
+r1
+!s85 0
+31
+R5
+!s107 E:/GIthub/Processor/top_layer.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/GIthub/Processor|E:/GIthub/Processor/top_layer.v|
+!i113 1
+R6
+R7
+R8
