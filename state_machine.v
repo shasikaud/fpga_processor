@@ -13,7 +13,7 @@ input start;           // Start signal to start the state machine from its idle 
 input[15:0] IR;        // 16 bit instruction register input
 output reg[5:0] state = 6'd0; // 6 bit output to the conntrol units
 // reg[5:0] next_state = 6'd0;
-
+// reg [5:0] temp_IR = IR[15:10];
 // Define the possible states
 parameter idle = 6'd0;
 parameter fetch1 = 6'd1;
@@ -69,16 +69,15 @@ always @(posedge clock)
 
         else if(state == fetch3 && start == 1)  
             begin
-            case(IR[15:0])   
-
-            16'd0: state  <= idle;
-            16'd1: state  <= clac;
-            16'd2: state  <= ldac1;
-            16'd3: state  <= stac1;
-            16'd4: state  <= mvacr;
-            16'd5: state  <= mvrac;
-            16'd6: state  <= add;
-            16'd7: state  <= mul;
+            case(IR[15:10])   
+            6'd0: state  <= idle;
+            6'd1: state  <= clac;
+            6'd2: state  <= ldac1;
+            6'd3: state  <= stac1;
+            6'd4: state  <= mvacr;
+            6'd5: state  <= mvrac;
+            6'd6: state  <= add;
+            6'd7: state  <= mul;
             // 16'd14: state  <= idle;
             // 16'd15: state  <= add;
             // 16'd16: state  <= idle;

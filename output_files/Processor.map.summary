@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 Analysis & Synthesis Status : Successful - Tue Jun 15 11:51:47 2021
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+=======
+Analysis & Elaboration Status : Successful - Mon May 31 15:28:10 2021
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+>>>>>>> dbbfff720d1be69cccd0fcf8c04fdd6156816fd2
 Revision Name : Processor
 Top-level Entity Name : Control_Unit
 Family : Cyclone IV E

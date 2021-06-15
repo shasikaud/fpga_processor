@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 |Control_Unit
 clock => mem_write[0]~reg0.CLK
 clock => mem_write[1]~reg0.CLK
@@ -41,5 +42,48 @@ control_out[14] << control_out[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 control_out[15] << control_out[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 mem_write[0] << mem_write[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 mem_write[1] << mem_write[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+=======
+|state_machine
+clock => state[0]~reg0.CLK
+clock => state[1]~reg0.CLK
+clock => state[2]~reg0.CLK
+clock => state[3]~reg0.CLK
+clock => state[4]~reg0.CLK
+clock => state[5]~reg0.CLK
+start => always0.IN1
+start => always0.IN1
+start => always0.IN1
+start => always0.IN1
+start => always0.IN1
+start => state.OUTPUTSELECT
+start => state.OUTPUTSELECT
+start => state.OUTPUTSELECT
+start => state.OUTPUTSELECT
+start => state.OUTPUTSELECT
+start => state.OUTPUTSELECT
+start => always0.IN1
+IR[0] => ~NO_FANOUT~
+IR[1] => ~NO_FANOUT~
+IR[2] => ~NO_FANOUT~
+IR[3] => ~NO_FANOUT~
+IR[4] => ~NO_FANOUT~
+IR[5] => ~NO_FANOUT~
+IR[6] => ~NO_FANOUT~
+IR[7] => ~NO_FANOUT~
+IR[8] => ~NO_FANOUT~
+IR[9] => ~NO_FANOUT~
+IR[10] => Decoder0.IN5
+IR[11] => Decoder0.IN4
+IR[12] => Decoder0.IN3
+IR[13] => Decoder0.IN2
+IR[14] => Decoder0.IN1
+IR[15] => Decoder0.IN0
+state[0] <= state[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+state[1] <= state[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+state[2] <= state[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+state[3] <= state[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+state[4] <= state[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+state[5] <= state[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+>>>>>>> dbbfff720d1be69cccd0fcf8c04fdd6156816fd2
 
 

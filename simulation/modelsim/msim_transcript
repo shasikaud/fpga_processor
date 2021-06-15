@@ -10,6 +10,7 @@
 # Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
+<<<<<<< HEAD
 # vlog -vlog01compat -work work +incdir+D:/OLD\ ACA/FPGA/Project/Test_project/fpga_processor {D:/OLD ACA/FPGA/Project/Test_project/fpga_processor/Control_Unit.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 # Start time: 11:53:20 on Jun 15,2021
@@ -51,4 +52,40 @@ run -all
 # Break key hit
 # Simulation stop requested.
 # End time: 11:57:06 on Jun 15,2021, Elapsed time: 0:03:23
+=======
+# vlog -vlog01compat -work work +incdir+E:/GIthub/Processor {E:/GIthub/Processor/state_machine.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:28:25 on May 31,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/GIthub/Processor" E:/GIthub/Processor/state_machine.v 
+# -- Compiling module state_machine
+# 
+# Top level modules:
+# 	state_machine
+# End time: 15:28:25 on May 31,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vlog -reportprogress 300 -work work E:/GIthub/Processor/tb/state_machine_tb.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:28:38 on May 31,2021
+# vlog -reportprogress 300 -work work E:/GIthub/Processor/tb/state_machine_tb.v 
+# -- Compiling module state_machine_tb
+# 
+# Top level modules:
+# 	state_machine_tb
+# End time: 15:28:38 on May 31,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.state_machine_tb
+# vsim work.state_machine_tb 
+# Start time: 15:28:40 on May 31,2021
+# Loading work.state_machine_tb
+# Loading work.state_machine
+add wave -position end  sim:/state_machine_tb/clock
+add wave -position end  sim:/state_machine_tb/IR
+add wave -position 1  sim:/state_machine_tb/start
+add wave -position end  sim:/state_machine_tb/state
+run -all
+# Break key hit
+# Simulation stop requested.
+# End time: 15:29:46 on May 31,2021, Elapsed time: 0:01:06
+>>>>>>> dbbfff720d1be69cccd0fcf8c04fdd6156816fd2
 # Errors: 0, Warnings: 0
