@@ -1,103 +1,33 @@
 m255
 K4
 z2
-!s11f vlog 2020.1 2020.02, Feb 28 2020
 13
 !s112 1.1
 !i10d 8192
 !i10e 25
 !i10f 100
 cModel Technology
-<<<<<<< HEAD
-Z0 dD:/OLD ACA/FPGA/Project/Test_project/fpga_processor/simulation/modelsim
-vControl_Unit
-!s110 1623738200
-!i10b 1
-!s100 E3DlnP6cO3Lc50Nzl_Kg23
-Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
-Iej4LA:4g6B_<D7AU9iXl;0
-Z2 VDg1SIo80bB@j0V0VzS_@n1
-R0
-w1623737489
-8D:/OLD ACA/FPGA/Project/Test_project/fpga_processor/Control_Unit.v
-FD:/OLD ACA/FPGA/Project/Test_project/fpga_processor/Control_Unit.v
-!i122 0
-L0 9 159
-Z3 OV;L;2020.1;71
-r1
-!s85 0
-31
-!s108 1623738200.000000
-!s107 D:/OLD ACA/FPGA/Project/Test_project/fpga_processor/Control_Unit.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/OLD ACA/FPGA/Project/Test_project/fpga_processor|D:/OLD ACA/FPGA/Project/Test_project/fpga_processor/Control_Unit.v|
-!i113 1
-o-vlog01compat -work work
-!s92 -vlog01compat -work work {+incdir+D:/OLD ACA/FPGA/Project/Test_project/fpga_processor}
-Z4 tCvgOpt 0
-n@control_@unit
-vControl_unit_tb
-!s110 1623738219
-!i10b 1
-!s100 Fz^2lgg>bT[UM=2k<?1cY2
-R1
-I_`E@XY2V5eU6ofH?[EzY`3
-=======
 Z0 dE:/GIthub/Processor/simulation/modelsim
-vstate_machine
-!s110 1622455105
+vControl_Unit
+!s110 1623746315
 !i10b 1
-!s100 R^0ISb^CDC><G2JiKLLO;0
-IY316c7P_BdhK[=KV3D?RV2
-Z1 VDg1SIo80bB@j0V0VzS_@n1
+!s100 @Dl8^>j4AoMX2Y@e5HH=`3
+Ik2i8_1Xm3eNV^61dzC;9>2
+VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1622454864
-8E:/GIthub/Processor/state_machine.v
-FE:/GIthub/Processor/state_machine.v
+w1623745862
+8E:/GIthub/Processor/Control_Unit.v
+FE:/GIthub/Processor/Control_Unit.v
 L0 9
-Z2 OV;L;10.5b;63
+OV;L;10.5b;63
 r1
 !s85 0
 31
-!s108 1622455105.000000
-!s107 E:/GIthub/Processor/state_machine.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/GIthub/Processor|E:/GIthub/Processor/state_machine.v|
+!s108 1623746313.000000
+!s107 E:/GIthub/Processor/Control_Unit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/GIthub/Processor|E:/GIthub/Processor/Control_Unit.v|
 !i113 1
 o-vlog01compat -work work
 !s92 -vlog01compat -work work +incdir+E:/GIthub/Processor
-Z3 tCvgOpt 0
-vstate_machine_tb
-!s110 1622455118
-!i10b 1
-!s100 a;iHP3Q1HSA58Ym@k]cV31
-IQ_?8<5^h`8B[9^D8XcfYo3
-R1
-R0
-w1622455055
-8E:/GIthub/Processor/tb/state_machine_tb.v
-FE:/GIthub/Processor/tb/state_machine_tb.v
-L0 2
->>>>>>> dbbfff720d1be69cccd0fcf8c04fdd6156816fd2
-R2
-R0
-w1623738058
-8D:/OLD ACA/FPGA/Project/Test_project/fpga_processor/tb/Control_unit_tb.v
-FD:/OLD ACA/FPGA/Project/Test_project/fpga_processor/tb/Control_unit_tb.v
-!i122 1
-L0 2 73
-R3
-r1
-!s85 0
-31
-<<<<<<< HEAD
-!s108 1623738219.000000
-!s107 D:/OLD ACA/FPGA/Project/Test_project/fpga_processor/tb/Control_unit_tb.v|
-!s90 -reportprogress|300|-work|work|D:/OLD ACA/FPGA/Project/Test_project/fpga_processor/tb/Control_unit_tb.v|
-=======
-!s108 1622455118.000000
-!s107 E:/GIthub/Processor/tb/state_machine_tb.v|
-!s90 -reportprogress|300|-work|work|E:/GIthub/Processor/tb/state_machine_tb.v|
->>>>>>> dbbfff720d1be69cccd0fcf8c04fdd6156816fd2
-!i113 1
-o-work work
-R4
-n@control_unit_tb
+tCvgOpt 0
+n@control_@unit
