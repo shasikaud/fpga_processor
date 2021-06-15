@@ -1,13 +1,13 @@
 //start - push button
 module top_layer(clk, start, dram_in, iram_in_ext,
 				 data_out, addr_out, mem_write_data_ext, mem_write_ins,
-				 read_en,mem_write_data,data_out,data_in_ext,iram_in);
+				 read_en, data_in_ext,iram_in);
 
 
 input start, mem_write_ins;			// start the process
 input [15:0] iram_in_ext;
 input [15:0] data_in_ext;
-input mem_write_data_ext;
+input mem_write_data_ext, read_en_ext;
 
 output wire [15:0] data_out; // data memory write output (data_bus <= input :: memory <= output)
 
@@ -17,7 +17,7 @@ output wire [15:0] dram_in; // data memory read output (data_bus <= output :: me
 
 wire[5:0] state;
 wire[15:0] data_out_proc, ir_out;
-wire [1:0] read_en;
+output wire [1:0] read_en;
 wire mem_write_data_proc, mem_write_data;
 
 // clock clock(clk);  //clock module
@@ -58,8 +58,7 @@ memory_ip  memory_ip_inst(          // instantiate instruction memory
 	.data(iram_in_ext) ,	// input [15:0] data_sig
 	.rden(read_en[0]) ,	// input  rden_sig
 	.wren(mem_write_ins) ,	// input  wren_sig
-	.q(iram_in) 	// output [15:0] q_sig
-    
+	.q(iram_in) 	// output [15:0] q_sig   
 );
 
 

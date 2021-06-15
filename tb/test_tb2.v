@@ -12,13 +12,15 @@ inputs:
     mem_write_ins: write enable of instruction memory
     mem_write_data_ext: write enable for external data write (testbench)
     iram_in_ext: enable signal to store instructions externally iram
-    data_in_ext: enable signal to store data externally data memory
+    data_in_ext: contains external data to be written into the data memory
+
 outputs:    
     dram_in: 16-bit data to be written to data memory
     addr_out: address of the data memory
     mem_write: 
     data_out: for testbench display purpose 
-
+    read_en: not required (testbench check)
+    iram_in: output of the instruciton memory && input to the processor
 */
 
 `timescale 1ns/1ps
@@ -27,6 +29,9 @@ module test_tb2();
 reg clock, start, mem_write_ins, mem_write_data_ext;
 reg [15:0] iram_in_ext,data_in_ext;
 wire[15:0] addr_out, mem_write, dram_in, data_out; 
+wire[1:0]  read_en;
+wire[15:0] iram_in;
+
 integer               data_file    ; // file handler
 integer               scan_file    ; // file handler
 
@@ -42,8 +47,6 @@ top_layer u_top_layer(
     .mem_write_data_ext ( mem_write_data_ext ),
     .mem_write_ins      ( mem_write_ins      ),
     .read_en            ( read_en            ),
-    .mem_write_data     ( mem_write_data     ),
-    .data_out           ( data_out           ),
     .data_in_ext        ( data_in_ext        ),
     .iram_in            ( iram_in            )
 );
