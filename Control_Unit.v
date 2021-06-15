@@ -6,7 +6,7 @@ inputs  :   clock,
 outputs :   countrol out,
             mem_write
 */
-module control_unit(clock, state, control_out, mem_write);
+module Control_Unit(clock, state, control_out, mem_write);
 
 input clock;
 input[5:0] state;
@@ -14,20 +14,22 @@ output reg[15:0] control_out;
 output reg[1:0] mem_write; 
 
 parameter idle = 6'd0;
-parameter fetch1 = 5'd1;
-parameter fetch2 = 5'd2;
-parameter fetch3 = 5'd3;
-parameter clac = 5'd4;
-parameter ldac1 = 5'd5;
-parameter ldac2 = 5'd6;
-parameter ldac3 = 5'd7;
-parameter stac1 = 5'd8;
-parameter stac2 = 5'd9;
-parameter stac3 = 5'd10;
-parameter mvacr = 5'd11;
-parameter mvrac = 5'd12;
-parameter add = 5'd13;
-parameter mul = 5'd14;
+parameter fetch1 = 6'd1;
+parameter fetch2 = 6'd2;
+parameter fetch3 = 6'd3;
+parameter clac = 6'd4;
+parameter ldac1 = 6'd5;
+parameter ldac2 = 6'd6;
+parameter ldac3 = 6'd7;
+parameter ldac4 = 6'd8;
+parameter stac1 = 6'd9;
+parameter stac2 = 6'd10;
+parameter stac3 = 6'd11;
+parameter stac4 = 6'd12;
+parameter mvacr = 6'd13;
+parameter mvrac = 6'd14;
+parameter add = 6'd15;
+parameter mul = 6'd16;
 
 //control signal
 // [1] branch
@@ -57,98 +59,105 @@ end
 fetch1:
 
 begin
-control_out <= 16'd3080;
+control_out <= 16'd1056;
 mem_write <= 2'd0;
 end
 
 fetch2:
 
 begin
-control_out <= 16'd4608;
+control_out <= 16'd2;
 mem_write <= 2'd0;
 end
 
 fetch3:
 
 begin
-control_out <= 16'd98304;
+control_out <= 16'd1;
 mem_write <= 2'd0;
 end
 
 clac:
 
 begin
-control_out <= 16'd4;
+control_out <= 16'd16384;
 mem_write <= 2'd0;
 end
 
 ldac1:
 
 begin
-control_out <= 16'd3088;
+control_out <= 16'd4160;
 mem_write <= 2'd0;
 end
 
 ldac2:
 
 begin
-control_out <= 16'd39168;
+control_out <= 16'd2;
 mem_write <= 2'd0;
 end
 
 ldac3:
 
 begin
-control_out <= 16'd8224;
+control_out <= 16'd0;
 mem_write <= 2'd0;
 end
 
 stac1:
 
 begin
-control_out <= 16'd11264;
+control_out <= 16'd64;
 mem_write <= 2'd0;
 end
 
 stac2:
 
 begin
-control_out <= 16'd12544;
+control_out <= 16'd4130;
 mem_write <= 2'd1;
 end
 
 stac3:
 
 begin
-control_out <= 16'd47104;
+control_out <= 16'd16;
+mem_write <= 2'd0;
+end
+
+stac4:
+
+begin
+control_out <= 16'd0;
 mem_write <= 2'd0;
 end
 
 mvacr:
 
 begin
-control_out <= 16'd16512;
+control_out <= 16'd16;
 mem_write <= 2'd0;
 end
 
 mvrac:
 
 begin
-control_out <= 16'd18464;
+control_out <= 16'd4;
 mem_write <= 2'd0;
 end
 
 add:
 
 begin
-control_out <= 16'd33;
+control_out <= 16'd548;
 mem_write <= 2'd0;
 end
 
 mul:
 
 begin
-control_out <= 16'd34;
+control_out <= 16'd1060;
 mem_write <= 2'd0;
 end
 

@@ -1,0 +1,75 @@
+`timescale 1ns/1ps
+module Control_unit_tb();
+    reg clock;
+    reg[5:0] state;
+    wire [15:0] control_out;
+    wire [1:0] mem_write;
+
+    Control_Unit u_control_unit(
+        .clock       ( clock       ),
+        .state       ( state       ),
+        .control_out ( control_out ),
+        .mem_write   ( mem_write   )
+    );
+
+	always
+		begin
+			#5 clock = 1;
+			#5 clock = 0;
+		end
+		
+	initial begin
+        #10;
+        state <= 6'd0;
+
+        #10 ;
+        state <= 6'd1;
+
+        #10;
+        state <= 6'd2;
+
+        #10; 
+        state <= 6'd3;
+
+        #10;
+        state <= 6'd4;
+
+        #10 ;
+        state <= 6'd5;
+
+        #10 ;
+        state <= 6'd6;
+
+        #10; 
+        state <= 6'd7;
+
+        #10;
+        state <= 6'd8;
+
+        #10 ;
+        state <= 6'd9;
+
+        #10;
+        state <= 6'd10;
+
+        #10; 
+        state <= 6'd11;
+
+        #10 ;
+        state <= 6'd12;
+
+        #10;
+        state <= 6'd13;
+
+        #10; 
+        state <= 6'd14;
+
+        #10;
+    end
+
+   
+
+
+
+endmodule
+

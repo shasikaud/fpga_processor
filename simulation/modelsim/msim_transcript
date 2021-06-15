@@ -1,57 +1,54 @@
-# Reading E:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
+# Reading pref.tcl
 # do Processor_run_msim_rtl_verilog.do
 # if {[file exists rtl_work]} {
 # 	vdel -lib rtl_work -all
 # }
 # vlib rtl_work
 # vmap work rtl_work
-# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
 # vmap work rtl_work 
-# Copying E:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -vlog01compat -work work +incdir+E:/GIthub/Processor {E:/GIthub/Processor/state_machine.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:58:44 on May 31,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/GIthub/Processor" E:/GIthub/Processor/state_machine.v 
-# -- Compiling module state_machine
+# vlog -vlog01compat -work work +incdir+D:/OLD\ ACA/FPGA/Project/Test_project/fpga_processor {D:/OLD ACA/FPGA/Project/Test_project/fpga_processor/Control_Unit.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:53:20 on Jun 15,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/OLD ACA/FPGA/Project/Test_project/fpga_processor" D:/OLD ACA/FPGA/Project/Test_project/fpga_processor/Control_Unit.v 
+# -- Compiling module Control_Unit
 # 
 # Top level modules:
-# 	state_machine
-# End time: 14:58:45 on May 31,2021, Elapsed time: 0:00:01
+# 	Control_Unit
+# End time: 11:53:20 on Jun 15,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-vlog -reportprogress 300 -work work E:/GIthub/Processor/tb/state_machine_tb.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:59:07 on May 31,2021
-# vlog -reportprogress 300 -work work E:/GIthub/Processor/tb/state_machine_tb.v 
-# -- Compiling module state_machine_tb
-# 
-# Top level modules:
-# 	state_machine_tb
-# End time: 14:59:07 on May 31,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work E:/GIthub/Processor/tb/state_machine_tb.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:59:10 on May 31,2021
-# vlog -reportprogress 300 -work work E:/GIthub/Processor/tb/state_machine_tb.v 
-# -- Compiling module state_machine_tb
+vlog -reportprogress 300 -work work {D:/OLD ACA/FPGA/Project/Test_project/fpga_processor/tb/Control_unit_tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:53:39 on Jun 15,2021
+# vlog -reportprogress 300 -work work D:/OLD ACA/FPGA/Project/Test_project/fpga_processor/tb/Control_unit_tb.v 
+# -- Compiling module Control_unit_tb
 # 
 # Top level modules:
-# 	state_machine_tb
-# End time: 14:59:10 on May 31,2021, Elapsed time: 0:00:00
+# 	Control_unit_tb
+# End time: 11:53:40 on Jun 15,2021, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-vsim work.state_machine_tb
-# vsim work.state_machine_tb 
-# Start time: 14:59:16 on May 31,2021
-# Loading work.state_machine_tb
-# Loading work.state_machine
-add wave -position end  sim:/state_machine_tb/state
-add wave -position end  sim:/state_machine_tb/start
-add wave -position end  sim:/state_machine_tb/clock
-add wave -position end  sim:/state_machine_tb/IR
+vsim work.Control_unit_tb
+# vsim work.Control_unit_tb 
+# Start time: 11:53:43 on Jun 15,2021
+# Loading work.Control_unit_tb
+# Loading work.Control_Unit
+# Trace back: Error QStructure::sort: invalid command name ""
+#   <6:C:/mtitcl/vsim/qstructure.tc_:2478: ::QStructure::sort .main_pane.structure 2 ascending
+#   <5:eval:1: ::QStructure::structsort .main_pane.structure 2 ascending
+#   <4:eval:1: ::namespace inscope ::QStructure {structsort .main_pane.structure} 2 ascending
+#   >3:proc:26: ::.main_pane.structure.interior.cs.body.struct sort 2 ascending
+#   >2:proc:10: ::.main_pane.structure.interior.cs.body.struct _initializeSortColumn
+#   <1:eval:1: ::namespace inscope ::vsimwidgets::Hierarchy {::.main_pane.structure.interior.cs.body.struct _initializeSortColumn}
+add wave -position end  sim:/Control_unit_tb/clock
+add wave -position end  sim:/Control_unit_tb/state
+add wave -position end  sim:/Control_unit_tb/control_out
+add wave -position end  sim:/Control_unit_tb/mem_write
 run -all
 # Break key hit
 # Simulation stop requested.
-# End time: 15:04:51 on May 31,2021, Elapsed time: 0:05:35
+# End time: 11:57:06 on Jun 15,2021, Elapsed time: 0:03:23
 # Errors: 0, Warnings: 0

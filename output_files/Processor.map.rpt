@@ -1,27 +1,35 @@
-Analysis & Elaboration report for Processor
-Mon May 31 14:58:12 2021
-Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Analysis & Synthesis report for Processor
+Tue Jun 15 11:51:47 2021
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
 ---------------------
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Elaboration Summary
-  3. Parallel Compilation
-  4. Parameter Settings for User Entity Instance: Top-level Entity: |state_machine
-  5. Analysis & Elaboration Settings
-  6. Analysis & Elaboration Messages
-  7. Analysis & Elaboration Suppressed Messages
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for User Entity Instance: Top-level Entity: |Control_Unit
+ 12. Post-Synthesis Netlist Statistics for Top Partition
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
+ 15. Analysis & Synthesis Suppressed Messages
 
 
 
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2018  Intel Corporation. All rights reserved.
+Copyright (C) 2020  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
-and other software and tools, and its AMPP partner logic 
+and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
@@ -31,78 +39,37 @@ the Intel FPGA IP License Agreement, or other applicable license
 agreement, including, without limitation, that your use is for
 the sole purpose of programming logic devices manufactured by
 Intel and sold by Intel or its authorized distributors.  Please
-refer to the applicable agreement for further details.
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
 
 
 
 +----------------------------------------------------------------------------------+
-; Analysis & Elaboration Summary                                                   ;
+; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status      ; Successful - Mon May 31 14:58:12 2021       ;
-; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Analysis & Synthesis Status        ; Successful - Tue Jun 15 11:51:47 2021       ;
+; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; Processor                                   ;
-; Top-level Entity Name              ; state_machine                               ;
+; Top-level Entity Name              ; Control_Unit                                ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; N/A until Partition Merge                   ;
-;     Total combinational functions  ; N/A until Partition Merge                   ;
-;     Dedicated logic registers      ; N/A until Partition Merge                   ;
-; Total registers                    ; N/A until Partition Merge                   ;
-; Total pins                         ; N/A until Partition Merge                   ;
-; Total virtual pins                 ; N/A until Partition Merge                   ;
-; Total memory bits                  ; N/A until Partition Merge                   ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
-; Total PLLs                         ; N/A until Partition Merge                   ;
+; Total logic elements               ; 18                                          ;
+;     Total combinational functions  ; 18                                          ;
+;     Dedicated logic registers      ; 11                                          ;
+; Total registers                    ; 11                                          ;
+; Total pins                         ; 25                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
 +------------------------------------+---------------------------------------------+
-
-
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 2           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-+----------------------------+-------------+
-
-
-+-------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |state_machine ;
-+----------------+--------+-----------------------------------------------------+
-; Parameter Name ; Value  ; Type                                                ;
-+----------------+--------+-----------------------------------------------------+
-; idle           ; 000000 ; Unsigned Binary                                     ;
-; fetch1         ; 000001 ; Unsigned Binary                                     ;
-; fetch2         ; 000010 ; Unsigned Binary                                     ;
-; fetch3         ; 000011 ; Unsigned Binary                                     ;
-; clac           ; 000100 ; Unsigned Binary                                     ;
-; ldac1          ; 000101 ; Unsigned Binary                                     ;
-; ldac2          ; 000110 ; Unsigned Binary                                     ;
-; ldac3          ; 000111 ; Unsigned Binary                                     ;
-; ldac4          ; 001000 ; Unsigned Binary                                     ;
-; stac1          ; 001001 ; Unsigned Binary                                     ;
-; stac2          ; 001010 ; Unsigned Binary                                     ;
-; stac3          ; 001011 ; Unsigned Binary                                     ;
-; stac4          ; 001100 ; Unsigned Binary                                     ;
-; mvacr          ; 001101 ; Unsigned Binary                                     ;
-; mvrac          ; 001110 ; Unsigned Binary                                     ;
-; add            ; 001111 ; Unsigned Binary                                     ;
-; mul            ; 010000 ; Unsigned Binary                                     ;
-+----------------+--------+-----------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +------------------------------------------------------------------------------------------------------------+
-; Analysis & Elaboration Settings                                                                            ;
+; Analysis & Synthesis Settings                                                                              ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
-; Top-level entity name                                            ; state_machine      ; Processor          ;
+; Top-level entity name                                            ; Control_Unit       ; Processor          ;
 ; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
 ; Type of Retiming Performed During Resynthesis                    ; Full               ;                    ;
 ; Resynthesis Optimization Effort                                  ; Normal             ;                    ;
@@ -186,73 +153,251 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------------------------------------------------------------------+--------------------+--------------------+
 
 
-+---------------------------------+
-; Analysis & Elaboration Messages ;
-+---------------------------------+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                     ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                       ; Library ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------------+---------+
+; Control_Unit.v                   ; yes             ; User Verilog HDL File  ; D:/OLD ACA/FPGA/Project/Test_project/fpga_processor/Control_Unit.v ;         ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------------+---------+
+
+
++----------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                    ;
++---------------------------------------------+------------------+
+; Resource                                    ; Usage            ;
++---------------------------------------------+------------------+
+; Estimated Total logic elements              ; 18               ;
+;                                             ;                  ;
+; Total combinational functions               ; 18               ;
+; Logic element usage by number of LUT inputs ;                  ;
+;     -- 4 input functions                    ; 12               ;
+;     -- 3 input functions                    ; 1                ;
+;     -- <=2 input functions                  ; 5                ;
+;                                             ;                  ;
+; Logic elements by mode                      ;                  ;
+;     -- normal mode                          ; 18               ;
+;     -- arithmetic mode                      ; 0                ;
+;                                             ;                  ;
+; Total registers                             ; 11               ;
+;     -- Dedicated logic registers            ; 11               ;
+;     -- I/O registers                        ; 0                ;
+;                                             ;                  ;
+; I/O pins                                    ; 25               ;
+;                                             ;                  ;
+; Embedded Multiplier 9-bit elements          ; 0                ;
+;                                             ;                  ;
+; Maximum fan-out node                        ; control_out[0]~1 ;
+; Maximum fan-out                             ; 11               ;
+; Total fan-out                               ; 130              ;
+; Average fan-out                             ; 1.65             ;
++---------------------------------------------+------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                       ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name  ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+--------------+
+; |Control_Unit              ; 18 (18)             ; 11 (11)                   ; 0           ; 0            ; 0       ; 0         ; 25   ; 0            ; |Control_Unit       ; Control_Unit ; work         ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; mem_write[1]~reg0                     ; Stuck at GND due to stuck port data_in ;
+; control_out[3]~reg0                   ; Stuck at GND due to stuck port data_in ;
+; control_out[7]~reg0                   ; Stuck at GND due to stuck port data_in ;
+; control_out[8]~reg0                   ; Stuck at GND due to stuck port data_in ;
+; control_out[11]~reg0                  ; Stuck at GND due to stuck port data_in ;
+; control_out[13]~reg0                  ; Stuck at GND due to stuck port data_in ;
+; control_out[15]~reg0                  ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 7 ;                                        ;
++---------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 11    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 11    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
+; 64:1               ; 11 bits   ; 462 LEs       ; 110 LEs              ; 352 LEs                ; Yes        ; |Control_Unit|control_out[0]~reg0 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |Control_Unit ;
++----------------+--------+----------------------------------------------------+
+; Parameter Name ; Value  ; Type                                               ;
++----------------+--------+----------------------------------------------------+
+; idle           ; 000000 ; Unsigned Binary                                    ;
+; fetch1         ; 000001 ; Unsigned Binary                                    ;
+; fetch2         ; 000010 ; Unsigned Binary                                    ;
+; fetch3         ; 000011 ; Unsigned Binary                                    ;
+; clac           ; 000100 ; Unsigned Binary                                    ;
+; ldac1          ; 000101 ; Unsigned Binary                                    ;
+; ldac2          ; 000110 ; Unsigned Binary                                    ;
+; ldac3          ; 000111 ; Unsigned Binary                                    ;
+; ldac4          ; 001000 ; Unsigned Binary                                    ;
+; stac1          ; 001001 ; Unsigned Binary                                    ;
+; stac2          ; 001010 ; Unsigned Binary                                    ;
+; stac3          ; 001011 ; Unsigned Binary                                    ;
+; stac4          ; 001100 ; Unsigned Binary                                    ;
+; mvacr          ; 001101 ; Unsigned Binary                                    ;
+; mvrac          ; 001110 ; Unsigned Binary                                    ;
+; add            ; 001111 ; Unsigned Binary                                    ;
+; mul            ; 010000 ; Unsigned Binary                                    ;
++----------------+--------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 25                          ;
+; cycloneiii_ff         ; 11                          ;
+;     ENA               ; 11                          ;
+; cycloneiii_lcell_comb ; 19                          ;
+;     normal            ; 19                          ;
+;         0 data inputs ; 1                           ;
+;         2 data inputs ; 5                           ;
+;         3 data inputs ; 1                           ;
+;         4 data inputs ; 12                          ;
+;                       ;                             ;
+; Max LUT depth         ; 3.00                        ;
+; Average LUT depth     ; 1.35                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Elaboration
-    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Mon May 31 14:57:54 2021
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Processor -c Processor --analysis_and_elaboration
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Tue Jun 15 11:51:01 2021
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Processor -c Processor
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file tb/control_unit_tb.v
+    Info (12023): Found entity 1: Control_unit_tb File: D:/OLD ACA/FPGA/Project/Test_project/fpga_processor/tb/Control_unit_tb.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file tb/state_machine_tb.v
-    Info (12023): Found entity 1: state_machine_tb File: E:/GIthub/Processor/tb/state_machine_tb.v Line: 2
+    Info (12023): Found entity 1: state_machine_tb File: D:/OLD ACA/FPGA/Project/Test_project/fpga_processor/tb/state_machine_tb.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file tb/test_tb1.v
-    Info (12023): Found entity 1: test1_tb File: E:/GIthub/Processor/tb/test_tb1.v Line: 11
+    Info (12023): Found entity 1: test1_tb File: D:/OLD ACA/FPGA/Project/Test_project/fpga_processor/tb/test_tb1.v Line: 11
 Info (12021): Found 1 design units, including 1 entities, in source file tb/read_file_tb.v
-    Info (12023): Found entity 1: read_file_tb File: E:/GIthub/Processor/tb/read_file_tb.v Line: 2
+    Info (12023): Found entity 1: read_file_tb File: D:/OLD ACA/FPGA/Project/Test_project/fpga_processor/tb/read_file_tb.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file memory_ip.v
-    Info (12023): Found entity 1: memory_ip File: E:/GIthub/Processor/memory_ip.v Line: 40
+    Info (12023): Found entity 1: memory_ip File: D:/OLD ACA/FPGA/Project/Test_project/fpga_processor/memory_ip.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file tb/memory_ip_tb.v
-    Info (12023): Found entity 1: memory_ip_tb File: E:/GIthub/Processor/tb/memory_ip_tb.v Line: 2
+    Info (12023): Found entity 1: memory_ip_tb File: D:/OLD ACA/FPGA/Project/Test_project/fpga_processor/tb/memory_ip_tb.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file tb/bus_tb.v
-    Info (12023): Found entity 1: BUS_tb File: E:/GIthub/Processor/tb/BUS_tb.v Line: 2
+    Info (12023): Found entity 1: BUS_tb File: D:/OLD ACA/FPGA/Project/Test_project/fpga_processor/tb/BUS_tb.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file tb/ac_tb.v
-    Info (12023): Found entity 1: ac_tb File: E:/GIthub/Processor/tb/ac_tb.v Line: 3
+    Info (12023): Found entity 1: ac_tb File: D:/OLD ACA/FPGA/Project/Test_project/fpga_processor/tb/ac_tb.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file tb/alu_tb.v
-    Info (12023): Found entity 1: ALU_tb File: E:/GIthub/Processor/tb/ALU_tb.v Line: 3
+    Info (12023): Found entity 1: ALU_tb File: D:/OLD ACA/FPGA/Project/Test_project/fpga_processor/tb/ALU_tb.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file register.v
-    Info (12023): Found entity 1: register File: E:/GIthub/Processor/Register.v Line: 1
+    Info (12023): Found entity 1: register File: D:/OLD ACA/FPGA/Project/Test_project/fpga_processor/Register.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file processor.v
-    Info (12023): Found entity 1: Processor File: E:/GIthub/Processor/Processor.v Line: 1
+    Info (12023): Found entity 1: Processor File: D:/OLD ACA/FPGA/Project/Test_project/fpga_processor/Processor.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file pc.v
-    Info (12023): Found entity 1: PC File: E:/GIthub/Processor/PC.v Line: 1
+    Info (12023): Found entity 1: PC File: D:/OLD ACA/FPGA/Project/Test_project/fpga_processor/PC.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file ac.v
-    Info (12023): Found entity 1: AC File: E:/GIthub/Processor/AC.v Line: 1
+    Info (12023): Found entity 1: AC File: D:/OLD ACA/FPGA/Project/Test_project/fpga_processor/AC.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file ir.v
-    Info (12023): Found entity 1: IR File: E:/GIthub/Processor/IR.v Line: 1
+    Info (12023): Found entity 1: IR File: D:/OLD ACA/FPGA/Project/Test_project/fpga_processor/IR.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu.v
-    Info (12023): Found entity 1: ALU File: E:/GIthub/Processor/ALU.v Line: 1
+    Info (12023): Found entity 1: ALU File: D:/OLD ACA/FPGA/Project/Test_project/fpga_processor/ALU.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file bus.v
-    Info (12023): Found entity 1: BUS File: E:/GIthub/Processor/BUS.v Line: 1
-Warning (10229): Verilog HDL Expression warning at Control_Unit.v(74): truncated literal to match 16 bits File: E:/GIthub/Processor/Control_Unit.v Line: 74
+    Info (12023): Found entity 1: BUS File: D:/OLD ACA/FPGA/Project/Test_project/fpga_processor/BUS.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file control_unit.v
-    Info (12023): Found entity 1: control_unit File: E:/GIthub/Processor/Control_Unit.v Line: 9
+    Info (12023): Found entity 1: Control_Unit File: D:/OLD ACA/FPGA/Project/Test_project/fpga_processor/Control_Unit.v Line: 9
 Info (12021): Found 1 design units, including 1 entities, in source file processor_datapath.v
-    Info (12023): Found entity 1: datapath File: E:/GIthub/Processor/Processor_datapath.v Line: 1
+    Info (12023): Found entity 1: datapath File: D:/OLD ACA/FPGA/Project/Test_project/fpga_processor/Processor_datapath.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file state_machine.v
-    Info (12023): Found entity 1: state_machine File: E:/GIthub/Processor/state_machine.v Line: 9
+    Info (12023): Found entity 1: state_machine File: D:/OLD ACA/FPGA/Project/Test_project/fpga_processor/state_machine.v Line: 9
 Info (12021): Found 1 design units, including 1 entities, in source file top_layer.v
-    Info (12023): Found entity 1: top_layer File: E:/GIthub/Processor/top_layer.v Line: 2
+    Info (12023): Found entity 1: top_layer File: D:/OLD ACA/FPGA/Project/Test_project/fpga_processor/top_layer.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file clock.v
-    Info (12023): Found entity 1: clock File: E:/GIthub/Processor/clock.v Line: 3
+    Info (12023): Found entity 1: clock File: D:/OLD ACA/FPGA/Project/Test_project/fpga_processor/clock.v Line: 3
 Info (12021): Found 0 design units, including 0 entities, in source file test.v
-Warning (10236): Verilog HDL Implicit Net warning at top_layer.v(24): created implicit net for "rden_sig" File: E:/GIthub/Processor/top_layer.v Line: 24
-Warning (10236): Verilog HDL Implicit Net warning at top_layer.v(25): created implicit net for "mem_write_data" File: E:/GIthub/Processor/top_layer.v Line: 25
-Warning (10236): Verilog HDL Implicit Net warning at top_layer.v(36): created implicit net for "mem_write_ins" File: E:/GIthub/Processor/top_layer.v Line: 36
-Info (12127): Elaborating entity "state_machine" for the top level hierarchy
-Info (144001): Generated suppressed messages file E:/GIthub/Processor/output_files/Processor.map.smsg
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4706 megabytes
-    Info: Processing ended: Mon May 31 14:58:12 2021
-    Info: Elapsed time: 00:00:18
-    Info: Total CPU time (on all processors): 00:00:28
+Warning (10236): Verilog HDL Implicit Net warning at top_layer.v(24): created implicit net for "rden_sig" File: D:/OLD ACA/FPGA/Project/Test_project/fpga_processor/top_layer.v Line: 24
+Warning (10236): Verilog HDL Implicit Net warning at top_layer.v(25): created implicit net for "mem_write_data" File: D:/OLD ACA/FPGA/Project/Test_project/fpga_processor/top_layer.v Line: 25
+Warning (10236): Verilog HDL Implicit Net warning at top_layer.v(36): created implicit net for "mem_write_ins" File: D:/OLD ACA/FPGA/Project/Test_project/fpga_processor/top_layer.v Line: 36
+Info (12127): Elaborating entity "Control_Unit" for the top level hierarchy
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "control_out[3]" is stuck at GND File: D:/OLD ACA/FPGA/Project/Test_project/fpga_processor/Control_Unit.v Line: 48
+    Warning (13410): Pin "control_out[7]" is stuck at GND File: D:/OLD ACA/FPGA/Project/Test_project/fpga_processor/Control_Unit.v Line: 48
+    Warning (13410): Pin "control_out[8]" is stuck at GND File: D:/OLD ACA/FPGA/Project/Test_project/fpga_processor/Control_Unit.v Line: 48
+    Warning (13410): Pin "control_out[11]" is stuck at GND File: D:/OLD ACA/FPGA/Project/Test_project/fpga_processor/Control_Unit.v Line: 48
+    Warning (13410): Pin "control_out[13]" is stuck at GND File: D:/OLD ACA/FPGA/Project/Test_project/fpga_processor/Control_Unit.v Line: 48
+    Warning (13410): Pin "control_out[15]" is stuck at GND File: D:/OLD ACA/FPGA/Project/Test_project/fpga_processor/Control_Unit.v Line: 48
+    Warning (13410): Pin "mem_write[1]" is stuck at GND File: D:/OLD ACA/FPGA/Project/Test_project/fpga_processor/Control_Unit.v Line: 48
+Info (286030): Timing-Driven Synthesis is running
+Info (144001): Generated suppressed messages file D:/OLD ACA/FPGA/Project/Test_project/fpga_processor/output_files/Processor.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 44 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 7 input pins
+    Info (21059): Implemented 18 output pins
+    Info (21061): Implemented 19 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 13 warnings
+    Info: Peak virtual memory: 4749 megabytes
+    Info: Processing ended: Tue Jun 15 11:51:47 2021
+    Info: Elapsed time: 00:00:46
+    Info: Total CPU time (on all processors): 00:00:53
 
 
-+--------------------------------------------+
-; Analysis & Elaboration Suppressed Messages ;
-+--------------------------------------------+
-The suppressed messages can be found in E:/GIthub/Processor/output_files/Processor.map.smsg.
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in D:/OLD ACA/FPGA/Project/Test_project/fpga_processor/output_files/Processor.map.smsg.
 
 
