@@ -196,6 +196,130 @@
 					"strict" : false
 				},
 				{
+					"name" : "addr_ins[0]",
+					"strict" : false
+				},
+				{
+					"name" : "addr_ins[1]",
+					"strict" : false
+				},
+				{
+					"name" : "addr_ins[2]",
+					"strict" : false
+				},
+				{
+					"name" : "addr_ins[3]",
+					"strict" : false
+				},
+				{
+					"name" : "addr_ins[4]",
+					"strict" : false
+				},
+				{
+					"name" : "addr_ins[5]",
+					"strict" : false
+				},
+				{
+					"name" : "addr_ins[6]",
+					"strict" : false
+				},
+				{
+					"name" : "addr_ins[7]",
+					"strict" : false
+				},
+				{
+					"name" : "addr_ins[8]",
+					"strict" : false
+				},
+				{
+					"name" : "addr_out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "addr_out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "addr_out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "addr_out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "addr_out[4]",
+					"strict" : false
+				},
+				{
+					"name" : "addr_out[5]",
+					"strict" : false
+				},
+				{
+					"name" : "addr_out[6]",
+					"strict" : false
+				},
+				{
+					"name" : "addr_out[7]",
+					"strict" : false
+				},
+				{
+					"name" : "addr_out[8]",
+					"strict" : false
+				},
+				{
+					"name" : "addr_out[9]",
+					"strict" : false
+				},
+				{
+					"name" : "addr_out[10]",
+					"strict" : false
+				},
+				{
+					"name" : "addr_out[11]",
+					"strict" : false
+				},
+				{
+					"name" : "addr_out[12]",
+					"strict" : false
+				},
+				{
+					"name" : "addr_out[13]",
+					"strict" : false
+				},
+				{
+					"name" : "addr_out[14]",
+					"strict" : false
+				},
+				{
+					"name" : "addr_out[15]",
+					"strict" : false
+				},
+				{
+					"name" : "state[0]",
+					"strict" : false
+				},
+				{
+					"name" : "state[1]",
+					"strict" : false
+				},
+				{
+					"name" : "state[2]",
+					"strict" : false
+				},
+				{
+					"name" : "state[3]",
+					"strict" : false
+				},
+				{
+					"name" : "state[4]",
+					"strict" : false
+				},
+				{
+					"name" : "state[5]",
+					"strict" : false
+				},
+				{
 					"name" : "clk",
 					"strict" : false
 				},
@@ -336,10 +460,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "read_en_ext[1]",
-					"strict" : false
-				},
-				{
 					"name" : "read_en_ext[0]",
 					"strict" : false
 				},
@@ -377,6 +497,38 @@
 				},
 				{
 					"name" : "addr_ext[8]",
+					"strict" : false
+				},
+				{
+					"name" : "read_en_ext[1]",
+					"strict" : false
+				},
+				{
+					"name" : "addr_ext[9]",
+					"strict" : false
+				},
+				{
+					"name" : "addr_ext[10]",
+					"strict" : false
+				},
+				{
+					"name" : "addr_ext[11]",
+					"strict" : false
+				},
+				{
+					"name" : "addr_ext[12]",
+					"strict" : false
+				},
+				{
+					"name" : "addr_ext[13]",
+					"strict" : false
+				},
+				{
+					"name" : "addr_ext[14]",
+					"strict" : false
+				},
+				{
+					"name" : "addr_ext[15]",
 					"strict" : false
 				},
 				{

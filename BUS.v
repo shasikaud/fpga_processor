@@ -1,4 +1,4 @@
-module BUS(ar,pc,ir,dr,r,ac,dram,iram, control, data_out, addr);
+module BUS(ar,pc,ir,dr,r,ac,dram,iram, control, data_out, addr, pc_addr);
 
 
 input[15:0] ar,pc,dr,ir, r,ac,dram, iram;
@@ -8,6 +8,7 @@ input[3:0] control;
 output reg[15:0] data_out;
 
 output reg[15:0] addr;
+output reg[15:0] pc_addr;
 
 // always @(ar or pc or dr or ir or r or ac or dram or iram or control) //control
 always @(control)
@@ -28,6 +29,7 @@ default: data_out <= 16'd0;
 endcase
 
 addr <= ar;
+pc_addr <= pc;
 
 end
 

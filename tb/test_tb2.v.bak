@@ -28,9 +28,9 @@ module test_tb2();
 
 reg clock, start, mem_write_ins, mem_write_data_ext;
 reg [15:0] iram_in_ext,data_in_ext;
-wire[15:0] addr_ext, mem_write, dram_in, data_out; 
-wire[1:0]  read_en;
-wire[15:0] iram_in;
+reg[15:0] addr_ext, mem_write; 
+reg[1:0]  read_en;
+wire[15:0] iram_in, dram_in, data_out;
 
 integer               data_file    ; // file handler
 integer               scan_file    ; // file handler
@@ -38,17 +38,17 @@ integer               scan_file    ; // file handler
 // wire[5:0] state,ir_out;
  
 top_layer u_top_layer(
-    .clk                ( clock              ),
-    .start              ( start              ),
-    .dram_in            ( dram_in            ),
-    .iram_in_ext        ( iram_in_ext        ),
-    .data_out           ( data_out           ),
-    .addr_ext           ( addr_ext           ),
-    .mem_write_data_ext ( mem_write_data_ext ),
-    .mem_write_ins      ( mem_write_ins      ),
-    .read_en            ( read_en            ),
-    .data_in_ext        ( data_in_ext        ),
-    .iram_in            ( iram_in            )
+    .clk                ( clock              ),     // clock
+    .start              ( start              ),     // start the processor
+    .dram_in            ( dram_in            ),     // output of the data memory
+    .iram_in_ext        ( iram_in_ext        ),     // to store data into iram
+    .data_out           ( data_out           ),     // to store data into dram
+    .addr_ext           ( addr_ext           ),     // location of the dram or iram
+    .mem_write_data_ext ( mem_write_data_ext ),     // dram write enable
+    .mem_write_ins      ( mem_write_ins      ),     // iram write enable
+    .read_en_ext        ( read_en            ),     // read enable
+    .data_in_ext        ( data_in_ext        ),     // to store data into dram
+    .iram_in            ( iram_in            )      // read istructions from iram
 );
 
 
@@ -107,6 +107,77 @@ initial begin
     #20;
     $fclose(data_file);
 
+
+    
+
+    // write instruction to the instruction memory
+    addr_ext = 9'd1;
+    data_file = $fopen("../../test_files/instruction.txt", "r");
+    if (data_file == `NULL) begin
+        $display("data_file handle was NULL");
+        $finish;
+    end
+
+     while(!$feof(data_file)) begin
+        @(posedge clock);          
+        #20;
+        mem_write_ins <= 1;
+        read_en <= 2'b00;
+        #10;
+        scan_file = $fscanf(data_file, "%d\n", iram_in_ext); 
+		#30;
+        // mem_write_ins <= 0;
+        // read_en <= 2'b01;
+		// #30;
+        addr_ext <= addr_ext + 1'd1;
+
+            // if (!$feof(data_file)) begin
+            //     $display(data_);
+        //use captured_data as you would any other wire or reg value;
+    end
+    #20;
+    $fclose(data_file);
+
+
+    #100;
+    mem_write_data_ext <= 0;
+    read_en <= 2'b01;
+    addr_ext <= 1'd1;
+
+    #50;
+    mem_write_data_ext <= 0;
+    read_en <= 2'b01;
+    addr_ext <= 1'd2;
+
+    #50;
+    mem_write_data_ext <= 0;
+    read_en <= 2'b01;
+    addr_ext <= 1'd3;
+
+
+    #50;
+    mem_write_data_ext <= 0;
+    read_en <= 2'b01;
+    addr_ext <= 1'd4;
+
+    #50;
+    mem_write_data_ext <= 0;
+    read_en <= 2'b01;
+    addr_ext <= 1'd5;
+
+
+    #50;
+    mem_write_data_ext <= 0;
+    read_en <= 2'b01;
+    addr_ext <= 1'd6;
+
+
+    #50;
+    mem_write_data_ext <= 0;
+    read_en <= 2'b01;
+    addr_ext <= 1'd7;
+    
+    // todo: add and mul 
     // #20;
 	//  data_address <= 9'd1;
 	//  #20;
@@ -123,7 +194,7 @@ initial begin
 
 
 
-
+    $stop;
     end
 
 endmodule

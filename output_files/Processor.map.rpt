@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Processor
-Tue Jun 15 16:49:50 2021
+Wed Jun 16 12:34:06 2021
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -17,20 +17,22 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   9. Registers Removed During Synthesis
  10. Removed Registers Triggering Further Register Optimizations
  11. General Register Statistics
- 12. Multiplexer Restructuring Statistics (Restructuring Performed)
- 13. Source assignments for memory_ip:memory_ip_data|altsyncram:altsyncram_component|altsyncram_2gh1:auto_generated
- 14. Source assignments for memory_ip:memory_ip_inst|altsyncram:altsyncram_component|altsyncram_2gh1:auto_generated
- 15. Parameter Settings for User Entity Instance: Processor:Processor|Control_Unit:control_unit
- 16. Parameter Settings for User Entity Instance: state_machine:state_machine
- 17. Parameter Settings for User Entity Instance: memory_ip:memory_ip_data|altsyncram:altsyncram_component
- 18. Parameter Settings for User Entity Instance: memory_ip:memory_ip_inst|altsyncram:altsyncram_component
- 19. altsyncram Parameter Settings by Entity Instance
- 20. Port Connectivity Checks: "Processor:Processor|datapath:datapath|AC:AC"
- 21. Port Connectivity Checks: "Processor:Processor"
- 22. Post-Synthesis Netlist Statistics for Top Partition
- 23. Elapsed Time Per Partition
- 24. Analysis & Synthesis Messages
- 25. Analysis & Synthesis Suppressed Messages
+ 12. Inverted Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Source assignments for memory_ip:memory_ip_data|altsyncram:altsyncram_component|altsyncram_2gh1:auto_generated
+ 15. Source assignments for memory_ip:memory_ip_inst|altsyncram:altsyncram_component|altsyncram_2gh1:auto_generated
+ 16. Parameter Settings for User Entity Instance: Processor:Processor|Control_Unit:control_unit
+ 17. Parameter Settings for User Entity Instance: state_machine:state_machine
+ 18. Parameter Settings for User Entity Instance: memory_ip:memory_ip_data|altsyncram:altsyncram_component
+ 19. Parameter Settings for User Entity Instance: memory_ip:memory_ip_inst|altsyncram:altsyncram_component
+ 20. altsyncram Parameter Settings by Entity Instance
+ 21. Port Connectivity Checks: "memory_ip:memory_ip_data"
+ 22. Port Connectivity Checks: "Processor:Processor|datapath:datapath|AC:AC"
+ 23. Port Connectivity Checks: "Processor:Processor"
+ 24. Post-Synthesis Netlist Statistics for Top Partition
+ 25. Elapsed Time Per Partition
+ 26. Analysis & Synthesis Messages
+ 27. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -56,16 +58,16 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Jun 15 16:49:50 2021       ;
+; Analysis & Synthesis Status        ; Successful - Wed Jun 16 12:34:06 2021       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Processor                                   ;
 ; Top-level Entity Name              ; top_layer                                   ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 242                                         ;
-;     Total combinational functions  ; 189                                         ;
-;     Dedicated logic registers      ; 126                                         ;
-; Total registers                    ; 126                                         ;
-; Total pins                         ; 102                                         ;
+; Total logic elements               ; 272                                         ;
+;     Total combinational functions  ; 219                                         ;
+;     Dedicated logic registers      ; 142                                         ;
+; Total registers                    ; 142                                         ;
+; Total pins                         ; 133                                         ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 16,384                                      ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -214,31 +216,31 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 242       ;
+; Estimated Total logic elements              ; 272       ;
 ;                                             ;           ;
-; Total combinational functions               ; 189       ;
+; Total combinational functions               ; 219       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 118       ;
-;     -- 3 input functions                    ; 28        ;
-;     -- <=2 input functions                  ; 43        ;
+;     -- 4 input functions                    ; 134       ;
+;     -- 3 input functions                    ; 51        ;
+;     -- <=2 input functions                  ; 34        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 169       ;
+;     -- normal mode                          ; 199       ;
 ;     -- arithmetic mode                      ; 20        ;
 ;                                             ;           ;
-; Total registers                             ; 126       ;
-;     -- Dedicated logic registers            ; 126       ;
+; Total registers                             ; 142       ;
+;     -- Dedicated logic registers            ; 142       ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
-; I/O pins                                    ; 102       ;
+; I/O pins                                    ; 133       ;
 ; Total memory bits                           ; 16384     ;
 ;                                             ;           ;
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 158       ;
-; Total fan-out                               ; 1578      ;
-; Average fan-out                             ; 2.86      ;
+; Maximum fan-out                             ; 174       ;
+; Total fan-out                               ; 1769      ;
+; Average fan-out                             ; 2.68      ;
 +---------------------------------------------+-----------+
 
 
@@ -247,13 +249,13 @@ refer to the applicable agreement for further details.
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                ; Entity Name     ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------+-----------------+--------------+
-; |top_layer                                ; 189 (37)            ; 126 (28)                  ; 16384       ; 0            ; 0       ; 0         ; 102  ; 0            ; |top_layer                                                                                         ; top_layer       ; work         ;
-;    |Processor:Processor|                  ; 109 (0)             ; 92 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_layer|Processor:Processor                                                                     ; Processor       ; work         ;
-;       |Control_Unit:control_unit|         ; 9 (9)               ; 12 (12)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_layer|Processor:Processor|Control_Unit:control_unit                                           ; Control_Unit    ; work         ;
-;       |datapath:datapath|                 ; 100 (0)             ; 80 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_layer|Processor:Processor|datapath:datapath                                                   ; datapath        ; work         ;
+; |top_layer                                ; 219 (52)            ; 142 (44)                  ; 16384       ; 0            ; 0       ; 0         ; 133  ; 0            ; |top_layer                                                                                         ; top_layer       ; work         ;
+;    |Processor:Processor|                  ; 128 (0)             ; 92 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_layer|Processor:Processor                                                                     ; Processor       ; work         ;
+;       |Control_Unit:control_unit|         ; 10 (10)             ; 12 (12)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_layer|Processor:Processor|Control_Unit:control_unit                                           ; Control_Unit    ; work         ;
+;       |datapath:datapath|                 ; 118 (0)             ; 80 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_layer|Processor:Processor|datapath:datapath                                                   ; datapath        ; work         ;
 ;          |BUS:BUS|                        ; 83 (83)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_layer|Processor:Processor|datapath:datapath|BUS:BUS                                           ; BUS             ; work         ;
 ;          |IR:IR|                          ; 0 (0)               ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_layer|Processor:Processor|datapath:datapath|IR:IR                                             ; IR              ; work         ;
-;          |PC:PC|                          ; 17 (17)             ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_layer|Processor:Processor|datapath:datapath|PC:PC                                             ; PC              ; work         ;
+;          |PC:PC|                          ; 35 (35)             ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_layer|Processor:Processor|datapath:datapath|PC:PC                                             ; PC              ; work         ;
 ;          |register:AR|                    ; 0 (0)               ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_layer|Processor:Processor|datapath:datapath|register:AR                                       ; register        ; work         ;
 ;          |register:DR|                    ; 0 (0)               ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_layer|Processor:Processor|datapath:datapath|register:DR                                       ; register        ; work         ;
 ;          |register:R|                     ; 0 (0)               ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_layer|Processor:Processor|datapath:datapath|register:R                                        ; register        ; work         ;
@@ -263,7 +265,7 @@ refer to the applicable agreement for further details.
 ;    |memory_ip:memory_ip_inst|             ; 0 (0)               ; 0 (0)                     ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_layer|memory_ip:memory_ip_inst                                                                ; memory_ip       ; work         ;
 ;       |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_layer|memory_ip:memory_ip_inst|altsyncram:altsyncram_component                                ; altsyncram      ; work         ;
 ;          |altsyncram_2gh1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_layer|memory_ip:memory_ip_inst|altsyncram:altsyncram_component|altsyncram_2gh1:auto_generated ; altsyncram_2gh1 ; work         ;
-;    |state_machine:state_machine|          ; 43 (43)             ; 6 (6)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_layer|state_machine:state_machine                                                             ; state_machine   ; work         ;
+;    |state_machine:state_machine|          ; 39 (39)             ; 6 (6)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_layer|state_machine:state_machine                                                             ; state_machine   ; work         ;
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -326,14 +328,24 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 126   ;
+; Total registers                              ; 142   ;
 ; Number of registers using Synchronous Clear  ; 8     ;
-; Number of registers using Synchronous Load   ; 23    ;
+; Number of registers using Synchronous Load   ; 7     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 116   ;
+; Number of registers using Clock Enable       ; 130   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++-------------------------------------------------------------------+
+; Inverted Register Statistics                                      ;
++---------------------------------------------------------+---------+
+; Inverted Register                                       ; Fan out ;
++---------------------------------------------------------+---------+
+; Processor:Processor|datapath:datapath|PC:PC|data_out[0] ; 3       ;
+; Total number of inverted registers = 1                  ;         ;
++---------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -341,11 +353,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                              ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------+
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |top_layer|Processor:Processor|datapath:datapath|PC:PC|data_out[9]      ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |top_layer|data_out[12]~reg0                                            ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 8 LEs                ; 24 LEs                 ; Yes        ; |top_layer|addr_out[8]                                                  ;
-; 64:1               ; 12 bits   ; 504 LEs       ; 120 LEs              ; 384 LEs                ; Yes        ; |top_layer|Processor:Processor|Control_Unit:control_unit|control_out[4] ;
-; 71:1               ; 5 bits    ; 235 LEs       ; 45 LEs               ; 190 LEs                ; Yes        ; |top_layer|state_machine:state_machine|state[1]                         ;
+; 3:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |top_layer|Processor:Processor|datapath:datapath|PC:PC|data_out[12]     ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |top_layer|data_out[2]~reg0                                             ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |top_layer|addr_out[6]~reg0                                             ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top_layer|addr_ins[5]~reg0                                             ;
+; 64:1               ; 12 bits   ; 504 LEs       ; 120 LEs              ; 384 LEs                ; Yes        ; |top_layer|Processor:Processor|Control_Unit:control_unit|control_out[7] ;
+; 71:1               ; 5 bits    ; 235 LEs       ; 45 LEs               ; 190 LEs                ; Yes        ; |top_layer|state_machine:state_machine|state[0]                         ;
 ; 16:1               ; 16 bits   ; 160 LEs       ; 80 LEs               ; 80 LEs                 ; No         ; |top_layer|Processor:Processor|datapath:datapath|BUS:BUS|Mux15          ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------+
 
@@ -571,6 +584,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------------------+----------------------------------------------------------+
 
 
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "memory_ip:memory_ip_data"                                                                                                                                                           ;
++---------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                                                           ;
++---------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; address ; Input ; Warning  ; Input port expression (16 bits) is wider than the input port (9 bits) it drives.  The 7 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++---------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "Processor:Processor|datapath:datapath|AC:AC"                                                                                                                                         ;
 +---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -589,6 +611,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; addr_out           ; Output ; Warning  ; Output or bidir port (16 bits) is wider than the port expression (1 bits) it drives; bit(s) "addr_out[15..1]" have no fanouts ;
 ; control_out[11..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                           ;
 ; control_out[15]    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                           ;
+; pc_addr            ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                           ;
 +--------------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -597,26 +620,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 102                         ;
-; cycloneiii_ff         ; 126                         ;
-;     ENA               ; 91                          ;
+; boundary_port         ; 133                         ;
+; cycloneiii_ff         ; 142                         ;
+;     ENA               ; 121                         ;
 ;     ENA SCLR          ; 2                           ;
 ;     ENA SCLR SLD      ; 6                           ;
-;     ENA SLD           ; 17                          ;
-;     plain             ; 10                          ;
-; cycloneiii_lcell_comb ; 189                         ;
+;     ENA SLD           ; 1                           ;
+;     plain             ; 12                          ;
+; cycloneiii_lcell_comb ; 219                         ;
 ;     arith             ; 20                          ;
 ;         2 data inputs ; 20                          ;
-;     normal            ; 169                         ;
+;     normal            ; 199                         ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 2                           ;
-;         2 data inputs ; 20                          ;
-;         3 data inputs ; 28                          ;
-;         4 data inputs ; 118                         ;
+;         2 data inputs ; 11                          ;
+;         3 data inputs ; 51                          ;
+;         4 data inputs ; 134                         ;
 ; cycloneiii_ram_block  ; 32                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 6.00                        ;
-; Average LUT depth     ; 3.16                        ;
+; Average LUT depth     ; 3.46                        ;
 +-----------------------+-----------------------------+
 
 
@@ -635,7 +658,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Jun 15 16:49:32 2021
+    Info: Processing started: Wed Jun 16 12:33:49 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Processor -c Processor
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -684,32 +707,35 @@ Info (12021): Found 1 design units, including 1 entities, in source file top_lay
 Info (12021): Found 1 design units, including 1 entities, in source file clock.v
     Info (12023): Found entity 1: clock File: E:/GIthub/Processor/clock.v Line: 3
 Info (12021): Found 0 design units, including 0 entities, in source file test.v
-Warning (10236): Verilog HDL Implicit Net warning at top_layer.v(35): created implicit net for "addr_out_proc" File: E:/GIthub/Processor/top_layer.v Line: 35
+Warning (10236): Verilog HDL Implicit Net warning at top_layer.v(48): created implicit net for "addr_out_proc" File: E:/GIthub/Processor/top_layer.v Line: 48
 Info (12127): Elaborating entity "top_layer" for the top level hierarchy
-Info (12128): Elaborating entity "Processor" for hierarchy "Processor:Processor" File: E:/GIthub/Processor/top_layer.v Line: 35
+Warning (10230): Verilog HDL assignment warning at top_layer.v(78): truncated value with size 16 to match size of target (9) File: E:/GIthub/Processor/top_layer.v Line: 78
+Warning (10230): Verilog HDL assignment warning at top_layer.v(90): truncated value with size 16 to match size of target (9) File: E:/GIthub/Processor/top_layer.v Line: 90
+Info (12128): Elaborating entity "Processor" for hierarchy "Processor:Processor" File: E:/GIthub/Processor/top_layer.v Line: 50
 Warning (10034): Output port "data_out" at Processor.v(8) has no driver File: E:/GIthub/Processor/Processor.v Line: 8
 Info (12128): Elaborating entity "Control_Unit" for hierarchy "Processor:Processor|Control_Unit:control_unit" File: E:/GIthub/Processor/Processor.v Line: 13
 Warning (12125): Using design file datapath.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: datapath File: E:/GIthub/Processor/datapath.v Line: 1
 Info (12128): Elaborating entity "datapath" for hierarchy "Processor:Processor|datapath:datapath" File: E:/GIthub/Processor/Processor.v Line: 16
 Info (12128): Elaborating entity "BUS" for hierarchy "Processor:Processor|datapath:datapath|BUS:BUS" File: E:/GIthub/Processor/datapath.v Line: 14
-Warning (10235): Verilog HDL Always Construct warning at BUS.v(18): variable "ar" is read inside the Always Construct but isn't in the Always Construct's Event Control File: E:/GIthub/Processor/BUS.v Line: 18
-Warning (10235): Verilog HDL Always Construct warning at BUS.v(19): variable "ac" is read inside the Always Construct but isn't in the Always Construct's Event Control File: E:/GIthub/Processor/BUS.v Line: 19
-Warning (10235): Verilog HDL Always Construct warning at BUS.v(20): variable "pc" is read inside the Always Construct but isn't in the Always Construct's Event Control File: E:/GIthub/Processor/BUS.v Line: 20
-Warning (10235): Verilog HDL Always Construct warning at BUS.v(21): variable "dr" is read inside the Always Construct but isn't in the Always Construct's Event Control File: E:/GIthub/Processor/BUS.v Line: 21
-Warning (10235): Verilog HDL Always Construct warning at BUS.v(22): variable "r" is read inside the Always Construct but isn't in the Always Construct's Event Control File: E:/GIthub/Processor/BUS.v Line: 22
-Warning (10235): Verilog HDL Always Construct warning at BUS.v(23): variable "iram" is read inside the Always Construct but isn't in the Always Construct's Event Control File: E:/GIthub/Processor/BUS.v Line: 23
-Warning (10235): Verilog HDL Always Construct warning at BUS.v(24): variable "dram" is read inside the Always Construct but isn't in the Always Construct's Event Control File: E:/GIthub/Processor/BUS.v Line: 24
-Warning (10235): Verilog HDL Always Construct warning at BUS.v(25): variable "ir" is read inside the Always Construct but isn't in the Always Construct's Event Control File: E:/GIthub/Processor/BUS.v Line: 25
-Warning (10235): Verilog HDL Always Construct warning at BUS.v(30): variable "ar" is read inside the Always Construct but isn't in the Always Construct's Event Control File: E:/GIthub/Processor/BUS.v Line: 30
+Warning (10235): Verilog HDL Always Construct warning at BUS.v(19): variable "ar" is read inside the Always Construct but isn't in the Always Construct's Event Control File: E:/GIthub/Processor/BUS.v Line: 19
+Warning (10235): Verilog HDL Always Construct warning at BUS.v(20): variable "ac" is read inside the Always Construct but isn't in the Always Construct's Event Control File: E:/GIthub/Processor/BUS.v Line: 20
+Warning (10235): Verilog HDL Always Construct warning at BUS.v(21): variable "pc" is read inside the Always Construct but isn't in the Always Construct's Event Control File: E:/GIthub/Processor/BUS.v Line: 21
+Warning (10235): Verilog HDL Always Construct warning at BUS.v(22): variable "dr" is read inside the Always Construct but isn't in the Always Construct's Event Control File: E:/GIthub/Processor/BUS.v Line: 22
+Warning (10235): Verilog HDL Always Construct warning at BUS.v(23): variable "r" is read inside the Always Construct but isn't in the Always Construct's Event Control File: E:/GIthub/Processor/BUS.v Line: 23
+Warning (10235): Verilog HDL Always Construct warning at BUS.v(24): variable "iram" is read inside the Always Construct but isn't in the Always Construct's Event Control File: E:/GIthub/Processor/BUS.v Line: 24
+Warning (10235): Verilog HDL Always Construct warning at BUS.v(25): variable "dram" is read inside the Always Construct but isn't in the Always Construct's Event Control File: E:/GIthub/Processor/BUS.v Line: 25
+Warning (10235): Verilog HDL Always Construct warning at BUS.v(26): variable "ir" is read inside the Always Construct but isn't in the Always Construct's Event Control File: E:/GIthub/Processor/BUS.v Line: 26
+Warning (10235): Verilog HDL Always Construct warning at BUS.v(31): variable "ar" is read inside the Always Construct but isn't in the Always Construct's Event Control File: E:/GIthub/Processor/BUS.v Line: 31
+Warning (10235): Verilog HDL Always Construct warning at BUS.v(32): variable "pc" is read inside the Always Construct but isn't in the Always Construct's Event Control File: E:/GIthub/Processor/BUS.v Line: 32
 Info (12128): Elaborating entity "register" for hierarchy "Processor:Processor|datapath:datapath|register:R" File: E:/GIthub/Processor/datapath.v Line: 16
 Info (12128): Elaborating entity "AC" for hierarchy "Processor:Processor|datapath:datapath|AC:AC" File: E:/GIthub/Processor/datapath.v Line: 22
 Info (12128): Elaborating entity "PC" for hierarchy "Processor:Processor|datapath:datapath|PC:PC" File: E:/GIthub/Processor/datapath.v Line: 24
 Info (12128): Elaborating entity "IR" for hierarchy "Processor:Processor|datapath:datapath|IR:IR" File: E:/GIthub/Processor/datapath.v Line: 26
 Info (12128): Elaborating entity "ALU" for hierarchy "Processor:Processor|datapath:datapath|ALU:ALU" File: E:/GIthub/Processor/datapath.v Line: 28
 Info (10264): Verilog HDL Case Statement information at ALU.v(20): all case item expressions in this case statement are onehot File: E:/GIthub/Processor/ALU.v Line: 20
-Info (12128): Elaborating entity "state_machine" for hierarchy "state_machine:state_machine" File: E:/GIthub/Processor/top_layer.v Line: 40
-Info (12128): Elaborating entity "memory_ip" for hierarchy "memory_ip:memory_ip_data" File: E:/GIthub/Processor/top_layer.v Line: 98
+Info (12128): Elaborating entity "state_machine" for hierarchy "state_machine:state_machine" File: E:/GIthub/Processor/top_layer.v Line: 55
+Info (12128): Elaborating entity "memory_ip" for hierarchy "memory_ip:memory_ip_data" File: E:/GIthub/Processor/top_layer.v Line: 119
 Info (12128): Elaborating entity "altsyncram" for hierarchy "memory_ip:memory_ip_data|altsyncram:altsyncram_component" File: E:/GIthub/Processor/memory_ip.v Line: 89
 Info (12130): Elaborated megafunction instantiation "memory_ip:memory_ip_data|altsyncram:altsyncram_component" File: E:/GIthub/Processor/memory_ip.v Line: 89
 Info (12133): Instantiated megafunction "memory_ip:memory_ip_data|altsyncram:altsyncram_component" with the following parameter: File: E:/GIthub/Processor/memory_ip.v Line: 89
@@ -731,30 +757,22 @@ Info (12133): Instantiated megafunction "memory_ip:memory_ip_data|altsyncram:alt
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_2gh1.tdf
     Info (12023): Found entity 1: altsyncram_2gh1 File: E:/GIthub/Processor/db/altsyncram_2gh1.tdf Line: 27
 Info (12128): Elaborating entity "altsyncram_2gh1" for hierarchy "memory_ip:memory_ip_data|altsyncram:altsyncram_component|altsyncram_2gh1:auto_generated" File: e:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
-Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (12241): 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 3 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file E:/GIthub/Processor/output_files/Processor.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 7 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "addr_ext[9]" File: E:/GIthub/Processor/top_layer.v Line: 17
-    Warning (15610): No output dependent on input pin "addr_ext[10]" File: E:/GIthub/Processor/top_layer.v Line: 17
-    Warning (15610): No output dependent on input pin "addr_ext[11]" File: E:/GIthub/Processor/top_layer.v Line: 17
-    Warning (15610): No output dependent on input pin "addr_ext[12]" File: E:/GIthub/Processor/top_layer.v Line: 17
-    Warning (15610): No output dependent on input pin "addr_ext[13]" File: E:/GIthub/Processor/top_layer.v Line: 17
-    Warning (15610): No output dependent on input pin "addr_ext[14]" File: E:/GIthub/Processor/top_layer.v Line: 17
-    Warning (15610): No output dependent on input pin "addr_ext[15]" File: E:/GIthub/Processor/top_layer.v Line: 17
-Info (21057): Implemented 394 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 456 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 54 input pins
-    Info (21059): Implemented 48 output pins
-    Info (21061): Implemented 260 logic cells
+    Info (21059): Implemented 79 output pins
+    Info (21061): Implemented 291 logic cells
     Info (21064): Implemented 32 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 24 warnings
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 19 warnings
     Info: Peak virtual memory: 4747 megabytes
-    Info: Processing ended: Tue Jun 15 16:49:50 2021
-    Info: Elapsed time: 00:00:18
-    Info: Total CPU time (on all processors): 00:00:35
+    Info: Processing ended: Wed Jun 16 12:34:06 2021
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:31
 
 
 +------------------------------------------+
