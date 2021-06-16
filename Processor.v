@@ -6,7 +6,7 @@ input[5:0] state;
 output[15:0] bus_out;
 output wire[15:0] addr_out;
 output wire[15:0] ir_out, data_out, pc_addr;
-output wire[15:0] control_out;
+output wire[22:0] control_out;
 //output reg[1:0] read_en;
 // corresponds to 13:data read / 12:instruction read
 //output reg mem_write_data;

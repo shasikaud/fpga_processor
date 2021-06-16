@@ -10,7 +10,7 @@ module Control_Unit(clock, state, control_out);
 
 input clock;
 input[5:0] state;
-output reg[15:0] control_out;
+output reg[22:0] control_out;
 // output reg[1:0] mem_write; 
 
 parameter idle = 6'd0;
@@ -50,105 +50,105 @@ case(state)
 idle:
 
 begin
-control_out <= 16'd0;
+control_out <= 23'd0;
 // mem_write <= 2'd0;
 end
 
 fetch1:
 
 begin
-control_out <= 16'd3080;
+control_out <= 23'd34880;
 // mem_write <= 2'd0;
 end
 
 fetch2:
 
 begin
-control_out <= 16'd4608;
+control_out <= 23'd262146;
 // mem_write <= 2'd0;
 end
 
 fetch3:
 
 begin
-control_out <= 16'd98304;
+control_out <= 23'd2622465;
 // mem_write <= 2'd0;
 end
 
 clac:
 
 begin
-control_out <= 16'd4;
+control_out <= 23'd8192;
 // mem_write <= 2'd0;
 end
 
 ldac1:
 
 begin
-control_out <= 16'd3088;
+control_out <= 23'd34944;
 // mem_write <= 2'd0;
 end
 
 ldac2:
 
 begin
-control_out <= 16'd39168;
+control_out <= 23'd2099200;
 // mem_write <= 2'd0;
 end
 
 ldac3:
 
 begin
-control_out <= 16'd8224;
+control_out <= 23'd1116160;
 // mem_write <= 2'd0;
 end
 
 stac1:
 
 begin
-control_out <= 16'd11264;
+control_out <= 23'd32832;
 // mem_write <= 2'd0;
 end
 
 stac2:
 
 begin
-control_out <= 16'd12544;
+control_out <= 23'd4130;
 // mem_write <= 2'd1;
 end
 
 stac3:
 
 begin
-control_out <= 16'd47104;
+control_out <= 23'd16;
 // mem_write <= 2'd0;
 end
 
 mvacr:
 
 begin
-control_out <= 16'd16512;
+control_out <= 23'd16416;
 // mem_write <= 2'd0;
 end
 
 mvrac:
 
 begin
-control_out <= 16'd18464;
+control_out <= 23'd131076;
 // mem_write <= 2'd0;
 end
 
 add:
 
 begin
-control_out <= 16'd33;
+control_out <= 23'd4194564;
 // mem_write <= 2'd0;
 end
 
 mul:
 
 begin
-control_out <= 16'd34;
+control_out <= 23'd4194820;
 // mem_write <= 2'd0;
 end
 

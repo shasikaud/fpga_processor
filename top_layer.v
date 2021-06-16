@@ -31,7 +31,8 @@ output wire [15:0] iram_in;
 output wire [15:0] dram_in; // data memory read output (data_bus <= output :: memory <= input)
 
 output wire[5:0] state;
-wire[15:0] data_out_proc, ir_out, control_out, pc_addr;
+wire[15:0] data_out_proc, ir_out, pc_addr;
+wire[23:0]control_out;
 reg [1:0] read_en;
 reg mem_write_data_proc;
 reg mem_write_data;
