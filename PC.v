@@ -6,6 +6,10 @@ input[15:0] data_in;
 input write_en;
 output reg[15:0] data_out;
 
+initial 
+    begin
+        data_out <= 16'd1;
+    end
 always @(posedge clock)
 begin
 

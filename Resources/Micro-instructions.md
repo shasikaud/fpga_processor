@@ -15,8 +15,8 @@ IR[9:0] operand address
 * CLAC 1 : AC <= 0;
 
 ## LDAC
-* LDAC 1: AR <= PC; read
-* LDAC 2: PC <= PC + 1
+* LDAC 1: AR <= IR; read
+* LDAC 2:
 * LDAC 3: DR <= D_M[t]
 * LDAC 4: AC <= DR
 

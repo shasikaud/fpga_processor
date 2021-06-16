@@ -1,17 +1,17 @@
-module datapath(clock, dram_in, iram_in, control,ir_out, bus_out, addr_out);
+module datapath(clock, dram_in, iram_in, control,ir_out, bus_out, addr_out, pc_addr);
 input clock;
 input [15:0] dram_in;
 input [15:0] iram_in;
 input[15:0] control;
 output[15:0] bus_out;
-output wire[15:0] addr_out, ir_out;
+output wire[15:0] addr_out, ir_out, pc_addr;
 
 wire[15:0] ar,pc,dr,r,ac,alu_out, data_in_alu, alu;
 
 wire[7:0] ir;
 
 
-BUS BUS(ar,pc,ir_out,dr,r,ac,dram_in,iram_in, control[3:0], bus_out, addr_out);
+BUS BUS(ar,pc,ir_out,dr,r,ac,dram_in,iram_in, control[3:0], bus_out, addr_out, pc_addr);
 
 register R(clock,control[3], bus_out, r);
 

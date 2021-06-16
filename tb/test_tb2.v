@@ -30,8 +30,10 @@ reg clock, start, mem_write_ins, mem_write_data_ext;
 reg [15:0] iram_in_ext,data_in_ext;
 reg[15:0] addr_ext, mem_write; 
 reg[1:0]  read_en;
-wire[15:0] iram_in, dram_in, data_out;
 
+wire[15:0] iram_in, dram_in, data_out, addr_out;
+wire[8:0] addr_ins;
+wire [5:0] state;
 integer               data_file    ; // file handler
 integer               scan_file    ; // file handler
 
@@ -48,7 +50,10 @@ top_layer u_top_layer(
     .mem_write_ins      ( mem_write_ins      ),     // iram write enable
     .read_en_ext        ( read_en            ),     // read enable
     .data_in_ext        ( data_in_ext        ),     // to store data into dram
-    .iram_in            ( iram_in            )      // read istructions from iram
+    .iram_in            ( iram_in            ),     // read istructions from iram
+    .addr_ins           (addr_ins            ),
+    .addr_out           (addr_out            ),
+    .state              (state               )
 );
 
 
@@ -98,7 +103,7 @@ initial begin
         mem_write_data_ext <= 0;
         read_en <= 2'b10;
 		#10;
-        addr_ext <= addr_ext + 1'd1;
+        addr_ext <= addr_ext + 9'd1;
 
             // if (!$feof(data_file)) begin
             //     $display(data_);
@@ -108,26 +113,29 @@ initial begin
     $fclose(data_file);
 
 
+    
+    mem_write_data_ext <= 0;
+    #10;
     // write instruction to the instruction memory
     addr_ext = 9'd1;
-    data_file = $fopen("../../test_files/instruction", "r");
+    data_file = $fopen("../../test_files/instruction.txt", "r");
     if (data_file == `NULL) begin
         $display("data_file handle was NULL");
         $finish;
     end
 
      while(!$feof(data_file)) begin
-        @(posedge clock);
+        @(posedge clock);          
         #20;
-        mem_write_data_ext <= 1;
+        mem_write_ins <= 1;
         read_en <= 2'b00;
         #10;
         scan_file = $fscanf(data_file, "%d\n", iram_in_ext); 
-		#20;
-        mem_write_data_ext <= 0;
-        read_en <= 2'b10;
-		#10;
-        addr_ext <= addr_ext + 1'd1;
+		#30;
+        // mem_write_ins <= 0;
+        // read_en <= 2'b01;
+		// #30;
+        addr_ext <= addr_ext + 9'd1;
 
             // if (!$feof(data_file)) begin
             //     $display(data_);
@@ -135,8 +143,67 @@ initial begin
     end
     #20;
     $fclose(data_file);
+    mem_write_ins <= 0;
+
+    #100;
+    start <= 1;
+    
+
+    #80;
+    start <= 0;
+
+    #20;
+    start <= 1;
+    
+
+    #40;
+    start <= 0;
+    // #150;
+    // read_en <= 2'b00;
+
+    // #50;
+    // mem_write_ins <= 0;
+    // read_en <= 2'b01;
+    // addr_ext <= 9'd1;
+
+    // #50;
+    // mem_write_ins <= 0;
+    // read_en <= 2'b01;
+    // addr_ext <= 9'd2;
+
+    // #50;
+    // mem_write_ins <= 0;
+    // read_en <= 2'b01;
+    // addr_ext <= 9'd3;
 
 
+    // #50;
+    // mem_write_ins <= 0;
+    // read_en <= 2'b01;
+    // addr_ext <= 9'd4;
+
+    // #50;
+    // mem_write_ins <= 0;
+    // read_en <= 2'b01;
+    // addr_ext <= 9'd5;
+
+
+    // #50;
+    // mem_write_ins <= 0;
+    // read_en <= 2'b01;
+    // addr_ext <= 9'd6;
+
+
+    // #50;
+    // mem_write_ins <= 0;
+    // read_en <= 2'b01;
+    // addr_ext <= 9'd7;
+
+    // #50;
+    // mem_write_ins <= 0;
+    // read_en <= 2'b01;
+    // addr_ext <= 9'd8;
+    
     // todo: add and mul 
     // #20;
 	//  data_address <= 9'd1;
@@ -154,6 +221,7 @@ initial begin
 
 
 
+    $stop;
 
     end
 
