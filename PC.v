@@ -15,7 +15,7 @@ begin
 
 if(write_en == 1)
 
-data_out <= data_in ;
+data_out <= data_in ;// why is data in needed
 
 
 if (inc == 1)
