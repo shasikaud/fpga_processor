@@ -57,21 +57,21 @@ end
 fetch1:
 
 begin
-control_out <= 23'd34880;
+control_out <= 23'd33856;
 // mem_write <= 2'd0;
 end
 
 fetch2:
 
 begin
-control_out <= 23'd262146;
+control_out <= 23'd2098178;
 // mem_write <= 2'd0;
 end
 
 fetch3:
 
 begin
-control_out <= 23'd2622465;
+control_out <= 23'd2621441;
 // mem_write <= 2'd0;
 end
 

@@ -12,7 +12,12 @@ module top_layer(clk,
 				 iram_in,
 				 addr_ins,
 				 addr_out,
-				 state);
+				 state,
+				 control_out,
+				 ir_out,
+				 read_en,
+				 data_out_proc,
+				 pc_addr);
 
 
 
@@ -31,9 +36,10 @@ output wire [15:0] iram_in;
 output wire [15:0] dram_in; // data memory read output (data_bus <= output :: memory <= input)
 
 output wire[5:0] state;
-wire[15:0] data_out_proc, ir_out, pc_addr;
-wire[23:0]control_out;
-reg [1:0] read_en;
+output wire [15:0] ir_out;
+output wire[15:0] data_out_proc, pc_addr;
+output wire[22:0]control_out;
+output reg [1:0] read_en;
 reg mem_write_data_proc;
 reg mem_write_data;
 reg read_en_data, read_en_ir;
@@ -57,8 +63,8 @@ state_machine state_machine(clk, start, ir_out, state);
 
 
 always @(posedge clk) begin
-	read_en <= control_out[13:12];
-	mem_write_data_proc <= control_out[14];
+	read_en <= control_out[11:10];
+	mem_write_data_proc <= control_out[12];
 
 	//data memmory
 	if (mem_write_data_proc == 1 && mem_write_data_ext == 0)
@@ -83,7 +89,7 @@ always @(posedge clk) begin
 	if (read_en_ext[0] == 0 && read_en[0] == 1)
 		begin
 			read_en_ir <= 1;
-			addr_ins <= addr_out_proc;
+			addr_ins <= pc_addr;
 		end
 	if (read_en_ext[0] == 1 && read_en[0] == 0)
 		begin

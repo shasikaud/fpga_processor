@@ -7,49 +7,296 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/Ajeeth/OneDrive/Desktop/FPGA PROJECT/fpga_processor/simulation/modelsim
+Z0 dE:/GIthub/prc/simulation/modelsim
+vAC
+Z1 !s110 1623915738
+!i10b 1
+!s100 5ZEbY^io[W:^SnDVPdP2R0
+InIIzP[TNLRf^V_QbQ_HPJ2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1623910463
+8E:/GIthub/prc/AC.v
+FE:/GIthub/prc/AC.v
+L0 1
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z5 !s108 1623915738.000000
+!s107 E:/GIthub/prc/AC.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/GIthub/prc|E:/GIthub/prc/AC.v|
+!i113 1
+Z6 o-vlog01compat -work work
+Z7 !s92 -vlog01compat -work work +incdir+E:/GIthub/prc
+Z8 tCvgOpt 0
+n@a@c
+vALU
+R1
+!i10b 1
+!s100 ^F>zGA?L@7a1XbA2O^BHh2
+IWe4FEQD[20;oSQH0_DYzc0
+R2
+R0
+R3
+8E:/GIthub/prc/ALU.v
+FE:/GIthub/prc/ALU.v
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 E:/GIthub/prc/ALU.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/GIthub/prc|E:/GIthub/prc/ALU.v|
+!i113 1
+R6
+R7
+R8
+n@a@l@u
+vBUS
+R1
+!i10b 1
+!s100 [ZXOGYc077o]a9^CAZ]KZ2
+IKj<gcaU:m]lD[CR9ko?@X3
+R2
+R0
+R3
+8E:/GIthub/prc/BUS.v
+FE:/GIthub/prc/BUS.v
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 E:/GIthub/prc/BUS.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/GIthub/prc|E:/GIthub/prc/BUS.v|
+!i113 1
+R6
+R7
+R8
+n@b@u@s
+vControl_Unit
+Z9 !s110 1623915739
+!i10b 1
+!s100 [MI5XFNKGhN;cgRZRYfG=0
+IOj6UMF_>>a^b[4gzWI=PE1
+R2
+R0
+w1623914635
+8E:/GIthub/prc/Control_Unit.v
+FE:/GIthub/prc/Control_Unit.v
+L0 9
+R4
+r1
+!s85 0
+31
+R5
+!s107 E:/GIthub/prc/Control_Unit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/GIthub/prc|E:/GIthub/prc/Control_Unit.v|
+!i113 1
+R6
+R7
+R8
+n@control_@unit
+vdatapath
+R9
+!i10b 1
+!s100 G]IFDmEo]S2YR5Ln@bAN?3
+IAV>mFnCeGEJFeL>d9d^VK3
+R2
+R0
+w1623913178
+8E:/GIthub/prc/datapath.v
+FE:/GIthub/prc/datapath.v
+L0 1
+R4
+r1
+!s85 0
+31
+Z10 !s108 1623915739.000000
+!s107 E:/GIthub/prc/datapath.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/GIthub/prc|E:/GIthub/prc/datapath.v|
+!i113 1
+R6
+R7
+R8
 vIR
-!s110 1623908231
+R1
 !i10b 1
 !s100 E>R><kzc0QWAdX>HK_;^G1
-I53EZb1zThIe`zC@m>_VMB0
-Z1 VDg1SIo80bB@j0V0VzS_@n1
-R0
-w1623873062
-8C:/Users/Ajeeth/OneDrive/Desktop/FPGA PROJECT/fpga_processor/IR.v
-FC:/Users/Ajeeth/OneDrive/Desktop/FPGA PROJECT/fpga_processor/IR.v
-L0 1
-Z2 OV;L;10.5b;63
-r1
-!s85 0
-31
-!s108 1623908231.000000
-!s107 C:/Users/Ajeeth/OneDrive/Desktop/FPGA PROJECT/fpga_processor/IR.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Ajeeth/OneDrive/Desktop/FPGA PROJECT/fpga_processor|C:/Users/Ajeeth/OneDrive/Desktop/FPGA PROJECT/fpga_processor/IR.v|
-!i113 1
-o-vlog01compat -work work
-!s92 -vlog01compat -work work {+incdir+C:/Users/Ajeeth/OneDrive/Desktop/FPGA PROJECT/fpga_processor}
-Z3 tCvgOpt 0
-n@i@r
-vIR_tb
-!s110 1623908261
-!i10b 1
-!s100 @?KSjkP<7?h9>I@Thhnk:3
-IXUZA]K]gjD=gQG]e7SiBb3
-R1
-R0
-w1623908191
-8C:/Users/Ajeeth/OneDrive/Desktop/FPGA PROJECT/fpga_processor/tb/IR_tb.v
-FC:/Users/Ajeeth/OneDrive/Desktop/FPGA PROJECT/fpga_processor/tb/IR_tb.v
-L0 3
+I=@FOfgWFa`hz1``T1_iYV1
 R2
+R0
+R3
+8E:/GIthub/prc/IR.v
+FE:/GIthub/prc/IR.v
+L0 1
+R4
 r1
 !s85 0
 31
-!s108 1623908261.000000
-!s107 C:/Users/Ajeeth/OneDrive/Desktop/FPGA PROJECT/fpga_processor/tb/IR_tb.v|
-!s90 -reportprogress|300|-work|work|C:/Users/Ajeeth/OneDrive/Desktop/FPGA PROJECT/fpga_processor/tb/IR_tb.v|
+R5
+!s107 E:/GIthub/prc/IR.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/GIthub/prc|E:/GIthub/prc/IR.v|
+!i113 1
+R6
+R7
+R8
+n@i@r
+vmemory_ip
+!s110 1623915737
+!i10b 1
+!s100 m3KQBG6cFB:KW:9E=mn;z2
+IXg@>MO2I408JLWm0a6h=22
+R2
+R0
+R3
+8E:/GIthub/prc/memory_ip.v
+FE:/GIthub/prc/memory_ip.v
+L0 40
+R4
+r1
+!s85 0
+31
+!s108 1623915737.000000
+!s107 E:/GIthub/prc/memory_ip.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/GIthub/prc|E:/GIthub/prc/memory_ip.v|
+!i113 1
+R6
+R7
+R8
+vPC
+R1
+!i10b 1
+!s100 Ce8KKd5QGbM42=amgW<[K2
+IRSj`=k^<WV2P6`be[A4iV1
+R2
+R0
+R3
+8E:/GIthub/prc/PC.v
+FE:/GIthub/prc/PC.v
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 E:/GIthub/prc/PC.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/GIthub/prc|E:/GIthub/prc/PC.v|
+!i113 1
+R6
+R7
+R8
+n@p@c
+vProcessor
+R1
+!i10b 1
+!s100 >?dCC=9O2if=H9UC0XPoX0
+IBf]^F8T:GASjZeh6SHLLa2
+R2
+R0
+R3
+8E:/GIthub/prc/Processor.v
+FE:/GIthub/prc/Processor.v
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 E:/GIthub/prc/Processor.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/GIthub/prc|E:/GIthub/prc/Processor.v|
+!i113 1
+R6
+R7
+R8
+n@processor
+vregister
+R1
+!i10b 1
+!s100 O2@edOc6SB[YHDAgZ4JNG2
+IcE?Gl?cW3giGGFikA<A=H1
+R2
+R0
+R3
+8E:/GIthub/prc/Register.v
+FE:/GIthub/prc/Register.v
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 E:/GIthub/prc/Register.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/GIthub/prc|E:/GIthub/prc/Register.v|
+!i113 1
+R6
+R7
+R8
+vstate_machine
+R9
+!i10b 1
+!s100 6KDFAH`zVaj;3gbQT<e0_1
+IofXURTI:feWFMKXND@Xlh0
+R2
+R0
+w1623915390
+8E:/GIthub/prc/state_machine.v
+FE:/GIthub/prc/state_machine.v
+L0 9
+R4
+r1
+!s85 0
+31
+R10
+!s107 E:/GIthub/prc/state_machine.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/GIthub/prc|E:/GIthub/prc/state_machine.v|
+!i113 1
+R6
+R7
+R8
+vtest_tb2
+!s110 1623915745
+!i10b 1
+!s100 ^ZFS8XfLcm;ZdW[P<?ene1
+IZglm6TBn<81fOJo83CWW22
+R2
+R0
+w1623914958
+8E:/GIthub/prc/tb/test_tb2.v
+FE:/GIthub/prc/tb/test_tb2.v
+L0 27
+R4
+r1
+!s85 0
+31
+!s108 1623915745.000000
+!s107 E:/GIthub/prc/tb/test_tb2.v|
+!s90 -reportprogress|300|-work|work|E:/GIthub/prc/tb/test_tb2.v|
 !i113 1
 o-work work
-R3
-n@i@r_tb
+R8
+vtop_layer
+R9
+!i10b 1
+!s100 cYnG`^2jMTH><^S<o1jCO0
+I=N@Z;aJJni4hN^U^zK]NL2
+R2
+R0
+w1623915699
+8E:/GIthub/prc/top_layer.v
+FE:/GIthub/prc/top_layer.v
+L0 2
+R4
+r1
+!s85 0
+31
+R10
+!s107 E:/GIthub/prc/top_layer.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/GIthub/prc|E:/GIthub/prc/top_layer.v|
+!i113 1
+R6
+R7
+R8
