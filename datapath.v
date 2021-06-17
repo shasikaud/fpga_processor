@@ -22,7 +22,7 @@ register DR(clock,control[16], bus_out, dr);
 
 AC AC(clock,control[17], bus_out, control[22], alu_out , ac);
 
-PC PC(clock, control[18], control[8], bus_out, pc);
+PC PC(clock, control[18], control[1], bus_out, pc);
 
 IR IR(clock,control[19], bus_out, ir_out);
 

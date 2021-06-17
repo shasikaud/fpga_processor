@@ -1,3 +1,10 @@
-Warning (10268): Verilog HDL information at read_file_tb.v(24): always construct contains both blocking and non-blocking assignments File: C:/Users/Ajeeth/OneDrive/Desktop/FPGA PROJECT/fpga_processor/tb/read_file_tb.v Line: 24
-Warning (10268): Verilog HDL information at BUS.v(15): always construct contains both blocking and non-blocking assignments File: C:/Users/Ajeeth/OneDrive/Desktop/FPGA PROJECT/fpga_processor/BUS.v Line: 15
-Warning (10268): Verilog HDL information at top_layer.v(59): always construct contains both blocking and non-blocking assignments File: C:/Users/Ajeeth/OneDrive/Desktop/FPGA PROJECT/fpga_processor/top_layer.v Line: 59
+Warning (10268): Verilog HDL information at read_file_tb.v(24): always construct contains both blocking and non-blocking assignments File: E:/GIthub/prc/tb/read_file_tb.v Line: 24
+Warning (10268): Verilog HDL information at BUS.v(15): always construct contains both blocking and non-blocking assignments File: E:/GIthub/prc/BUS.v Line: 15
+Warning (10268): Verilog HDL information at top_layer.v(65): always construct contains both blocking and non-blocking assignments File: E:/GIthub/prc/top_layer.v Line: 65
+Info (10281): Verilog HDL Declaration information at datapath.v(10): object "r" differs only in case from object "R" in the same scope File: E:/GIthub/prc/datapath.v Line: 10
+Info (10281): Verilog HDL Declaration information at datapath.v(10): object "ar" differs only in case from object "AR" in the same scope File: E:/GIthub/prc/datapath.v Line: 10
+Info (10281): Verilog HDL Declaration information at datapath.v(10): object "dr" differs only in case from object "DR" in the same scope File: E:/GIthub/prc/datapath.v Line: 10
+Info (10281): Verilog HDL Declaration information at datapath.v(10): object "ac" differs only in case from object "AC" in the same scope File: E:/GIthub/prc/datapath.v Line: 10
+Info (10281): Verilog HDL Declaration information at datapath.v(10): object "pc" differs only in case from object "PC" in the same scope File: E:/GIthub/prc/datapath.v Line: 10
+Info (10281): Verilog HDL Declaration information at datapath.v(12): object "ir" differs only in case from object "IR" in the same scope File: E:/GIthub/prc/datapath.v Line: 12
+Info (10281): Verilog HDL Declaration information at datapath.v(10): object "alu" differs only in case from object "ALU" in the same scope File: E:/GIthub/prc/datapath.v Line: 10

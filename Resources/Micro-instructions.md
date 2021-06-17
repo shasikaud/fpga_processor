@@ -21,8 +21,8 @@ IR[9:0] operand address
 * LDAC 4: AC <= DR
 
 ## STAC
-* STAC 1: AR <= PC;
-* STAC 2: DR <= AC; PC <= PC +1 ; mem_write 
+* STAC 1: AR <= IR;
+* STAC 2: DR <= AC; mem_write 
 * STAC 3: D_M[t] <= DR
 * STAC 4: ??? check latency
 

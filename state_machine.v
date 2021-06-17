@@ -96,7 +96,7 @@ always @(posedge clock)
 
         else if((state == add || state == ldac4 || state == stac4 || state == clac || state == mvacr || state == mvrac || state == mul ) && start == 1 )
             begin
-            state <=idle;
+            state <=fetch1;
             end
 
         else if(start == 1)

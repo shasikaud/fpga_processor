@@ -31,12 +31,14 @@ reg [15:0] iram_in_ext,data_in_ext;
 reg[15:0] addr_ext, mem_write; 
 reg[1:0]  read_en;
 
-wire[15:0] iram_in, dram_in, data_out, addr_out;
+wire[15:0] iram_in, dram_in, data_out, addr_out, ir_out;
 wire[8:0] addr_ins;
 wire [5:0] state;
 integer               data_file    ; // file handler
 integer               scan_file    ; // file handler
-
+wire [22:0] control_out;
+wire [1:0] read_proc;
+wire[15:0] data_out_proc, pc_addr;
 // wire[5:0] state,ir_out;
  
 top_layer u_top_layer(
@@ -50,10 +52,15 @@ top_layer u_top_layer(
     .mem_write_ins      ( mem_write_ins      ),     // iram write enable
     .read_en_ext        ( read_en            ),     // read enable
     .data_in_ext        ( data_in_ext        ),     // to store data into dram
-    .iram_in            ( iram_in            ),     // read istructions from iram
+    .iram_in            (iram_in             ),     // read istructions from iram
     .addr_ins           (addr_ins            ),
     .addr_out           (addr_out            ),
-    .state              (state               )
+    .state              (state               ),
+    .control_out        (control_out         ),
+    .ir_out             (ir_out              ),
+    .read_en            (read_proc           ),
+    .data_out_proc      (data_out_proc       ),
+	.pc_addr            (pc_addr             )
 );
 
 
@@ -149,8 +156,8 @@ initial begin
     start <= 1;
     
 
-    #80;
-    start <= 0;
+    #5000;
+    start <= 1;
 
     #20;
     start <= 1;
