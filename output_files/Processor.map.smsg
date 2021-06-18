@@ -1,4 +1,3 @@
-Warning (10268): Verilog HDL information at read_file_tb.v(24): always construct contains both blocking and non-blocking assignments File: E:/GIthub/prc/tb/read_file_tb.v Line: 24
 Warning (10268): Verilog HDL information at BUS.v(15): always construct contains both blocking and non-blocking assignments File: E:/GIthub/prc/BUS.v Line: 15
 Warning (10268): Verilog HDL information at top_layer.v(65): always construct contains both blocking and non-blocking assignments File: E:/GIthub/prc/top_layer.v Line: 65
 Info (10281): Verilog HDL Declaration information at datapath.v(10): object "r" differs only in case from object "R" in the same scope File: E:/GIthub/prc/datapath.v Line: 10
