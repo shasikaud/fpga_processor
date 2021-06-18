@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dE:/GIthub/prc/simulation/modelsim
 vAC
-Z1 !s110 1623915738
+Z1 !s110 1624001349
 !i10b 1
 !s100 5ZEbY^io[W:^SnDVPdP2R0
 InIIzP[TNLRf^V_QbQ_HPJ2
@@ -23,7 +23,7 @@ Z4 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z5 !s108 1623915738.000000
+Z5 !s108 1624001349.000000
 !s107 E:/GIthub/prc/AC.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/GIthub/prc|E:/GIthub/prc/AC.v|
 !i113 1
@@ -78,7 +78,7 @@ R7
 R8
 n@b@u@s
 vControl_Unit
-Z9 !s110 1623915739
+Z9 !s110 1624001348
 !i10b 1
 !s100 [MI5XFNKGhN;cgRZRYfG=0
 IOj6UMF_>>a^b[4gzWI=PE1
@@ -92,7 +92,7 @@ R4
 r1
 !s85 0
 31
-R5
+Z10 !s108 1624001348.000000
 !s107 E:/GIthub/prc/Control_Unit.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/GIthub/prc|E:/GIthub/prc/Control_Unit.v|
 !i113 1
@@ -101,7 +101,7 @@ R7
 R8
 n@control_@unit
 vdatapath
-R9
+R1
 !i10b 1
 !s100 G]IFDmEo]S2YR5Ln@bAN?3
 IAV>mFnCeGEJFeL>d9d^VK3
@@ -115,7 +115,7 @@ R4
 r1
 !s85 0
 31
-Z10 !s108 1623915739.000000
+R5
 !s107 E:/GIthub/prc/datapath.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/GIthub/prc|E:/GIthub/prc/datapath.v|
 !i113 1
@@ -146,7 +146,7 @@ R7
 R8
 n@i@r
 vmemory_ip
-!s110 1623915737
+R1
 !i10b 1
 !s100 m3KQBG6cFB:KW:9E=mn;z2
 IXg@>MO2I408JLWm0a6h=22
@@ -160,7 +160,7 @@ R4
 r1
 !s85 0
 31
-!s108 1623915737.000000
+R5
 !s107 E:/GIthub/prc/memory_ip.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/GIthub/prc|E:/GIthub/prc/memory_ip.v|
 !i113 1
@@ -191,7 +191,7 @@ R7
 R8
 n@p@c
 vProcessor
-R1
+Z11 !s110 1624001350
 !i10b 1
 !s100 >?dCC=9O2if=H9UC0XPoX0
 IBf]^F8T:GASjZeh6SHLLa2
@@ -205,7 +205,7 @@ R4
 r1
 !s85 0
 31
-R5
+Z12 !s108 1624001350.000000
 !s107 E:/GIthub/prc/Processor.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/GIthub/prc|E:/GIthub/prc/Processor.v|
 !i113 1
@@ -214,7 +214,7 @@ R7
 R8
 n@processor
 vregister
-R1
+R11
 !i10b 1
 !s100 O2@edOc6SB[YHDAgZ4JNG2
 IcE?Gl?cW3giGGFikA<A=H1
@@ -228,7 +228,7 @@ R4
 r1
 !s85 0
 31
-R5
+R12
 !s107 E:/GIthub/prc/Register.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/GIthub/prc|E:/GIthub/prc/Register.v|
 !i113 1
@@ -236,7 +236,7 @@ R6
 R7
 R8
 vstate_machine
-R9
+R1
 !i10b 1
 !s100 6KDFAH`zVaj;3gbQT<e0_1
 IofXURTI:feWFMKXND@Xlh0
@@ -250,7 +250,7 @@ R4
 r1
 !s85 0
 31
-R10
+R5
 !s107 E:/GIthub/prc/state_machine.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/GIthub/prc|E:/GIthub/prc/state_machine.v|
 !i113 1
@@ -258,13 +258,13 @@ R6
 R7
 R8
 vtest_tb2
-!s110 1623915745
+R1
 !i10b 1
 !s100 ^ZFS8XfLcm;ZdW[P<?ene1
-IZglm6TBn<81fOJo83CWW22
+IAXW66Y]>I`37k46DCNOIE2
 R2
 R0
-w1623914958
+w1623916235
 8E:/GIthub/prc/tb/test_tb2.v
 FE:/GIthub/prc/tb/test_tb2.v
 L0 27
@@ -272,11 +272,12 @@ R4
 r1
 !s85 0
 31
-!s108 1623915745.000000
+R5
 !s107 E:/GIthub/prc/tb/test_tb2.v|
-!s90 -reportprogress|300|-work|work|E:/GIthub/prc/tb/test_tb2.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/GIthub/prc/tb|E:/GIthub/prc/tb/test_tb2.v|
 !i113 1
-o-work work
+R6
+!s92 -vlog01compat -work work +incdir+E:/GIthub/prc/tb
 R8
 vtop_layer
 R9
