@@ -10,21 +10,24 @@ parameter idle = 6'd0;
 parameter fetch1 = 6'd1;
 parameter fetch2 = 6'd2;
 parameter fetch3 = 6'd3;
-parameter ldr11 = 6'd4;
-parameter ldr12 = 6'd5;
-parameter ldr13 = 6'd6;
-parameter ldr14 = 6'd7;
-parameter ldr21 = 6'd8;
-parameter ldr22 = 6'd9;
-parameter ldr23 = 6'd10;
-parameter ldr24 = 6'd11;
-parameter stac1 = 6'd12;
-parameter stac2 = 6'd13;
-parameter stac3 = 6'd14;
-parameter stac4 = 6'd15;
-parameter add = 6'd16;
-parameter add2 = 6'd17;
-parameter mul = 6'd18;
+parameter fetch4 = 6'd4;
+parameter fetch5 = 6'd5;
+parameter fetch6 = 6'd6;
+parameter ldr11 = 6'd7;
+parameter ldr12 = 6'd8;
+parameter ldr13 = 6'd9;
+parameter ldr14 = 6'd10;
+parameter ldr21 = 6'd11;
+parameter ldr22 = 6'd12;
+parameter ldr23 = 6'd13;
+parameter ldr24 = 6'd14;
+parameter stac1 = 6'd15;
+parameter stac2 = 6'd16;
+parameter stac3 = 6'd17;
+parameter stac4 = 6'd18;
+parameter add = 6'd19;
+parameter add2 = 6'd20;
+parameter mul = 6'd21;
 
 
 always @(posedge clock)
@@ -33,7 +36,7 @@ always @(posedge clock)
 //    state<= next_state;     // assign the next state for the control unit
 
 
-        if(state == idle && start == 0) // remains in the idle state till the start signal is received
+        if(start == 0) // remains in the idle state till the start signal is received
             begin
             state <=  idle;
             end
@@ -45,7 +48,7 @@ always @(posedge clock)
             state  <= fetch1;
             end
 
-        else if(state == fetch3 && start == 1)  
+        else if(state == fetch6 && start == 1)  
             begin
             case(IR[15:10])   
             6'd0: state  <= idle;

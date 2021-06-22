@@ -15,6 +15,7 @@ wire write_en;
 // todo: remove for test 
 wire[19:0] control_out;
 wire [5:0] state ;
+wire [15:0] data_in_pc,alu_in_1,alu_in_2, alu_out;
 
 core core_dut(
     .clock    ( clock    ),
@@ -27,7 +28,11 @@ core core_dut(
     .read_en  ( read_en  ),
     .write_en ( write_en ),
     .control_out(control_out),
-    .state (state)
+    .state (state),
+    .data_in_pc(data_in_pc),
+    .alu_in_1(alu_in_1),
+    .alu_in_2(alu_in_2),
+    .alu_out(alu_out)
 );
 
 
@@ -57,12 +62,14 @@ initial begin
     iram_in <= 1025;
     dram_in <= 3;
 
+    
 
    
 
     // !load r2
-    #50;
-    start <= 1;
+
+    #100
+    start<=1;
     iram_in <= 2050;
     dram_in <= 2;
 
@@ -73,16 +80,16 @@ initial begin
     // // dram_in <= 0;
 
     // !mul
-    #50;
+    #100
     start <= 1;
-    iram_in <= 5120;
+    iram_in <= 4096;
     // dram_in <= 0;
 
 
     
     // !store
 
-    #50;
+    #300
     start <= 1;
     iram_in <= 3072;
 

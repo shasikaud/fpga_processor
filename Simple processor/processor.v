@@ -1,11 +1,12 @@
-module processor(clock,control, dram_in,iram_in,dram_out, ir_out,ar_out, pc_out);
+module processor(clock,control, dram_in,iram_in,dram_out, ir_out,ar_out, pc_out, data_in_pc,alu_in_1,alu_in_2, alu_out);
 
 input clock;
 input[14:0] control;
 input[15:0] dram_in,iram_in;
 output wire[15:0] dram_out,ir_out,ar_out, pc_out;
 
-wire[15:0] data_in_pc,alu_in_1,alu_in_2, alu_out;
+output wire[15:0] data_in_pc,alu_in_1,alu_in_2, alu_out; // output for test
+
 
 
 register R1(clock, alu_in_1, dram_in, control[2], control[8]);
