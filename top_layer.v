@@ -17,7 +17,9 @@ module top_layer(clk,
 				 ir_out,
 				 read_en,
 				 data_out_proc,
-				 pc_addr);
+				 pc_addr,
+				 addr_out_proc,
+				 bus_out);
 
 
 
@@ -26,7 +28,7 @@ input [1:0] read_en_ext;
 input [15:0] iram_in_ext,addr_ext;
 input [15:0] data_in_ext;
 input mem_write_data_ext;
-wire [15:0]bus_out;
+output wire [15:0]bus_out;
 output reg [8:0] addr_ins;
 
 output reg [15:0] data_out; // data memory write output (data_bus <= input :: memory <= output)
@@ -43,6 +45,7 @@ output reg [1:0] read_en;
 reg mem_write_data_proc;
 reg mem_write_data;
 reg read_en_data, read_en_ir;
+output wire	 [15:0] addr_out_proc;
 // clock clock(clk);  //clock module
 
 Processor Processor(clk, 
@@ -70,7 +73,7 @@ always @(posedge clk) begin
 	if (mem_write_data_proc == 1 && mem_write_data_ext == 0)
 		begin
 			mem_write_data = 1;
-			data_out <= data_out_proc;
+			data_out <= bus_out;
 			addr_out <= addr_out_proc;
 		end
 	if (mem_write_data_proc == 0 && mem_write_data_ext == 1)
@@ -82,19 +85,19 @@ always @(posedge clk) begin
 	
 	if (mem_write_ins == 1)
 		begin
-			addr_ins <= addr_ext;
+			addr_ins = addr_ext;
 		end
 
 	// !instruction memory
 	if (read_en_ext[0] == 0 && read_en[0] == 1)
 		begin
-			read_en_ir <= 1;
-			addr_ins <= pc_addr;
+			read_en_ir = 1;
+			addr_ins = addr_out_proc;
 		end
 	if (read_en_ext[0] == 1 && read_en[0] == 0)
 		begin
-			read_en_ir <= 1;
-			addr_ins <= addr_ext;
+			read_en_ir = 1;
+			addr_ins = addr_ext;
 		end
 
 	// !data memory

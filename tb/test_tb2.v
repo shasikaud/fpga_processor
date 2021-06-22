@@ -28,7 +28,7 @@ module test_tb2();
 
 reg clock, start, mem_write_ins, mem_write_data_ext;
 reg [15:0] iram_in_ext,data_in_ext;
-reg[15:0] addr_ext, mem_write; 
+reg[15:0] addr_ext; 
 reg[1:0]  read_en;
 
 wire[15:0] iram_in, dram_in, data_out, addr_out, ir_out;
@@ -38,7 +38,7 @@ integer               data_file    ; // file handler
 integer               scan_file    ; // file handler
 wire [22:0] control_out;
 wire [1:0] read_proc;
-wire[15:0] data_out_proc, pc_addr;
+wire[15:0] data_out_proc, pc_addr,addr_out_proc,bus_out;
 // wire[5:0] state,ir_out;
  
 top_layer u_top_layer(
@@ -60,7 +60,9 @@ top_layer u_top_layer(
     .ir_out             (ir_out              ),
     .read_en            (read_proc           ),
     .data_out_proc      (data_out_proc       ),
-	.pc_addr            (pc_addr             )
+	.pc_addr            (pc_addr             ),
+    .addr_out_proc      (addr_out_proc       ),
+    .bus_out            (bus_out             )
 );
 
 
@@ -139,11 +141,13 @@ initial begin
         #10;
         scan_file = $fscanf(data_file, "%d\n", iram_in_ext); 
 		#30;
-        // mem_write_ins <= 0;
-        // read_en <= 2'b01;
-		// #30;
+        mem_write_ins <= 0;
+        read_en <= 2'b01;
+		#30;
+        read_en <= 2'b00;
+        #20;
         addr_ext <= addr_ext + 9'd1;
-
+        
             // if (!$feof(data_file)) begin
             //     $display(data_);
         //use captured_data as you would any other wire or reg value;
@@ -165,6 +169,14 @@ initial begin
 
     #40;
     start <= 0;
+
+
+    #20;
+    read_en <= 2'd2;
+    #20;
+    addr_ext <= 9'd3;
+    #80;
+
     // #150;
     // read_en <= 2'b00;
 

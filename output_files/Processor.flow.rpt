@@ -1,5 +1,5 @@
 Flow report for Processor
-Fri Jun 18 12:58:58 2021
+Tue Jun 22 13:22:51 2021
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,7 +40,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Fri Jun 18 12:58:58 2021       ;
+; Flow Status                        ; Successful - Tue Jun 22 13:22:51 2021       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Processor                                   ;
 ; Top-level Entity Name              ; top_layer                                   ;
@@ -62,7 +62,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/18/2021 12:58:45 ;
+; Start date & time ; 06/22/2021 13:22:37 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Processor           ;
 +-------------------+---------------------+
@@ -73,7 +73,7 @@ refer to the applicable agreement for further details.
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID                ; 109952957599664.162400132503644        ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID                ; 109952957599664.162434835619428        ; --            ; --          ; --                                ;
 ; EDA_DESIGN_ENTRY_SYNTHESIS_TOOL      ; Precision Synthesis                    ; <None>        ; --          ; --                                ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; test_tb2                          ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_timing           ;
@@ -115,8 +115,8 @@ refer to the applicable agreement for further details.
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Elaboration ; 00:00:13     ; 1.0                     ; 4723 MB             ; 00:00:29                           ;
-; Total                  ; 00:00:13     ; --                      ; --                  ; 00:00:29                           ;
+; Analysis & Elaboration ; 00:00:15     ; 1.0                     ; 4723 MB             ; 00:00:31                           ;
+; Total                  ; 00:00:15     ; --                      ; --                  ; 00:00:31                           ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
