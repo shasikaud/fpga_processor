@@ -10,10 +10,10 @@ module register(clock, data_out, data_in, read_en, write_en);
 	begin
 	
 	if(write_en == 1)
-	data_store <= data_in;
+	data_out <= data_in;
 
-	if(read_en == 1)
-	data_out <= data_store;
+	// if(read_en == 1)
+	// data_out <= data_store;
 
 
 end

@@ -23,7 +23,8 @@ parameter stac2 = 6'd13;
 parameter stac3 = 6'd14;
 parameter stac4 = 6'd15;
 parameter add = 6'd16;
-parameter mul = 6'd17;
+parameter add2 = 6'd17;
+parameter mul = 6'd18;
 
 
 always @(posedge clock)
@@ -58,7 +59,7 @@ always @(posedge clock)
 
             end
 
-        else if((state == add || state == ldr14 || state == ldr24 || state == stac4 || state == mul ) && start == 1 )
+        else if((state == add2 || state == ldr14 || state == ldr24 || state == stac4 || state == mul ) && start == 1 )
             begin
             state <=fetch1;
             end
