@@ -63,7 +63,7 @@
 
 
 
-|State      |Control Signal          |Decimal |
+|State      |Control Signal          |Decimal |s
 |---        |---                     |---     |
 |IDLE       |0000-0000-0000-0000-0000|0       |     
 |Fetch 1*   |0010-0001-0000-1100-0000|135328  |     

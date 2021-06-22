@@ -22,6 +22,7 @@ module PC(clock, data_out, data_in, read_en, write_en, inc);
 	
 	if(inc == 1)
 	data_store <= data_store + 16'd1;
+	data_out <= data_store;
 
 end
 

@@ -30,7 +30,8 @@ parameter stac2 = 6'd13;
 parameter stac3 = 6'd14;
 parameter stac4 = 6'd15;
 parameter add = 6'd16;
-parameter mul = 6'd17;
+parameter add2 = 6'd17;
+parameter mul = 6'd18;
 
 
 always@(posedge clock)
@@ -47,21 +48,21 @@ end
 fetch1:
 
 begin
-control_out <= 20'd135296;
+control_out <= 20'd135328;
 
 end
 
 fetch2:
 
 begin
-control_out <= 20'd147456;
+control_out <= 20'd147488;
 
 end
 
 fetch3:
 
 begin
-control_out <= 20'd133120;
+control_out <= 20'd133152;
 
 end
 
@@ -108,7 +109,7 @@ begin
 control_out <= 20'd33280;
 end
 
-ldr14:
+ldr24:
 
 begin
 control_out <= 20'd33280;
@@ -124,24 +125,30 @@ end
 stac2:
 
 begin
-control_out <= 20'd65600;
+control_out <= 20'd65616;
 end
 
 stac3:
 
 begin
-control_out <= 20'd65600;
+control_out <= 20'd65616;
 end
 
 stac4:
 
 begin
-control_out <= 20'd65600;
+control_out <= 20'd65616;
 end
 
 
 
 add:
+
+begin
+control_out <= 23'd1037;
+end
+
+add2:
 
 begin
 control_out <= 23'd1037;
