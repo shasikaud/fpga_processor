@@ -19,19 +19,21 @@ parameter idle = 6'd0;
 parameter fetch1 = 6'd1;
 parameter fetch2 = 6'd2;
 parameter fetch3 = 6'd3;
-parameter clac = 6'd4;
-parameter ldac1 = 6'd5;
-parameter ldac2 = 6'd6;
-parameter ldac3 = 6'd7;
-parameter ldac4 = 6'd8;
-parameter stac1 = 6'd9;
-parameter stac2 = 6'd10;
-parameter stac3 = 6'd11;
-parameter stac4 = 6'd12;
-parameter mvacr = 6'd13;
-parameter mvrac = 6'd14;
-parameter add = 6'd15;
-parameter mul = 6'd16;
+parameter fetch4 = 6'd4;
+parameter fetch5 = 6'd5;
+parameter clac = 6'd6;
+parameter ldac1 = 6'd7;
+parameter ldac2 = 6'd8;
+parameter ldac3 = 6'd9;
+parameter ldac4 = 6'd10;
+parameter stac1 = 6'd11;
+parameter stac2 = 6'd12;
+parameter stac3 = 6'd13;
+parameter stac4 = 6'd14;
+parameter mvacr = 6'd15;
+parameter mvrac = 6'd16;
+parameter add = 6'd17;
+parameter mul = 6'd18;
 
 
 //reg[5:0] next_state = 6'd0;
@@ -66,8 +68,16 @@ always @(posedge clock)
             begin
             state  <= fetch3;
             end
+        else if (state == fetch3 && start == 1)
+            begin
+            state  <= fetch4;
+            end
+        else if (state == fetch4 && start == 1)
+            begin
+            state  <= fetch5;
+            end
 
-        else if(state == fetch3 && start == 1)  
+        else if(state == fetch5 && start == 1)  
             begin
             case(IR[15:10])   
             6'd0: state  <= idle;
@@ -88,7 +98,7 @@ always @(posedge clock)
         //i_clac: state  <= clac;
 
         //more cases
-        //how to jump back to fetch1 at end
+        //how to jread_en <= 2'b00;ump back tread_en <= 2'b00;o fetch1 at end
 
             endcase
 

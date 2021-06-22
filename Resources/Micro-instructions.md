@@ -19,7 +19,7 @@ IR[9:0] operand address
 * LDAC 2:
 * LDAC 3: DR <= D_M[t]
 * LDAC 4: AC <= DR
-
+* LDAC 5:
 ## STAC
 * STAC 1: AR <= IR;
 * STAC 2: DR <= AC; mem_write 
