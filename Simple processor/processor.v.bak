@@ -1,0 +1,12 @@
+module processor(clock, dram_in,iram_in,dram_out,control, ir_out,ar_out, pc_out);
+
+input clock;
+input[] control;
+input[15:0] dram_in,iram_in;
+output[15:0] dram_out,ir_out,ar_out, pc_out;
+
+register(clock, data_out, data_in, read_en, write_en);
+ALU(clock, alu_control, alu_in_1,alu_in_2, alu_out);
+PC(clock, data_out, data_in, read_en, write_en, inc);
+
+endmodule 

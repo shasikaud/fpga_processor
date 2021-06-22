@@ -1,0 +1,8 @@
+module register(clock, data_out, data_in, read_en, write_en);
+
+input clock;
+
+
+
+
+endmodule 
