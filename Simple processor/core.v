@@ -16,6 +16,11 @@ output wire[15:0] data_in_pc,alu_in_1,alu_in_2, alu_out; // output for test
 wire[15:0] ir_out;
 
 
+
+
+
+
+
 state_machine state_machine(clock, start, ir_out, state);
 
 control_unit control_Unit(clock, state, control_out);
