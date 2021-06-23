@@ -93,46 +93,6 @@ initial begin
     iram_write_ext <=0;
 
 
-    // addr_ext <= 9'd1;
-    // Data_in_ins <= 16'd0;
-    // #20;
-    // iram_write_ext <= 1;
-    // #20;
-    // iram_write_ext <= 0;
-
-    // #10;
-    // addr_ext <= 9'd2;
-    // Data_in_ins <= 16'd1025;
-    // #20;
-    // iram_write_ext <= 1;
-    // #20;
-    // iram_write_ext <= 0;
-
-
-    // #10;
-    // addr_ext <= 9'd3;
-    // Data_in_ins <= 16'd2050;
-    // #20;
-    // iram_write_ext <= 1;
-    // #20;
-    // iram_write_ext <= 0;
-
-    // #10;
-    // addr_ext <= 9'd4;
-    // Data_in_ins <=  16'd5120;
-    // #20;
-    // iram_write_ext <= 1;
-    // #20;
-    // iram_write_ext <= 0;
-
-    // #10;
-    // addr_ext <= 9'd5;
-    // Data_in_ins <=  16'd3075;
-    // #20;
-    // iram_write_ext <= 1;
-    // #20;
-    // iram_write_ext <= 0;
-
     #100;
 
     start_2 <=0;
