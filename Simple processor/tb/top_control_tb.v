@@ -2,10 +2,12 @@
 
 module top_control_tb();
 
-reg clock, start, start_2;
+reg clock, start, start_2, start_3;
 reg [8:0] addr_ext;
-reg iram_write_ext;
-reg [15:0] Data_in_ins;
+reg iram_write_ext;  //write enable to iram externally
+reg dram_write_ext;  //write enable to dram externally
+reg [15:0] Data_in_ins;   //instruction to be writtern externally to iram
+reg [15:0] Data_in_dram;   //data to be writtern externally to dram
 wire [15:0] dram_out, pc_out, ar_out, dram_in, iram_in;
 
 wire [1:0] read_en;
@@ -34,12 +36,15 @@ top_control u_top_control(
     .alu_in_1    ( alu_in_1    ),
     .alu_in_2    ( alu_in_2    ),
     .alu_out     ( alu_out     ),
-    .write_en    (write_en     ),
-    .read_en     (read_en      ),
-    .addr_ext    (addr_ext)     ,     
-    .start_2        (start_2),
+    .write_en    ( write_en    ),
+    .read_en     ( read_en     ),
+    .addr_ext    ( addr_ext    ),     
+    .start_2     ( start_2     ),
     .iram_write_ext(iram_write_ext),
-    .Data_in_ins    (Data_in_ins)
+    .Data_in_ins ( Data_in_ins ),
+    .start_3     ( start_3     ),
+    .dram_write_ext (dram_write_ext),
+    .Data_in_dram ( Data_in_dram)
 );
 
 
@@ -56,6 +61,7 @@ initial begin
     #100;
     start <= 0;
     start_2 <= 0;
+    start_3 <= 0;
     #50;
     start_2 <= 1;
     #10;
@@ -89,15 +95,51 @@ initial begin
     end
     #20;
     $fclose(data_file);
-
     iram_write_ext <=0;
-
-
     #100;
 
-    start_2 <=0;
+    start_2 <= 0;
+    start_3 <= 1;
+
+    #20
+
+    // ! store dram values
+    addr_ext = 9'd1;
+    data_file = $fopen("../../test_files/mat_data.txt", "r");
+    if (data_file == `NULL) begin
+        $display("data_file handle was NULL");
+        $finish;
+    end
+    
+
+    while(!$feof(data_file)) begin
+        @(posedge clock);
+        #20;
+        dram_write_ext <= 0;
+        #10;
+        scan_file = $fscanf(data_file, "%d\n", Data_in_dram); 
+		#20;
+        dram_write_ext <= 1;
+		#40;
+        dram_write_ext <= 0;
+        #40;
+        addr_ext <= addr_ext + 9'd1;
+
+            // if (!$feof(data_file)) begin
+            //     $display(data_);
+        //use captured_data as you would any other wire or reg value;
+    end
+    #20;
+    $fclose(data_file);
+    dram_write_ext <=0;
+    #100;
+
+    start_2 <= 0;
+    start_3 <= 0;
     #10;
-    start <=1;
+
+    //START PROCESSOR
+    start <= 1;
     #1000;
 
     $stop;
