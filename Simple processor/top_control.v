@@ -6,32 +6,26 @@ module top_control (
     dram_out,
     pc_out,
     ar_out,
-    read_en,
-    write_en,
     control_out,
     state,
     data_in_pc,
     alu_in_1,
     alu_in_2,
     alu_out,
-    instruc_mem_store,
-    read_en_ir,
-    write_en_ir,
-    data_mem_store,
-    write_en_d,
+    write_en,
+    read_en
 );
 
     input clock,start;
     output wire [15:0] dram_in, iram_in,dram_out,pc_out, ar_out;
 //    output wire [15:0] ;
-    input [1:0] read_en;
-    input write_en;
+    output wire  [1:0] read_en;
+    output wire  write_en;
     output wire [19:0]control_out;
     output wire[5:0] state;
     output wire[15:0] data_in_pc,alu_in_1,alu_in_2, alu_out;
-    input [15:0] instruc_mem_store,data_mem_store;
-    input read_en_ir,write_en_ir, write_en_d;
-
+    wire write_en_ins;
+    wire [15:0] Data_in_ins;
 
 core core_1(
     .clock       ( clock       ),
@@ -52,25 +46,26 @@ core core_1(
 );
 
 
-
-
-memory_ip iram(
-    .address ( pc_out               ),
-    .clock   ( clock                ),
-    .data    ( instruc_mem_store    ),
-    .rden    ( read_en_ir           ),
-    .wren    ( write_en_ir          ),
-    .q       ( iram_in              )
+iram iram(
+    .clk      ( clock      ),
+    .write_en ( write_en_ins ),
+    .read_en  ( read_en[1]  ),
+    .addr     ( pc_out[8:0]     ),
+    .Data_in  ( Data_in_ins  ),
+    .Data_out ( iram_in )
 );
 
-memory_ip dram(
-    .address ( address ),
-    .clock   ( clock   ),
-    .data    ( data_mem_store    ),
-    .rden    ( read_en_d    ),
-    .wren    ( write_en_d    ),
-    .q       ( dram_in )
+
+dram dram(
+    .clk      ( clock      ),
+    .write_en ( write_en ),
+    .read_en  ( read_en[0]  ),
+    .addr     ( ar_out[8:0]     ),
+    .Data_in  ( dram_out  ),
+    .Data_out ( dram_in )
 );
+
+
 
 
 

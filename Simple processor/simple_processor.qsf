@@ -52,7 +52,7 @@ set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_signal_integrity
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_boundary_scan
 set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
-set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH singleport_ram_tb -section_id eda_simulation
+set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH top_control_tb -section_id eda_simulation
 set_global_assignment -name EDA_TEST_BENCH_NAME core_tb -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id core_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME core_tb -section_id core_tb
@@ -69,6 +69,14 @@ set_global_assignment -name VERILOG_FILE processor.v
 set_global_assignment -name VERILOG_FILE state_machine.v
 set_global_assignment -name VERILOG_FILE control_unit.v
 set_global_assignment -name VERILOG_FILE core.v
+set_global_assignment -name EDA_TEST_BENCH_NAME singleport_ram_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id singleport_ram_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME singleport_ram_tb -section_id singleport_ram_tb
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name VERILOG_FILE iram.v
+set_global_assignment -name VERILOG_FILE dram.v
 set_global_assignment -name EDA_TEST_BENCH_FILE tb/core_tb.v -section_id core_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE tb/top_control_tb.v -section_id top_control_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE ALU.v -section_id top_control_tb
@@ -78,12 +86,7 @@ set_global_assignment -name EDA_TEST_BENCH_FILE state_machine.v -section_id top_
 set_global_assignment -name EDA_TEST_BENCH_FILE register.v -section_id top_control_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE processor.v -section_id top_control_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE PC.v -section_id top_control_tb
-set_global_assignment -name EDA_TEST_BENCH_FILE memory_ip.v -section_id top_control_tb
-set_global_assignment -name EDA_TEST_BENCH_NAME singleport_ram_tb -section_id eda_simulation
-set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id singleport_ram_tb
-set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME singleport_ram_tb -section_id singleport_ram_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE iram.v -section_id top_control_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE dram.v -section_id top_control_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE tb/singleport_ram_tb.v -section_id singleport_ram_tb
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

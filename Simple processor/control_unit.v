@@ -58,7 +58,7 @@ end
 fetch2:
 
 begin
-control_out <= 20'd147488;
+control_out <= 20'd131134;
 
 end
 
@@ -78,13 +78,13 @@ end
 fetch5:
 
 begin
-control_out <= 20'd133152;
+control_out <= 20'd18464;
 
 end
 fetch6:
 
 begin
-control_out <= 20'd133152;
+control_out <= 20'd2080;
 
 end
 
