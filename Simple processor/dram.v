@@ -10,10 +10,10 @@ module dram(clk,write_en,read_en,addr,Data_in,Data_out);
 	 reg [8:0] addr_ext;
 	 integer data_file, scan_file;
 	 
-	 initial begin
-	 singleport_ram[1] <= 16'd3;
-	 singleport_ram[2] <= 16'd50;
-	 end
+	//  initial begin
+	//  singleport_ram[1] <= 16'd3;
+	//  singleport_ram[2] <= 16'd50;
+	//  end
 
     always @(posedge clk) 
     begin
