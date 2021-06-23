@@ -17,6 +17,9 @@ wire[19:0] control_out;
 wire [5:0] state ;
 wire [15:0] data_in_pc,alu_in_1,alu_in_2, alu_out;
 
+`define NULL 0
+
+
 top_control u_top_control(
     .clock       ( clock       ),
     .start       ( start       ),
@@ -57,52 +60,83 @@ initial begin
     start_2 <= 1;
     #10;
 
+
+    // ! store iram values
+    addr_ext = 9'd1;
+    data_file = $fopen("../../test_files/instruction.txt", "r");
+    if (data_file == `NULL) begin
+        $display("data_file handle was NULL");
+        $finish;
+    end
     
 
+    while(!$feof(data_file)) begin
+        @(posedge clock);
+        #20;
+        iram_write_ext <= 0;
+        #10;
+        scan_file = $fscanf(data_file, "%d\n", Data_in_ins); 
+		#20;
+        iram_write_ext <= 1;
+		#40;
+        iram_write_ext <= 0;
+        #40;
+        addr_ext <= addr_ext + 9'd1;
 
-    addr_ext <= 9'd1;
-    Data_in_ins <= 16'd0;
+            // if (!$feof(data_file)) begin
+            //     $display(data_);
+        //use captured_data as you would any other wire or reg value;
+    end
     #20;
-    iram_write_ext <= 1;
-    #20;
-    iram_write_ext <= 0;
+    $fclose(data_file);
 
-    #10;
-    addr_ext <= 9'd2;
-    Data_in_ins <= 16'd1025;
-    #20;
-    iram_write_ext <= 1;
-    #20;
-    iram_write_ext <= 0;
+    iram_write_ext <=0;
 
 
-    #10;
-    addr_ext <= 9'd3;
-    Data_in_ins <= 16'd2050;
-    #20;
-    iram_write_ext <= 1;
-    #20;
-    iram_write_ext <= 0;
+    // addr_ext <= 9'd1;
+    // Data_in_ins <= 16'd0;
+    // #20;
+    // iram_write_ext <= 1;
+    // #20;
+    // iram_write_ext <= 0;
 
-    #10;
-    addr_ext <= 9'd4;
-    Data_in_ins <=  16'd5120;
-    #20;
-    iram_write_ext <= 1;
-    #20;
-    iram_write_ext <= 0;
+    // #10;
+    // addr_ext <= 9'd2;
+    // Data_in_ins <= 16'd1025;
+    // #20;
+    // iram_write_ext <= 1;
+    // #20;
+    // iram_write_ext <= 0;
 
-    #10;
-    addr_ext <= 9'd5;
-    Data_in_ins <=  16'd3075;
-    #20;
-    iram_write_ext <= 1;
-    #20;
-    iram_write_ext <= 0;
+
+    // #10;
+    // addr_ext <= 9'd3;
+    // Data_in_ins <= 16'd2050;
+    // #20;
+    // iram_write_ext <= 1;
+    // #20;
+    // iram_write_ext <= 0;
+
+    // #10;
+    // addr_ext <= 9'd4;
+    // Data_in_ins <=  16'd5120;
+    // #20;
+    // iram_write_ext <= 1;
+    // #20;
+    // iram_write_ext <= 0;
+
+    // #10;
+    // addr_ext <= 9'd5;
+    // Data_in_ins <=  16'd3075;
+    // #20;
+    // iram_write_ext <= 1;
+    // #20;
+    // iram_write_ext <= 0;
 
     #100;
 
     start_2 <=0;
+    #10;
     start <=1;
     #1000;
 
