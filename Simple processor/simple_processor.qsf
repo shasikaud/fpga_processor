@@ -59,24 +59,12 @@ set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME core_tb -section_id core_
 set_global_assignment -name EDA_TEST_BENCH_NAME top_control_tb -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id top_control_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME top_control_tb -section_id top_control_tb
-set_global_assignment -name VERILOG_FILE singleport_ram.v
-set_global_assignment -name VERILOG_FILE top_control.v
-set_global_assignment -name VERILOG_FILE memory_ip.v
-set_global_assignment -name VERILOG_FILE register.v
-set_global_assignment -name VERILOG_FILE ALU.v
-set_global_assignment -name VERILOG_FILE PC.v
-set_global_assignment -name VERILOG_FILE processor.v
-set_global_assignment -name VERILOG_FILE state_machine.v
-set_global_assignment -name VERILOG_FILE control_unit.v
-set_global_assignment -name VERILOG_FILE core.v
 set_global_assignment -name EDA_TEST_BENCH_NAME singleport_ram_tb -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id singleport_ram_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME singleport_ram_tb -section_id singleport_ram_tb
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_global_assignment -name VERILOG_FILE iram.v
-set_global_assignment -name VERILOG_FILE dram.v
 set_global_assignment -name EDA_TEST_BENCH_FILE tb/core_tb.v -section_id core_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE tb/top_control_tb.v -section_id top_control_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE ALU.v -section_id top_control_tb
@@ -88,5 +76,20 @@ set_global_assignment -name EDA_TEST_BENCH_FILE processor.v -section_id top_cont
 set_global_assignment -name EDA_TEST_BENCH_FILE PC.v -section_id top_control_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE iram.v -section_id top_control_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE dram.v -section_id top_control_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE rom_vlog_mif.v -section_id top_control_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE tb/singleport_ram_tb.v -section_id singleport_ram_tb
+set_global_assignment -name MIF_FILE mem_init_vlog.mif
+set_global_assignment -name VERILOG_FILE rom_vlog_mif.v
+set_global_assignment -name VERILOG_FILE singleport_ram.v
+set_global_assignment -name VERILOG_FILE top_control.v
+set_global_assignment -name VERILOG_FILE memory_ip.v
+set_global_assignment -name VERILOG_FILE register.v
+set_global_assignment -name VERILOG_FILE ALU.v
+set_global_assignment -name VERILOG_FILE PC.v
+set_global_assignment -name VERILOG_FILE processor.v
+set_global_assignment -name VERILOG_FILE state_machine.v
+set_global_assignment -name VERILOG_FILE control_unit.v
+set_global_assignment -name VERILOG_FILE core.v
+set_global_assignment -name VERILOG_FILE iram.v
+set_global_assignment -name VERILOG_FILE dram.v
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

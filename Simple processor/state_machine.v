@@ -50,7 +50,7 @@ always @(posedge clock)
 
         else if(state == fetch6 && start == 1)  
             begin
-            case(IR[15:10])   
+            case(IR[15:10])  
             6'd0: state  <= idle;
             6'd1: state  <= ldr11;
             6'd2: state  <= ldr21;

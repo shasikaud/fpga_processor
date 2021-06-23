@@ -64,7 +64,7 @@ end
 
 fetch3:
 
-begin
+begin                   
 control_out <= 20'd133152;
 
 end

@@ -2,8 +2,10 @@
 
 module top_control_tb();
 
-reg clock, start;
-
+reg clock, start, start_2;
+reg [8:0] addr_ext;
+reg iram_write_ext;
+reg [15:0] Data_in_ins;
 wire [15:0] dram_out, pc_out, ar_out, dram_in, iram_in;
 
 wire [1:0] read_en;
@@ -30,7 +32,11 @@ top_control u_top_control(
     .alu_in_2    ( alu_in_2    ),
     .alu_out     ( alu_out     ),
     .write_en    (write_en     ),
-    .read_en     (read_en      )
+    .read_en     (read_en      ),
+    .addr_ext    (addr_ext)     ,     
+    .start_2        (start_2),
+    .iram_write_ext(iram_write_ext),
+    .Data_in_ins    (Data_in_ins)
 );
 
 
@@ -42,15 +48,65 @@ always
 			#5 clock = 1;
 			#5 clock = 0;
 		end
-
+    
 initial begin
+    #100;
     start <= 0;
+    start_2 <= 0;
     #50;
+    start_2 <= 1;
+    #10;
 
+    
+
+
+    addr_ext <= 9'd1;
+    Data_in_ins <= 16'd0;
+    #20;
+    iram_write_ext <= 1;
+    #20;
+    iram_write_ext <= 0;
+
+    #10;
+    addr_ext <= 9'd2;
+    Data_in_ins <= 16'd1025;
+    #20;
+    iram_write_ext <= 1;
+    #20;
+    iram_write_ext <= 0;
+
+
+    #10;
+    addr_ext <= 9'd3;
+    Data_in_ins <= 16'd2050;
+    #20;
+    iram_write_ext <= 1;
+    #20;
+    iram_write_ext <= 0;
+
+    #10;
+    addr_ext <= 9'd4;
+    Data_in_ins <=  16'd5120;
+    #20;
+    iram_write_ext <= 1;
+    #20;
+    iram_write_ext <= 0;
+
+    #10;
+    addr_ext <= 9'd5;
+    Data_in_ins <=  16'd3075;
+    #20;
+    iram_write_ext <= 1;
+    #20;
+    iram_write_ext <= 0;
+
+    #100;
+
+    start_2 <=0;
     start <=1;
     #1000;
 
-    $finish;
+    $stop;
 
 end
 
