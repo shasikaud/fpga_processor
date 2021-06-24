@@ -1,0 +1,16 @@
+Fitter Status : Successful - Tue Jun 22 21:29:30 2021
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Revision Name : simple_processor
+Top-level Entity Name : core
+Family : Cyclone IV E
+Device : EP4CE15F23C6
+Timing Models : Final
+Total logic elements : 174 / 15,408 ( 1 % )
+    Total combinational functions : 82 / 15,408 ( < 1 % )
+    Dedicated logic registers : 147 / 15,408 ( < 1 % )
+Total registers : 147
+Total pins : 175 / 344 ( 51 % )
+Total virtual pins : 0
+Total memory bits : 0 / 516,096 ( 0 % )
+Embedded Multiplier 9-bit elements : 2 / 112 ( 2 % )
+Total PLLs : 0 / 4 ( 0 % )
