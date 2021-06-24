@@ -20,6 +20,7 @@
 |STAC  1    |6d'5       |000_011    | 3072 + 10b(address in dec)  |
 |ADD        |6'd15      |000_100    | 4096                        |
 |MUL        |6'd16      |000_101    | 5120                        |
+|Finish     |           |           |                             |
 ### Registers
 ---
 * AR - adress register
@@ -49,6 +50,7 @@
 * [16] - data_mem_read
 * [17] - data_mem_write
 * [18] - inst_mem_read
+* [19] - end_of_operation
 
 
 
@@ -76,7 +78,7 @@
 |STAC  4    |0001-0000-0000-0101-0000|65616   |     
 |ADD        |0000-0000-0100-0000-1101|1037    |     
 |MUL        |0000-0000-0100-0000-1110|1038    |     
-
+|Finish     |0100-0000-0000-0000-0000|262144  |
 
 |Curent state        | Next state  | 
 | -----------        | ----------- |

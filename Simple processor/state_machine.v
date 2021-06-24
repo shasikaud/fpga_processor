@@ -25,9 +25,11 @@ parameter stac1 = 6'd15;
 parameter stac2 = 6'd16;
 parameter stac3 = 6'd17;
 parameter stac4 = 6'd18;
-parameter add = 6'd19;
-parameter mul = 6'd20;
-
+parameter add1 = 6'd19;
+parameter add2 = 6'd20;
+parameter mul1 = 6'd21;
+parameter mul2 = 6'd22;
+parameter FINISH = 6'd23;
 
 always @(posedge clock)
 
@@ -54,14 +56,14 @@ always @(posedge clock)
             6'd1: state  <= ldr11;
             6'd2: state  <= ldr21;
             6'd3: state  <= stac1;
-            6'd4: state  <= add;
-            6'd5: state  <= mul;
+            6'd4: state  <= add1;
+            6'd5: state  <= mul1;
 
             endcase
 
             end
 
-        else if((state == add || state == ldr14 || state == ldr24 || state == stac4 || state == mul ) && start == 1 )
+        else if((state == add2 || state == ldr14 || state == ldr24 || state == stac4 || state == mul2 ) && start == 1 )
             begin
             state <=fetch1;
             end

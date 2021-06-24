@@ -32,8 +32,12 @@ parameter stac1 = 6'd15;
 parameter stac2 = 6'd16;
 parameter stac3 = 6'd17;
 parameter stac4 = 6'd18;
-parameter add = 6'd19;
-parameter mul = 6'd20;
+parameter add1 = 6'd19;
+parameter add2 = 6'd20;
+parameter mul1 = 6'd21;
+parameter mul2 = 6'd22;
+parameter FINISH = 6'd23;
+
 
 
 always@(posedge clock)
@@ -162,14 +166,27 @@ end
 
 
 
-add:
+add1:
+
+begin
+control_out <= 20'd1037;
+end
+
+add2:
 
 begin
 control_out <= 20'd1037;
 end
 
 
-mul:
+
+mul1:
+
+begin
+control_out <= 20'd1038;
+end
+
+mul2:
 
 begin
 control_out <= 20'd1038;

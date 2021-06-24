@@ -140,7 +140,7 @@ initial begin
 
     //START PROCESSOR
     start <= 1;
-    #1000000;
+    #12000;
 
     $stop;
 
