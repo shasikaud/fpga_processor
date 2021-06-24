@@ -46,9 +46,9 @@ module top_control (
 core core_1(
     .clock       ( clock       ),
     .start       ( start       ),
-    .dram_in     ( dram_in     ),
+    .dram_in     ( dram_in     ),   //dram to processor
     .iram_in     ( iram_in     ),
-    .dram_out    ( dram_out    ),
+    .dram_out    ( dram_out    ),   //processor to dram
     .pc_out      ( pc_out      ),
     .ar_out      ( ar_out      ),
     .read_en     ( read_en     ),
@@ -109,26 +109,14 @@ iram iram(
     .Data_out ( iram_in    )               //internal
 );
 
-// rom_vlog_mif#(
-//     .ADDR_WIDTH ( 9 ),
-//     .DATA_WIDTH ( 16 )
-// )u_rom_vlog_mif(
-//     .clk_i      ( clock      ),
-//     .read_en    ( read_en[0] ),
-//     .write_en   ( write_en   ),
-//     .data       ( dram_out   ),
-//     .addr_i     ( ar_out[8:0] ),
-//     .data_o     ( dram_in    )
-// );
-
 
 dram dram(
     .clk      ( clock       ),
-    .write_en ( dram_write_en ),
-    .read_en  ( read_en[0]  ),
-    .addr     ( dram_addr   ),
-    .Data_in  ( dram_store  ),
-    .Data_out ( dram_in     )
+    .write_en ( dram_write_en ),    //or
+    .read_en  ( read_en[0]  ),      //internal
+    .addr     ( dram_addr   ),      //or
+    .Data_in  ( dram_store  ),      //ot
+    .Data_out ( dram_in     )       //internal
 );
 
 
