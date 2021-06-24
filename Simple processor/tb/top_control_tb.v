@@ -94,7 +94,7 @@ initial begin
         //use captured_data as you would any other wire or reg value;
     end
     #20;
-    $fclose(data_file);
+    //$fclose(data_file);
     iram_write_ext <=0;
     #10;
 
@@ -105,19 +105,19 @@ initial begin
 
     // ! store dram values
     addr_ext = 9'd1;
-    data_file2 = $fopen("../../test_files/mat_data.txt", "r");
-    if (data_file2 == `NULL) begin
+    data_file = $fopen("../../test_files/mat_data.txt", "r");
+    if (data_file == `NULL) begin
         $display("data_file handle was NULL");
         $finish;
     end
     
 
-    while(!$feof(data_file2)) begin
+    while(!$feof(data_file)) begin
         @(posedge clock);
         #20;
         dram_write_ext <= 0;
         #10;
-        scan_file = $fscanf(data_file2, "%d\n", Data_in_dram); 
+        scan_file = $fscanf(data_file, "%d\n", Data_in_dram); 
 		#20;
         dram_write_ext <= 1;
 		#40;
@@ -130,7 +130,7 @@ initial begin
         //use captured_data as you would any other wire or reg value;
     end
     #20;
-    $fclose(data_file2);
+    $fclose(data_file);
     dram_write_ext <=0;
     #10;
 
