@@ -10,8 +10,8 @@ module ALU(clock, alu_control, alu_in_1,alu_in_2, alu_out);
 	
 	case(alu_control)
 	
-	2'b01: alu_out <= alu_in_1 + alu_in_2;
-	2'b10: alu_out <= alu_in_1 * alu_in_2;
+	2'd1: alu_out <= alu_in_1 + alu_in_2;
+	2'd2: alu_out <= alu_in_1 * alu_in_2;
 	
 	endcase
 	

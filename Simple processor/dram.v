@@ -4,8 +4,8 @@ module dram(clk,write_en,read_en,addr,Data_in,Data_out);
     input[15:0] Data_in;
     output[15:0] Data_out;
 
-    reg[15:0] singleport_ram[31:0];
-    reg[4:0] addr_read;
+    reg[15:0] singleport_ram[511:0];
+    reg[8:0] addr_read;
 	 
 	 reg [8:0] addr_ext;
 	 integer data_file, scan_file;

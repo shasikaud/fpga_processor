@@ -69,7 +69,7 @@ initial begin
 
     // ! store iram values
     addr_ext = 9'd1;
-    data_file = $fopen("../../test_files/instruction.txt", "r");
+    data_file = $fopen("../../test_files/InstructionTest1.txt", "r");
     if (data_file == `NULL) begin
         $display("data_file handle was NULL");
         $finish;
@@ -105,7 +105,7 @@ initial begin
 
     // ! store dram values
     addr_ext = 9'd1;
-    data_file = $fopen("../../test_files/mat_data.txt", "r");
+    data_file = $fopen("../../test_files/DataTest1.txt", "r");
     if (data_file == `NULL) begin
         $display("data_file handle was NULL");
         $finish;
@@ -140,7 +140,7 @@ initial begin
 
     //START PROCESSOR
     start <= 1;
-    #1000;
+    #1000000;
 
     $stop;
 
