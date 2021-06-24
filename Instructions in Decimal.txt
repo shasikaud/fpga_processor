@@ -1,0 +1,6 @@
+CLAC - 1024
+LDAC - 2048 + 10b(address in decimal)
+MVACR - 4096
+ADD - 6144
+MUL - 7168
+STAC - 3072 + 10b(address in decimal)            6'd666666te  <= stac1;

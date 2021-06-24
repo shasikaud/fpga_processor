@@ -1,4 +1,6 @@
-module clock(clk);
+//clock module
+
+module clock(clk);     
 output reg clk;
 always
 begin
