@@ -70,16 +70,6 @@ for i in range(9):
     instructions.append(add)
     instructions.append(store+91+i) #starts with 91th position
 
-for i in range(9):
-    instructions.append(load1+55+(3*i))
-    instructions.append(load2+55+(3*i)+1)
-    instructions.append(add)
-    instructions.append(store+83+i) #starts with 83th position
-    instructions.append(load1+83+i)
-    instructions.append(load2+57+(3*i))
-    instructions.append(add)
-    instructions.append(store+91+i) #starts with 91th position
-  
 
 f = open("instructions_test.txt", "w")
 for i in instructions:
