@@ -30,7 +30,7 @@ for i in range(mat1_rows):  #iterate rows MAT1
 #print (muls_stage1)
 #print (len(muls_stage1))
 
-f = open("matrix_data.txt", "w")
+f = open("./Simple processor/test_files/matrix_data.txt", "w")
 for i in muls_stage1:
     f.write(str(i)+ "\n")
 f.close()
@@ -70,8 +70,18 @@ for i in range(9):
     instructions.append(add)
     instructions.append(store+91+i) #starts with 91th position
 
+for i in range(9):
+    instructions.append(load1+55+(3*i))
+    instructions.append(load2+55+(3*i)+1)
+    instructions.append(add)
+    instructions.append(store+83+i) #starts with 83th position
+    instructions.append(load1+83+i)
+    instructions.append(load2+57+(3*i))
+    instructions.append(add)
+    instructions.append(store+91+i) #starts with 91th position
+  
 
-f = open("instructions_test.txt", "w")
+f = open("./Simple processor/test_files/instructions_test.txt", "w")
 for i in instructions:
     f.write(str(i)+ "\n")
 f.close()
