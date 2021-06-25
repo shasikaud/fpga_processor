@@ -2,10 +2,11 @@
 
 module top_control_tb();
 
-reg clock, start, start_2, start_3;
+reg clock, start, start_2, start_3, start_4;
 reg [8:0] addr_ext;
 reg iram_write_ext;  //write enable to iram externally
 reg dram_write_ext;  //write enable to dram externally
+reg read_en_ext;  //read enable dram externally
 reg [15:0] Data_in_ins;   //instruction to be writtern externally to iram
 reg [15:0] Data_in_dram;   //data to be writtern externally to dram
 wire [15:0] dram_out, pc_out, ar_out, dram_in, iram_in;
@@ -44,7 +45,9 @@ top_control u_top_control(
     .Data_in_ins ( Data_in_ins ),
     .start_3     ( start_3     ),
     .dram_write_ext (dram_write_ext),
-    .Data_in_dram ( Data_in_dram)
+    .Data_in_dram ( Data_in_dram),
+    .start_4     ( start_4     ),
+    .read_en_ext ( read_en_ext )
 );
 
 
@@ -62,6 +65,7 @@ initial begin
     start <= 0;
     start_2 <= 0;
     start_3 <= 0;
+    start_4 <= 0;
     #50;
     start_2 <= 1;
     #10;
@@ -69,7 +73,7 @@ initial begin
 
     // ! store iram values
     addr_ext = 9'd1;
-    data_file = $fopen("../../test_files/InstructionTest1.txt", "r");
+    data_file = $fopen("../../test_files/instructions_test.txt", "r");
     if (data_file == `NULL) begin
         $display("data_file handle was NULL");
         $finish;
@@ -105,7 +109,7 @@ initial begin
 
     // ! store dram values
     addr_ext = 9'd1;
-    data_file = $fopen("../../test_files/DataTest1.txt", "r");
+    data_file = $fopen("../../test_files/matrix_data.txt", "r");
     if (data_file == `NULL) begin
         $display("data_file handle was NULL");
         $finish;
@@ -140,7 +144,40 @@ initial begin
 
     //START PROCESSOR
     start <= 1;
-    #12000;
+    #1200000;
+
+    start <= 0;
+    #10;
+
+    // read final matrix vaues from dram   
+    addr_ext = 9'd91;   //for this test case
+    data_file = $fopen("../../test_files/final_matrix.txt", "w");
+    if (data_file == `NULL) begin
+        $display("data_file handle was NULL");
+        $finish;
+    end
+    
+    start_4 <= 1;
+    #20;
+
+    while(addr_ext < 9'd101) begin
+        @(posedge clock);
+        #20;
+        read_en_ext <= 1;
+        #50;
+        $fwrite(data_file, "%d\n", dram_in); 
+		#50;
+        read_en_ext <= 0;
+        #40;
+        addr_ext <= addr_ext + 9'd1;
+    
+    end
+    #20;
+    $fclose(data_file);
+    start_4 <= 0;
+    iram_write_ext <=0;
+    #10;
+
 
     $stop;
 
