@@ -9,10 +9,10 @@ mat2_cols = 0
 
 muls_stage1 = []
 
-mat1_rows = input("ENTER MATRIX 1 DIMENSIONS :: ROWS >> ")
-mat1_cols = input("ENTER MATRIX 1 DIMENSIONS :: COLUMNS >> ")
-mat2_rows = input("ENTER MATRIX 2 DIMENSIONS :: ROWS >> ")
-mat2_cols = input("ENTER MATRIX 2 DIMENSIONS :: COLUMNS >> ")
+mat1_rows = int(input("ENTER MATRIX 1 DIMENSIONS :: ROWS >> "))
+mat1_cols = int(input("ENTER MATRIX 1 DIMENSIONS :: COLUMNS >> "))
+mat2_rows = int(input("ENTER MATRIX 2 DIMENSIONS :: ROWS >> "))
+mat2_cols = int(input("ENTER MATRIX 2 DIMENSIONS :: COLUMNS >> "))
 
 for i in range(mat1_rows*mat1_cols):
     mat1.append(input("ENTER MATRIX 1 VALUES >> "))
@@ -54,7 +54,7 @@ mul = 5120
 add = 4096
 store = 3072
 
-for i in range(len(muls_stage1)/2):
+for i in range(int(len(muls_stage1)/2)):
     instructions.append(load1+(2*i)+1)
     instructions.append(load2+(2*i)+2)
     instructions.append(mul)
