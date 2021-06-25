@@ -14,13 +14,15 @@ wire [15:0] dram_out, pc_out, ar_out, dram_in, iram_in;
 wire [1:0] read_en;
 wire write_en; 
 integer  data_file, data_file2, scan_file, param_file;
+
 reg[8:0] final_start, final_end;
+
 
 // todo: remove for test 
 wire[19:0] control_out;
 wire [5:0] state ;
 wire [15:0] data_in_pc,alu_in_1,alu_in_2, alu_out;
-
+reg[8:0] final_start, final_end
 `define NULL 0
 
 
@@ -100,6 +102,7 @@ initial begin
     end
     #20;
     $fclose(data_file);
+
     #20
     param_file = $fopen("../../test_files/final.txt", "r");
     if (data_file == `NULL) begin
@@ -111,6 +114,20 @@ initial begin
     scan_file = $fscanf(data_file, "%d\n", final_end); 
 
     $fclose(param_file);
+
+
+
+    #20
+        param_file = $fopen("../../test_files/final.txt", "r");
+    if (param_file == `NULL) begin
+        $display("data_file handle was NULL");
+        $finish;
+    end
+
+    scan_file = $fscanf(data_file, "%d\n",final_start); 
+    scan_file = $fscanf(data_file, "%d\n", final_end);
+
+    $fclose(param_file); 
 
 
     #20
@@ -159,6 +176,7 @@ initial begin
 
     //START PROCESSOR
     start <= 1;
+
     #1200000;
 
     start <= 0;
@@ -192,6 +210,7 @@ initial begin
     start_4 <= 0;
     iram_write_ext <=0;
     #10;
+
 
 
     $stop;
