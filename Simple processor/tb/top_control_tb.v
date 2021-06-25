@@ -150,7 +150,7 @@ initial begin
     #10;
 
     // read final matrix vaues from dram   
-    addr_ext = 9'd91;   //for this test case
+    addr_ext = 9'd200;   //for this test case
     data_file = $fopen("../../test_files/final_matrix.txt", "w");
     if (data_file == `NULL) begin
         $display("data_file handle was NULL");
@@ -160,7 +160,7 @@ initial begin
     start_4 <= 1;
     #20;
 
-    while(addr_ext < 9'd101) begin
+    while(addr_ext < 9'd215) begin
         @(posedge clock);
         #20;
         read_en_ext <= 1;

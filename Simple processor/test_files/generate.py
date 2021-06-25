@@ -40,9 +40,9 @@ f.close()
 #######################################################
 
 # 1 - 54 >>  mul digits
-# 55 - 82 >> multiplied values
-# 83 - 90 >> store temp pair addition
-# 91 - 100 >> row/col sum
+# 75 - 100 >> multiplied values
+# 150 - 200 >> store temp pair addition
+# 200 - 250 >> row/col sum
 
 instructions = [0]
 
@@ -58,17 +58,17 @@ for i in range(int(len(muls_stage1)/2)):
     instructions.append(load1+(2*i)+1)
     instructions.append(load2+(2*i)+2)
     instructions.append(mul)
-    instructions.append(store+55+i) #starts with 55th position
+    instructions.append(store+75+i) #starts with 55th position
 
 for i in range(9):
-    instructions.append(load1+55+(3*i))
-    instructions.append(load2+55+(3*i)+1)
+    instructions.append(load1+75+(3*i))
+    instructions.append(load2+75+(3*i)+1)
     instructions.append(add)
-    instructions.append(store+83+i) #starts with 83th position
-    instructions.append(load1+83+i)
-    instructions.append(load2+57+(3*i))
+    instructions.append(store+150+i) #starts with 83th position
+    instructions.append(load1+150+i)
+    instructions.append(load2+77+(3*i))
     instructions.append(add)
-    instructions.append(store+91+i) #starts with 91th position
+    instructions.append(store+200+i) #starts with 91th position
 
 
 
