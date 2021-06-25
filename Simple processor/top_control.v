@@ -20,10 +20,12 @@ module top_control (
     Data_in_ins,
     start_3,
     dram_write_ext,
-    Data_in_dram
+    Data_in_dram,
+    start_4,
+    read_en_ext
 );
 
-    input clock, start, start_2, iram_write_ext, start_3, dram_write_ext;
+    input clock, start, start_2, start_4, iram_write_ext, start_3, dram_write_ext, read_en_ext;
     input [8:0] addr_ext;
     input [15:0] Data_in_ins, Data_in_dram;
 
@@ -42,6 +44,8 @@ module top_control (
     reg [8:0] dram_addr;
     reg [15:0] dram_store;
     reg dram_write_en;
+
+    reg dram_read_en;
 
 core core_1(
     .clock       ( clock       ),
@@ -95,7 +99,16 @@ always @(posedge clock) begin
         dram_store <= dram_out;
         dram_addr <= ar_out[8:0];
         dram_write_en <= write_en; 
+        dram_read_en <= read_en[0];
     end
+
+    if (start_4 == 1)
+    begin
+        dram_addr <= addr_ext;
+        dram_read_en <= read_en_ext;
+
+    end
+
 end
 
 
@@ -113,7 +126,7 @@ iram iram(
 dram dram(
     .clk      ( clock       ),
     .write_en ( dram_write_en ),    //or
-    .read_en  ( read_en[0]  ),      //internal
+    .read_en  ( dram_read_en ),      //internal
     .addr     ( dram_addr   ),      //or
     .Data_in  ( dram_store  ),      //ot
     .Data_out ( dram_in     )       //internal

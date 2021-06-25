@@ -10,151 +10,175 @@ z2
 cModel Technology
 Z0 dD:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/simulation/modelsim
 vALU
-Z1 !s110 1624377759
+Z1 !s110 1624652516
 !i10b 1
-!s100 zYK591YD2TaSlV`Q=Oh`m0
+!s100 1Wzo_f[YNcna3a^@m8RG22
 Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
-IIfo;69mBePYi9mkYl];;C0
+IJVE:[1AL4Gk0liAX_e=;e1
 Z3 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1624360237
+Z4 w1624631495
 8D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/ALU.v
 FD:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/ALU.v
-!i122 1
+!i122 11
 L0 1 19
-Z4 OV;L;2020.1;71
+Z5 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z5 !s108 1624377759.000000
+Z6 !s108 1624652516.000000
 !s107 D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/ALU.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor|D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/ALU.v|
 !i113 1
-Z6 o-vlog01compat -work work
-Z7 !s92 -vlog01compat -work work {+incdir+D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor}
-Z8 tCvgOpt 0
+Z7 o-vlog01compat -work work
+Z8 !s92 -vlog01compat -work work {+incdir+D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor}
+Z9 tCvgOpt 0
 n@a@l@u
 vcontrol_unit
 R1
 !i10b 1
-!s100 BjULz>MnmZjV2>50KdlhJ0
+!s100 P?bmjgKYFGW^4Y`ZJe1j71
 R2
-IM3mDlkXKh]`M>ZEl?:H[f0
+IHPD0;SYTPPMe:MYdgeJa^1
 R3
 R0
-w1624376393
+R4
 8D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/control_unit.v
 FD:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/control_unit.v
-!i122 5
-L0 9 179
-R4
+!i122 13
+L0 9 190
+R5
 r1
 !s85 0
 31
-R5
+R6
 !s107 D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/control_unit.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor|D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/control_unit.v|
 !i113 1
-R6
 R7
 R8
+R9
 vcore
 R1
 !i10b 1
-!s100 b;2h<eeBB506hifSzGZJe2
+!s100 zLKQGFghkzDdJOV;46zF71
 R2
-I^TN4FBnGn6C<Q`AGSSLkF0
+I1BA23mN4ga8aOG?X`fQC=1
 R3
 R0
-w1624374603
+R4
 8D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/core.v
 FD:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/core.v
-!i122 6
-L0 1 47
-R4
+!i122 12
+L0 1 52
+R5
 r1
 !s85 0
 31
-R5
+R6
 !s107 D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/core.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor|D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/core.v|
 !i113 1
-R6
 R7
 R8
-vcore_tb
-!s110 1624377760
+R9
+vdram
+Z10 !s110 1624652517
 !i10b 1
-!s100 f;`jcY_maLUi;W_:cNQZ62
+!s100 @GNIk6n3IaV28Y@oE9:i83
 R2
-Ib=^Sbg2<UYWaTDMG5NCL;0
+IL5oO_hP<cg2^mN7@U]g9P1
 R3
 R0
-w1624377741
-8D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/../tb/core_tb.v
-FD:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/../tb/core_tb.v
-!i122 7
-L0 3 101
 R4
+8D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/dram.v
+FD:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/dram.v
+!i122 19
+Z11 L0 1 33
+R5
 r1
 !s85 0
 31
-R5
-!s107 D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/../tb/core_tb.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/../tb|D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/../tb/core_tb.v|
+Z12 !s108 1624652517.000000
+!s107 D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/dram.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor|D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/dram.v|
 !i113 1
-R6
-!s92 -vlog01compat -work work {+incdir+D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/../tb}
+R7
 R8
+R9
+viram
+R10
+!i10b 1
+!s100 ?z1L8:b`920ZPdCzf2Iz<2
+R2
+IdLf>R3aFi89^`^7o7c_A90
+R3
+R0
+R4
+8D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/iram.v
+FD:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/iram.v
+!i122 18
+R11
+R5
+r1
+!s85 0
+31
+R12
+!s107 D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/iram.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor|D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/iram.v|
+!i113 1
+R7
+R8
+R9
 vPC
-R1
+R10
 !i10b 1
 !s100 XXH70[cS`L81oPbmOn7Z=3
 R2
 IKBW=me@O>bUVLFdf=Hm8S2
 R3
 R0
-Z9 w1624373626
+R4
 8D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/PC.v
 FD:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/PC.v
-!i122 2
+!i122 17
 L0 1 29
-R4
+R5
 r1
 !s85 0
 31
-R5
+R12
 !s107 D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/PC.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor|D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/PC.v|
 !i113 1
-R6
 R7
 R8
+R9
 n@p@c
 vprocessor
-R1
+R10
 !i10b 1
 !s100 25lc9aF8fHMz>h>go?DN]3
 R2
 I9k3S_XIUB4lhJI]eIh45L3
 R3
 R0
-w1624374473
+R4
 8D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/processor.v
 FD:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/processor.v
-!i122 3
+!i122 16
 L0 1 27
-R4
+R5
 r1
 !s85 0
 31
-R5
+R6
 !s107 D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/processor.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor|D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/processor.v|
 !i113 1
-R6
 R7
 R8
+R9
 vregister
 R1
 !i10b 1
@@ -163,43 +187,115 @@ R2
 I6ibHZBcUXTFIeIZjk?:jY0
 R3
 R0
-R9
+R4
 8D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/register.v
 FD:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/register.v
-!i122 0
+!i122 15
 L0 1 21
-R4
+R5
 r1
 !s85 0
 31
-R5
+R6
 !s107 D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/register.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor|D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/register.v|
 !i113 1
-R6
 R7
 R8
-vstate_machine
-R1
+R9
+vrom_vlog_mif
+R10
 !i10b 1
-!s100 kTR2PP9l_S?9;41_NGaz90
+!s100 M:G;HcFdhCaULW3j_<=@;0
 R2
-I>@3;g@KJH<PQJ>OHTj]WN0
+IBHo@g4dFNGV:81h9FP:BW1
 R3
 R0
-w1624376392
-8D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/state_machine.v
-FD:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/state_machine.v
-!i122 4
-L0 2 78
 R4
+8D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/rom_vlog_mif.v
+FD:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/rom_vlog_mif.v
+!i122 20
+L0 3 34
+R5
 r1
 !s85 0
 31
+R12
+!s107 D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/rom_vlog_mif.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor|D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/rom_vlog_mif.v|
+!i113 1
+R7
+R8
+R9
+vstate_machine
+R1
+!i10b 1
+!s100 9h0eT<IS;YEnA9VFlPODa3
+R2
+IbA]IVTn1<<gE5;@bo5[bi1
+R3
+R0
+R4
+8D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/state_machine.v
+FD:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/state_machine.v
+!i122 14
+L0 2 79
 R5
+r1
+!s85 0
+31
+R6
 !s107 D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/state_machine.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor|D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/state_machine.v|
 !i113 1
-R6
 R7
 R8
+R9
+vtop_control
+!s110 1624652515
+!i10b 1
+!s100 HSjnA3EBo5cQPGNbHH?g:3
+R2
+IQYW?YWdmL0E=YcMS2QBIR1
+R3
+R0
+w1624651713
+8D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/top_control.v
+FD:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/top_control.v
+!i122 0
+L0 1 141
+R5
+r1
+!s85 0
+31
+!s108 1624652515.000000
+!s107 D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/top_control.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor|D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/top_control.v|
+!i113 1
+R7
+R8
+R9
+vtop_control_tb
+R1
+!i10b 1
+!s100 kc@Q@dC1Mi>>lEk25]DmN1
+R2
+I2HkjnEd_aeeDO9AP=T[@F3
+R3
+R0
+w1624652435
+8D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/tb/top_control_tb.v
+FD:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/tb/top_control_tb.v
+!i122 10
+L0 3 201
+R5
+r1
+!s85 0
+31
+R6
+!s107 D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/tb/top_control_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/tb|D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/tb/top_control_tb.v|
+!i113 1
+R7
+!s92 -vlog01compat -work work {+incdir+D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/tb}
+R9
