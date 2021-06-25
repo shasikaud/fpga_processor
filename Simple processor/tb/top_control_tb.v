@@ -2,10 +2,11 @@
 
 module top_control_tb();
 
-reg clock, start, start_2, start_3;
+reg clock, start, start_2, start_3, start_4;
 reg [8:0] addr_ext;
 reg iram_write_ext;  //write enable to iram externally
 reg dram_write_ext;  //write enable to dram externally
+reg read_en_ext;  //read enable dram externally
 reg [15:0] Data_in_ins;   //instruction to be writtern externally to iram
 reg [15:0] Data_in_dram;   //data to be writtern externally to dram
 wire [15:0] dram_out, pc_out, ar_out, dram_in, iram_in;
@@ -13,10 +14,9 @@ wire [15:0] dram_out, pc_out, ar_out, dram_in, iram_in;
 wire [1:0] read_en;
 wire write_en; 
 integer  data_file, data_file2, scan_file, param_file;
-<<<<<<< Updated upstream
+
 reg[8:0] final_start, final_end;
-=======
->>>>>>> Stashed changes
+
 
 // todo: remove for test 
 wire[19:0] control_out;
@@ -48,7 +48,9 @@ top_control u_top_control(
     .Data_in_ins ( Data_in_ins ),
     .start_3     ( start_3     ),
     .dram_write_ext (dram_write_ext),
-    .Data_in_dram ( Data_in_dram)
+    .Data_in_dram ( Data_in_dram),
+    .start_4     ( start_4     ),
+    .read_en_ext ( read_en_ext )
 );
 
 
@@ -66,6 +68,7 @@ initial begin
     start <= 0;
     start_2 <= 0;
     start_3 <= 0;
+    start_4 <= 0;
     #50;
     start_2 <= 1;
     #10;
@@ -99,7 +102,7 @@ initial begin
     end
     #20;
     $fclose(data_file);
-<<<<<<< Updated upstream
+
     #20
     param_file = $fopen("../../test_files/final.txt", "r");
     if (data_file == `NULL) begin
@@ -112,7 +115,7 @@ initial begin
 
     $fclose(param_file);
 
-=======
+
 
     #20
         param_file = $fopen("../../test_files/final.txt", "r");
@@ -125,7 +128,7 @@ initial begin
     scan_file = $fscanf(data_file, "%d\n", final_end);
 
     $fclose(param_file); 
->>>>>>> Stashed changes
+
 
     #20
     iram_write_ext <=0;
@@ -173,9 +176,7 @@ initial begin
 
     //START PROCESSOR
     start <= 1;
-<<<<<<< Updated upstream
-    #12000;
-=======
+
     #1200000;
 
     start <= 0;
@@ -210,7 +211,7 @@ initial begin
     iram_write_ext <=0;
     #10;
 
->>>>>>> Stashed changes
+
 
     $stop;
 
