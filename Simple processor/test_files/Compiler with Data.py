@@ -106,4 +106,20 @@ file.writelines(instructions_text)
 
 file.close()
 
+file = open('Summary.txt', 'w')
+file.writelines('Matrix 1:' + '\n')
+for r in matrix1_nested:
+    file.writelines(' '.join(r) +  '\n')
+
+file.writelines('\n')
+file.writelines('Matrix 2:' + '\n')
+for r in matrix2_nested:
+    file.writelines(' '.join(r) +  '\n')
+
+file.close()
+
+file = open('Dimensions.txt', 'w')
+file.writelines(str(param_3) + '\n')
+file.writelines(str(param_1) + '\n')
+file.close()
 
