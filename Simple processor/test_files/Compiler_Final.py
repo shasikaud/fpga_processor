@@ -7,36 +7,31 @@ matrix2_nested = []
 i=1
 j=1
 
-while(True):
- 
-    
-    row = input('Input row ' + str(i) + ' of matrix 1: ').split(' ')
+file = open('input.txt', 'r')
+input_file = file.readlines()
+file.close()
 
-    if(row == ['']):
+for i in range(0, len(input_file)):
+    if(input_file[i].strip() == ''):
         break
-    else:
-        matrix1_nested.append(row)
-        for element in row:
-            matrix1.append(element)
-        i+=1
+    row = input_file[i].strip().split(' ')
+    matrix1_nested.append(row)
+    for element in row:
+        matrix1.append(element)
 
 print('Matrix 1:')
 for r in matrix1_nested:
     print(' '.join(r))
 
-
-while(True):
- 
+for j in range(i+1, len(input_file)):
     
-    row = input('Input row ' + str(j) + ' of matrix 2: ').split(' ')
-
-    if(row == ['']):
+    if(input_file[j].strip() == ''):
         break
-    else:
-        matrix2_nested.append(row)
-        for element in row:
-            matrix2.append(element)
-        j+=1
+    row = input_file[j].strip().split(' ')
+    matrix2_nested.append(row)
+    for element in row:
+        matrix2.append(element)
+
 
 print('Matrix 2:')
 for r in matrix2_nested:
