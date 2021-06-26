@@ -1,4 +1,4 @@
-
+#get inputs from text file
 matrix1 = []
 matrix2 = []
 
@@ -48,7 +48,7 @@ file.writelines(matrix2_text)
 file.close()
 
 
-
+#get marix dimensions
 param_1 = len(matrix1_nested)
 param_2 = len(matrix1_nested[0])
 param_3 = len(matrix2_nested[0])
@@ -62,6 +62,7 @@ file.writelines(str(matrix_2 + 1) + '\n')
 file.writelines(str(matrix_3) + '\n')
 file.close()
 
+#generate instructions list
 instructions = []
 ADD = 4096
 MUL = 5120
@@ -87,12 +88,16 @@ for i in range(1, param_1 + 1):
         STAC = 3072 + matrix_2 + param_3*(i-1) + j
         instructions.append(STAC)
 
-for i in range(matrix_2+1, matrix_3+1):
-    LDR1 = 1024 + i
-    LDR2 = 2048 + i
-    instructions.append(LDR1)
-    instructions.append(LDR2)
 
+# COmmands to read result for verification(need for testing only)
+# for i in range(matrix_2+1, matrix_3+1):
+#     LDR1 = 1024 + i
+#     LDR2 = 2048 + i
+#     instructions.append(LDR1)
+#     instructions.append(LDR2)
+
+
+#write instructions to txt file
 instructions_text = '\n'. join(map(str, instructions))
 
 file = open('instructions.txt', 'w')
@@ -101,6 +106,7 @@ file.writelines(instructions_text)
 
 file.close()
 
+#store additional data to txt files
 file = open('Summary.txt', 'w')
 file.writelines('Matrix 1:' + '\n')
 for r in matrix1_nested:
