@@ -16,7 +16,7 @@ for line in final_matrix_file:
 
 result = []
 
-for i in range(0, int(len(final_matrix)/columns)):
+for i in range(0, rows):
     row = []
     for j in range(0, columns):
         row.append(final_matrix[columns*i + j])

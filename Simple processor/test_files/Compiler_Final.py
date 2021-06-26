@@ -48,7 +48,7 @@ file.writelines(matrix2_text)
 file.close()
 
 
-#get marix dimensions
+#get matrix dimensions
 param_1 = len(matrix1_nested)
 param_2 = len(matrix1_nested[0])
 param_3 = len(matrix2_nested[0])
@@ -120,7 +120,7 @@ for r in matrix2_nested:
 file.close()
 
 file = open('Dimensions.txt', 'w')
-file.writelines(str(param_3) + '\n')
-file.writelines(str(param_1) + '\n')
+file.writelines(str(param_3) + '\n') #no of columns of matrix 2
+file.writelines(str(param_1) + '\n') #no of rows of matrix 1
 file.close()
 
