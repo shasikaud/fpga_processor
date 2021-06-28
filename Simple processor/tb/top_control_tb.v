@@ -102,13 +102,13 @@ initial begin
     $fclose(data_file);
     #20
     param_file = $fopen("../../test_files/final.txt", "r");
-    if (data_file == `NULL) begin
+    if (param_file == `NULL) begin
         $display("param_file handle was NULL");
         $finish;
     end
 
-    scan_file = $fscanf(data_file, "%d\n", final_start); 
-    scan_file = $fscanf(data_file, "%d\n", final_end); 
+    scan_file = $fscanf(param_file, "%d\n", final_start); 
+    scan_file = $fscanf(param_file, "%d\n", final_end); 
 
     $fclose(param_file);
 
