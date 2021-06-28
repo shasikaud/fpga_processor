@@ -73,7 +73,7 @@ MUL = 5120
 
 for i in range(1, param_1 + 1):
     for j in range(1, param_3 + 1):
-        core_no = (param_2*(i-1) + j)%cores
+        core_no = (param_3*(i-1) + j)%cores
         shift = core_no*param_2
         for k in range(1, param_2+1):
             LDR1 = 1024 + param_2*(i-1) + k

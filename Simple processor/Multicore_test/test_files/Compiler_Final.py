@@ -1,13 +1,11 @@
-#no fo cores
-cores = 2
-
 #get inputs from text file
 matrix1 = []
 matrix2 = []
 
 matrix1_nested = []
 matrix2_nested = []
-
+i=1
+j=1
 
 file = open('input.txt', 'r')
 input_file = file.readlines()
@@ -66,33 +64,29 @@ file.close()
 
 #generate instructions list
 instructions = []
-for n in range(0, cores):
-    instructions.append([])
 ADD = 4096
 MUL = 5120
 
 for i in range(1, param_1 + 1):
     for j in range(1, param_3 + 1):
-        core_no = (param_2*(i-1) + j)%cores
-        shift = core_no*param_2
         for k in range(1, param_2+1):
             LDR1 = 1024 + param_2*(i-1) + k
             LDR2 = 2048 + matrix_1 + param_3*(k-1) + j
-            STAC = 3072 + matrix_3 + k + shift
-            instructions[core_no].append(LDR1)
-            instructions[core_no].append(LDR2)
-            instructions[core_no].append(MUL)
-            instructions[core_no].append(STAC)
+            STAC = 3072 + matrix_3 + k
+            instructions.append(LDR1)
+            instructions.append(LDR2)
+            instructions.append(MUL)
+            instructions.append(STAC)
         for t in range(1, param_2):
-            LDR1 = 1024 + matrix_3 + t + shift
-            LDR2 = 2048 + matrix_3 + t + 1 + shift
-            STAC = 3072 + matrix_3 + t + 1 + shift
-            instructions[core_no].append(LDR1)
-            instructions[core_no].append(LDR2)
-            instructions[core_no].append(ADD)
-            instructions[core_no].append(STAC)
+            LDR1 = 1024 + matrix_3 + t
+            LDR2 = 2048 + matrix_3 + t+1
+            STAC = 3072 + matrix_3 + t+1
+            instructions.append(LDR1)
+            instructions.append(LDR2)
+            instructions.append(ADD)
+            instructions.append(STAC)
         STAC = 3072 + matrix_2 + param_3*(i-1) + j
-        instructions[core_no].append(STAC)
+        instructions.append(STAC)
 
 
 # COmmands to read result for verification(need for testing only)
@@ -104,14 +98,13 @@ for i in range(1, param_1 + 1):
 
 
 #write instructions to txt file
-for n in range(0, cores):
-    instructions_text = '\n'. join(map(str, instructions[n]))
+instructions_text = '\n'. join(map(str, instructions))
 
-    file = open('instructions_core_' + str(n+1) + '.txt', 'w')
-    file.writelines(str(0) + '\n')
-    file.writelines(instructions_text)
+file = open('instructions.txt', 'w')
+file.writelines(str(0) + '\n')
+file.writelines(instructions_text)
 
-    file.close()
+file.close()
 
 #store additional data to txt files
 file = open('Summary.txt', 'w')

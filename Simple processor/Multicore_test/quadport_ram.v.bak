@@ -13,14 +13,14 @@ module quadport_ram(
     input[15:0] Data_in1,Data_in2,Data_in3,Data_in4;
     output[15:0] Data_out1,Data_out2,Data_out3,Data_out4;
 
-    reg[15:0] quadport_ram[31:0];
+    reg[15:0] quadport_ram[31:0]
     reg[8:0] addr_read1,addr_read2,addr_read3,addr_read4;
 
     always @(posedge clk) 
     begin
       if (write_en1 == 1) 
         begin
-           quadport_ram[addr1] <= Data_in1;
+           quadport_ram[addr1] <= Data_in;
            //addr_read1 <= addr1; 
         end
         if (read_en1 == 1)
@@ -38,7 +38,7 @@ module quadport_ram(
         end
         if (read_en2 == 1)
         begin
-            addr_read2 <= addr2;
+            addr_read1 <= addr2;
         end    
     end
 
@@ -46,7 +46,7 @@ module quadport_ram(
     begin
       if (write_en3 == 1) 
         begin
-           quadport_ram[addr3] <= Data_in3;
+           quadport_ram[addr3] <= Data_in34;
            //addr_read3 <= addr3; 
         end
         if (read_en3 == 1)
