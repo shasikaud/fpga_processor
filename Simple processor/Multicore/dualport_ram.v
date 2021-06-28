@@ -18,7 +18,7 @@ module dualport_ram(
     begin
       if (write_en1 == 1) 
         begin
-           dualport_ram[addr1] <= Data_in3;
+           dualport_ram[addr1] <= Data_in1;
            //addr_read1 <= addr1; 
         end
         if (read_en1 == 1)
