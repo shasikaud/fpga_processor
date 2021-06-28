@@ -1,5 +1,5 @@
 Flow report for simple_processor
-Wed Jun 23 14:35:36 2021
+Mon Jun 28 19:17:51 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Wed Jun 23 14:35:36 2021       ;
+; Flow Status                        ; Successful - Mon Jun 28 19:17:51 2021       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; simple_processor                            ;
 ; Top-level Entity Name              ; top_control                                 ;
@@ -63,7 +63,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/23/2021 14:35:27 ;
+; Start date & time ; 06/28/2021 19:17:42 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; simple_processor    ;
 +-------------------+---------------------+
@@ -74,7 +74,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------+----------------------------------------+------------------+-------------+-----------------------------------+
 ; Assignment Name                      ; Value                                  ; Default Value    ; Entity Name ; Section Id                        ;
 +--------------------------------------+----------------------------------------+------------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID                ; 10995770589205.162443912725496         ; --               ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID                ; 10995770589205.162488806221968         ; --               ; --          ; --                                ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --               ; --          ; singleport_ram_tb                 ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --               ; --          ; core_tb                           ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --               ; --          ; top_control_tb                    ;
@@ -98,6 +98,7 @@ https://fpgasoftware.intel.com/eula.
 ; EDA_TEST_BENCH_FILE                  ; PC.v                                   ; --               ; --          ; top_control_tb                    ;
 ; EDA_TEST_BENCH_FILE                  ; iram.v                                 ; --               ; --          ; top_control_tb                    ;
 ; EDA_TEST_BENCH_FILE                  ; dram.v                                 ; --               ; --          ; top_control_tb                    ;
+; EDA_TEST_BENCH_FILE                  ; rom_vlog_mif.v                         ; --               ; --          ; top_control_tb                    ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; singleport_ram_tb                      ; --               ; --          ; singleport_ram_tb                 ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; core_tb                                ; --               ; --          ; core_tb                           ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; top_control_tb                         ; --               ; --          ; top_control_tb                    ;
@@ -118,8 +119,8 @@ https://fpgasoftware.intel.com/eula.
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Elaboration ; 00:00:10     ; 1.0                     ; 4707 MB             ; 00:00:21                           ;
-; Total                  ; 00:00:10     ; --                      ; --                  ; 00:00:21                           ;
+; Analysis & Elaboration ; 00:00:09     ; 1.0                     ; 4704 MB             ; 00:00:23                           ;
+; Total                  ; 00:00:09     ; --                      ; --                  ; 00:00:23                           ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

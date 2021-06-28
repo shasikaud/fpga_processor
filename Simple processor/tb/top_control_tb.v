@@ -13,7 +13,8 @@ wire [15:0] dram_out, pc_out, ar_out, dram_in, iram_in;
 
 wire [1:0] read_en;
 wire write_en; 
-integer  data_file, data_file2, scan_file;
+integer  data_file, data_file2, scan_file, param_file;
+reg[8:0] final_start, final_end;
 
 // todo: remove for test 
 wire[19:0] control_out;
@@ -73,7 +74,7 @@ initial begin
 
     // ! store iram values
     addr_ext = 9'd1;
-    data_file = $fopen("../../test_files/instructions_test.txt", "r");
+    data_file = $fopen("../../test_files/instructions.txt", "r");
     if (data_file == `NULL) begin
         $display("data_file handle was NULL");
         $finish;
@@ -98,7 +99,21 @@ initial begin
         //use captured_data as you would any other wire or reg value;
     end
     #20;
-    //$fclose(data_file);
+    $fclose(data_file);
+    #20
+    param_file = $fopen("../../test_files/final.txt", "r");
+    if (param_file == `NULL) begin
+        $display("param_file handle was NULL");
+        $finish;
+    end
+
+    scan_file = $fscanf(param_file, "%d\n", final_start); 
+    scan_file = $fscanf(param_file, "%d\n", final_end); 
+
+    $fclose(param_file);
+
+
+    #20
     iram_write_ext <=0;
     #10;
 
@@ -109,7 +124,7 @@ initial begin
 
     // ! store dram values
     addr_ext = 9'd1;
-    data_file = $fopen("../../test_files/matrix_data.txt", "r");
+    data_file = $fopen("../../test_files/data.txt", "r");
     if (data_file == `NULL) begin
         $display("data_file handle was NULL");
         $finish;
@@ -150,7 +165,7 @@ initial begin
     #10;
 
     // read final matrix vaues from dram   
-    addr_ext = 9'd200;   //for this test case
+    addr_ext = final_start;   //for this test case
     data_file = $fopen("../../test_files/final_matrix.txt", "w");
     if (data_file == `NULL) begin
         $display("data_file handle was NULL");
@@ -160,7 +175,7 @@ initial begin
     start_4 <= 1;
     #20;
 
-    while(addr_ext < 9'd215) begin
+    while(addr_ext < final_end) begin
         @(posedge clock);
         #20;
         read_en_ext <= 1;

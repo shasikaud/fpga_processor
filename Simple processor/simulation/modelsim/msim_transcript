@@ -10,92 +10,223 @@
 # Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
+# vlog -vlog01compat -work work +incdir+D:/Academics/FPGA\ Processor\ Project/GitHub/fpga_processor/Simple\ processor {D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/top_control.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:22:31 on Jun 28,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor" D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/top_control.v 
+# -- Compiling module top_control
+# 
+# Top level modules:
+# 	top_control
+# End time: 19:22:31 on Jun 28,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+D:/Academics/FPGA\ Processor\ Project/GitHub/fpga_processor/Simple\ processor {D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/register.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:32:39 on Jun 22,2021
+# Start time: 19:22:31 on Jun 28,2021
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor" D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/register.v 
 # -- Compiling module register
 # 
 # Top level modules:
 # 	register
-# End time: 21:32:39 on Jun 22,2021, Elapsed time: 0:00:00
+# End time: 19:22:31 on Jun 28,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+D:/Academics/FPGA\ Processor\ Project/GitHub/fpga_processor/Simple\ processor {D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/ALU.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:32:39 on Jun 22,2021
+# Start time: 19:22:32 on Jun 28,2021
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor" D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/ALU.v 
 # -- Compiling module ALU
 # 
 # Top level modules:
 # 	ALU
-# End time: 21:32:39 on Jun 22,2021, Elapsed time: 0:00:00
+# End time: 19:22:32 on Jun 28,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+D:/Academics/FPGA\ Processor\ Project/GitHub/fpga_processor/Simple\ processor {D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/PC.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:32:39 on Jun 22,2021
+# Start time: 19:22:32 on Jun 28,2021
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor" D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/PC.v 
 # -- Compiling module PC
 # 
 # Top level modules:
 # 	PC
-# End time: 21:32:39 on Jun 22,2021, Elapsed time: 0:00:00
+# End time: 19:22:32 on Jun 28,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+D:/Academics/FPGA\ Processor\ Project/GitHub/fpga_processor/Simple\ processor {D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/processor.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:32:39 on Jun 22,2021
+# Start time: 19:22:32 on Jun 28,2021
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor" D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/processor.v 
 # -- Compiling module processor
 # 
 # Top level modules:
 # 	processor
-# End time: 21:32:39 on Jun 22,2021, Elapsed time: 0:00:00
+# End time: 19:22:32 on Jun 28,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+D:/Academics/FPGA\ Processor\ Project/GitHub/fpga_processor/Simple\ processor {D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/state_machine.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:32:39 on Jun 22,2021
+# Start time: 19:22:32 on Jun 28,2021
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor" D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/state_machine.v 
 # -- Compiling module state_machine
 # 
 # Top level modules:
 # 	state_machine
-# End time: 21:32:39 on Jun 22,2021, Elapsed time: 0:00:00
+# End time: 19:22:32 on Jun 28,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+D:/Academics/FPGA\ Processor\ Project/GitHub/fpga_processor/Simple\ processor {D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/control_unit.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:32:39 on Jun 22,2021
+# Start time: 19:22:32 on Jun 28,2021
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor" D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/control_unit.v 
 # -- Compiling module control_unit
 # 
 # Top level modules:
 # 	control_unit
-# End time: 21:32:39 on Jun 22,2021, Elapsed time: 0:00:00
+# End time: 19:22:32 on Jun 28,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+D:/Academics/FPGA\ Processor\ Project/GitHub/fpga_processor/Simple\ processor {D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/core.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:32:39 on Jun 22,2021
+# Start time: 19:22:32 on Jun 28,2021
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor" D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/core.v 
 # -- Compiling module core
 # 
 # Top level modules:
 # 	core
-# End time: 21:32:39 on Jun 22,2021, Elapsed time: 0:00:00
+# End time: 19:22:33 on Jun 28,2021, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-# 
-# vlog -vlog01compat -work work +incdir+D:/Academics/FPGA\ Processor\ Project/GitHub/fpga_processor/Simple\ processor/../tb {D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/../tb/core_tb.v}
+# vlog -vlog01compat -work work +incdir+D:/Academics/FPGA\ Processor\ Project/GitHub/fpga_processor/Simple\ processor {D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/iram.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:32:39 on Jun 22,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/../tb" D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/../tb/core_tb.v 
-# -- Compiling module core_tb
+# Start time: 19:22:33 on Jun 28,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor" D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/iram.v 
+# -- Compiling module iram
 # 
 # Top level modules:
-# 	core_tb
-# End time: 21:32:40 on Jun 22,2021, Elapsed time: 0:00:01
+# 	iram
+# End time: 19:22:33 on Jun 28,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Academics/FPGA\ Processor\ Project/GitHub/fpga_processor/Simple\ processor {D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/dram.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:22:33 on Jun 28,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor" D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/dram.v 
+# -- Compiling module dram
+# 
+# Top level modules:
+# 	dram
+# End time: 19:22:33 on Jun 28,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  core_tb
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" core_tb 
-# Start time: 21:32:40 on Jun 22,2021
-# Loading work.core_tb
+# vlog -vlog01compat -work work +incdir+D:/Academics/FPGA\ Processor\ Project/GitHub/fpga_processor/Simple\ processor/tb {D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/tb/top_control_tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:22:33 on Jun 28,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/tb" D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/tb/top_control_tb.v 
+# -- Compiling module top_control_tb
+# 
+# Top level modules:
+# 	top_control_tb
+# End time: 19:22:33 on Jun 28,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Academics/FPGA\ Processor\ Project/GitHub/fpga_processor/Simple\ processor {D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/ALU.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:22:33 on Jun 28,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor" D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/ALU.v 
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# End time: 19:22:33 on Jun 28,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Academics/FPGA\ Processor\ Project/GitHub/fpga_processor/Simple\ processor {D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/core.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:22:33 on Jun 28,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor" D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/core.v 
+# -- Compiling module core
+# 
+# Top level modules:
+# 	core
+# End time: 19:22:33 on Jun 28,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Academics/FPGA\ Processor\ Project/GitHub/fpga_processor/Simple\ processor {D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/control_unit.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:22:33 on Jun 28,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor" D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/control_unit.v 
+# -- Compiling module control_unit
+# 
+# Top level modules:
+# 	control_unit
+# End time: 19:22:33 on Jun 28,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Academics/FPGA\ Processor\ Project/GitHub/fpga_processor/Simple\ processor {D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/state_machine.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:22:33 on Jun 28,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor" D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/state_machine.v 
+# -- Compiling module state_machine
+# 
+# Top level modules:
+# 	state_machine
+# End time: 19:22:33 on Jun 28,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Academics/FPGA\ Processor\ Project/GitHub/fpga_processor/Simple\ processor {D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/register.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:22:33 on Jun 28,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor" D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/register.v 
+# -- Compiling module register
+# 
+# Top level modules:
+# 	register
+# End time: 19:22:33 on Jun 28,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Academics/FPGA\ Processor\ Project/GitHub/fpga_processor/Simple\ processor {D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/processor.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:22:33 on Jun 28,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor" D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/processor.v 
+# -- Compiling module processor
+# 
+# Top level modules:
+# 	processor
+# End time: 19:22:34 on Jun 28,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Academics/FPGA\ Processor\ Project/GitHub/fpga_processor/Simple\ processor {D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/PC.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:22:34 on Jun 28,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor" D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/PC.v 
+# -- Compiling module PC
+# 
+# Top level modules:
+# 	PC
+# End time: 19:22:34 on Jun 28,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Academics/FPGA\ Processor\ Project/GitHub/fpga_processor/Simple\ processor {D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/iram.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:22:34 on Jun 28,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor" D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/iram.v 
+# -- Compiling module iram
+# 
+# Top level modules:
+# 	iram
+# End time: 19:22:34 on Jun 28,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Academics/FPGA\ Processor\ Project/GitHub/fpga_processor/Simple\ processor {D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/dram.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:22:34 on Jun 28,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor" D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/dram.v 
+# -- Compiling module dram
+# 
+# Top level modules:
+# 	dram
+# End time: 19:22:34 on Jun 28,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Academics/FPGA\ Processor\ Project/GitHub/fpga_processor/Simple\ processor {D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/rom_vlog_mif.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:22:34 on Jun 28,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor" D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/rom_vlog_mif.v 
+# -- Compiling module rom_vlog_mif
+# 
+# Top level modules:
+# 	rom_vlog_mif
+# End time: 19:22:34 on Jun 28,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  top_control_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" top_control_tb 
+# Start time: 19:22:34 on Jun 28,2021
+# Loading work.top_control_tb
+# Loading work.top_control
 # Loading work.core
 # Loading work.state_machine
 # Loading work.control_unit
@@ -103,15 +234,22 @@
 # Loading work.register
 # Loading work.PC
 # Loading work.ALU
+# Loading work.iram
+# Loading work.dram
 # 
 # add wave *
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Sandushan Ranaweera  Hostname: SANDUSHAN-I7  ProcessID: 18964
+#           Attempting to use alternate WLF file "./wlftyzmakk".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftyzmakk
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-# ** Note: $stop    : D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/../tb/core_tb.v(98)
-#    Time: 1070 ps  Iteration: 0  Instance: /core_tb
-# Break in Module core_tb at D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/../tb/core_tb.v line 98
-# End time: 21:33:04 on Jun 22,2021, Elapsed time: 0:00:24
-# Errors: 0, Warnings: 0
+# ** Note: $stop    : D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/tb/top_control_tb.v(197)
+#    Time: 1228835 ns  Iteration: 0  Instance: /top_control_tb
+# Break in Module top_control_tb at D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Simple processor/tb/top_control_tb.v line 197
+# End time: 19:24:52 on Jun 28,2021, Elapsed time: 0:02:18
+# Errors: 0, Warnings: 2
