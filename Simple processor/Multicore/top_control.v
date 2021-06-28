@@ -149,7 +149,7 @@ iram iram2(
     .Data_out ( iram_in    )               //internal
 );
 
-dram dualport_ram(
+dualport_ram dram(
     .clk      ( clock       ),
     .write_en ( dram_write_en ),    //or
     .read_en  ( dram_read_en ),      //internal
