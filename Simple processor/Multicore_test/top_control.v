@@ -58,15 +58,18 @@ core core_2(
     .write_en    ( write_en_2    )
 );
 
+// iram for core 1
 iram iram1(
     .clk      ( clock      ),
-    .write_en ( iram_write_1 ),         //or
-    .read_en  ( read_en_1[1] ),          //internal
-    .addr     ( iram_add_1   ),      //or
-    .Data_in  ( Data_in_ins ),         //external 
-    .Data_out ( iram_in_1    )               //internal
+    .write_en ( iram_write_1 ),      
+    .read_en  ( read_en_1[1] ),       
+    .addr     ( iram_add_1   ),   
+    .Data_in  ( Data_in_ins ),       
+    .Data_out ( iram_in_1    )          
 );
 
+
+// iram for core 2
 iram iram2(
     .clk      ( clock      ),
     .write_en ( iram_write_2 ),         //or
@@ -79,15 +82,15 @@ iram iram2(
 dualport_ram dram(
     .clk      ( clock       ),
     .write_en1 ( dram_write_en_1 ),
-    .write_en2 ( dram_write_en_2 ),     //or
+    .write_en2 ( dram_write_en_2 ),     
     .read_en1  ( dram_read_en_1 ),
-    .read_en2   (dram_read_en_2 ),     //internal
+    .read_en2   (dram_read_en_2 ),     
     .addr1     ( dram_addr_1   ),
-    .addr2     ( dram_addr_2   ),      //or
-    .Data_in1  ( dram_store_1  ),
-    .Data_in2  ( dram_store_2  ),     //ot
-    .Data_out1 ( dram_in_1     ),
-    .Data_out2 ( dram_in_2     )       //internal
+    .addr2     ( dram_addr_2   ),      
+    .Data_in1  ( dram_store_1  ),   // core 1 data in
+    .Data_in2  ( dram_store_2  ),  // core 2 data in
+    .Data_out1 ( dram_in_1     ),    // core 1 data out
+    .Data_out2 ( dram_in_2     )      // core 2 data out
 );
 
 always @(posedge clock) begin
