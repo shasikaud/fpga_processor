@@ -10,14 +10,22 @@ module top_control (
     Data_in_dram,
     start_4,
     read_en_ext,
+<<<<<<< Updated upstream
     dram_in
+=======
+	 dram_in
+>>>>>>> Stashed changes
 );
 
     input clock, start, start_2, start_4, iram_write_ext, start_3, dram_write_ext, read_en_ext;
     input [8:0] addr_ext;
     input [15:0] Data_in_ins, Data_in_dram;
 
+<<<<<<< Updated upstream
     output wire [15:0] dram_in; 
+=======
+    output wire [15:0] dram_in;
+>>>>>>> Stashed changes
 	 wire [15:0] iram_in,dram_out,pc_out, ar_out;
 
     wire [1:0] read_en;
