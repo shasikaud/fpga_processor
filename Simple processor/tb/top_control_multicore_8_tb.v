@@ -11,7 +11,7 @@ reg [15:0] Data_in_ins;   //instruction to be writtern externally to iram
 reg [15:0] Data_in_dram;   //data to be writtern externally to dram
 
 
-integer  data_file, data_file2, scan_file, param_file;
+integer  data_file, scan_file, param_file;
 reg[8:0] final_start, final_end;
 
 wire[15:0]  dram_in;
