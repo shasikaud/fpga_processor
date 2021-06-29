@@ -4,7 +4,7 @@ module quadport_ram(
     read_en1,read_en2,read_en3,read_en4,
     addr1,addr2,addr3,addr4,
     Data_in1,Data_in2,Data_in3,Data_in4,
-    Data_out1,Data_out2,Data_out3,Data_out4,
+    Data_out1,Data_out2,Data_out3,Data_out4
 );
 
     input clk,write_en1,write_en2,write_en3,write_en4;

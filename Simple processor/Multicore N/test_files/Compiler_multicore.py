@@ -1,3 +1,5 @@
+import numpy as np
+
 #no fo cores
 cores = 4
 #get inputs from text file
@@ -23,6 +25,7 @@ for i in range(0, len(input_file)):
 print('Matrix 1:')
 for r in matrix1_nested:
     print(' '.join(r))
+print('\n')
 
 for j in range(i+1, len(input_file)):
     
@@ -33,11 +36,10 @@ for j in range(i+1, len(input_file)):
     for element in row:
         matrix2.append(element)
 
-
 print('Matrix 2:')
 for r in matrix2_nested:
     print(' '.join(r))
-
+print('\n')
 
 file = open('data.txt', 'w')
 matrix1_text = '\n'. join(map(str, matrix1))
@@ -58,7 +60,7 @@ matrix_1 = param_1*param_2
 matrix_2 = matrix_1 + param_2*param_3
 matrix_3 = matrix_2 + param_3*param_1
 
-file = open('final.txt', 'w')
+file = open('final_addresess.txt', 'w')
 file.writelines(str(matrix_2 + 1) + '\n')
 file.writelines(str(matrix_3) + '\n')
 file.close()
@@ -105,21 +107,6 @@ for core_no in range(1, cores + 1):
 
     file.close()
 
-#store additional data to txt files
-file = open('Summary.txt', 'w')
-file.writelines('Matrix 1:' + '\n')
-for r in matrix1_nested:
-    file.writelines(' '.join(r) +  '\n')
 
-file.writelines('\n')
-file.writelines('Matrix 2:' + '\n')
-for r in matrix2_nested:
-    file.writelines(' '.join(r) +  '\n')
 
-file.close()
-
-file = open('Dimensions.txt', 'w')
-file.writelines(str(param_3) + '\n') #no of columns of matrix 2
-file.writelines(str(param_1) + '\n') #no of rows of matrix 1
-file.close()
 
