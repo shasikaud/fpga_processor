@@ -126,7 +126,11 @@ initial begin
     $fclose(data_file);
     #20
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     param_file = $fopen("../../test_files/final.txt", "r");
+=======
+    param_file = $fopen("../../test_files/final_addreses.txt", "r");
+>>>>>>> Stashed changes
 =======
     param_file = $fopen("../../test_files/final_addreses.txt", "r");
 >>>>>>> Stashed changes
