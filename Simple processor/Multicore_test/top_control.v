@@ -3,107 +3,91 @@ module top_control (
     start,
     addr_ext,
     start_2,
-    iram_write_ext1,
-    iram_write_ext2,
+    iram_write_ext_1,
+    iram_write_ext_2,
     Data_in_ins                                                              ,
     start_3,
     dram_write_ext,
     Data_in_dram,
     start_4,
     read_en_ext,
-	 dram_in1
+	 dram_in_1
 );
 
-    input clock, start, start_2, start_4, iram_write_ext1, iram_write_ext2, start_3, dram_write_ext, read_en_ext;
+    input clock, start, start_2, start_4, iram_write_ext_1, iram_write_ext_2, start_3, dram_write_ext, read_en_ext;
     input [8:0] addr_ext;
     input [15:0] Data_in_ins, Data_in_dram;
-	 output wire[15:0] dram_in1;
+	 output wire[15:0] dram_in_1;
 
-    wire [15:0] iram_in1,dram_out1,pc_out1,dram_in2, iram_in2,pc_out2,ar_out1 , alu_out1, alu_out2, alu_in_12,alu_in_22, dram_out2, ar_out2;
+    wire [15:0] iram_in_1,dram_out_1,pc_out_1,dram_in_2, iram_in_2,pc_out_2,ar_out_1 ,dram_out_2, ar_out_2;
 //    output wire [15:0] ;
-    wire [1:0] read_en1, read_en2;
-    wire write_en1, write_en2;
-    wire [19:0] control_out1, control_out2;
-    wire [5:0] state1,state2;
-    wire [15:0] data_in_pc1,alu_in_11,alu_in_21,data_in_pc2;
-    wire  write_en_ins1, write_en_ins2;
+    wire [1:0] read_en_1, read_en_2;
+    wire  write_en_ins_1, write_en_ins_2;
    
-    reg [8:0] iram_add1, iram_add2;
-    reg iram_write1, iram_write2;
+    reg [8:0] iram_add_1, iram_add_2;
+    reg iram_write_1, iram_write_2;
 
-    reg [8:0] dram_addr1, dram_addr2;
-    reg [15:0] dram_store1, dram_store2;
-    reg dram_write_en1, dram_write_en2;
+    reg [8:0] dram_addr_1, dram_addr_2;
+    reg [15:0] dram_store_1, dram_store_2;
+    reg dram_write_en_1, dram_write_en_2;
 
-    reg dram_read_en1, dram_read_en2;
+    reg dram_read_en_1, dram_read_en_2;
 
 
 core core_1(
     .clock       ( clock       ),
     .start       ( start       ),
-    .dram_in     ( dram_in1     ),   //dram to processor
-    .iram_in     ( iram_in1     ),
-    .dram_out    ( dram_out1    ),   //processor to dram
-    .pc_out      ( pc_out1      ),
-    .ar_out      ( ar_out1      ),
-    .read_en     ( read_en1    ),
-    .write_en    ( write_en1    ),
-    .control_out ( control_out1 ),
-    .state       ( state1       ),
-    .data_in_pc  ( data_in_pc1  ),
-    .alu_in_1    ( alu_in_11    ),
-    .alu_in_2    ( alu_in_21    ),
-    .alu_out     ( alu_out1    )
+    .dram_in     ( dram_in_1     ),   //dram to processor
+    .iram_in     ( iram_in_1     ),
+    .dram_out    ( dram_out_1    ),   //processor to dram
+    .pc_out      ( pc_out_1      ),
+    .ar_out      ( ar_out_1      ),
+    .read_en     ( read_en_1    ),
+    .write_en    ( write_en_1    )
 );
 
 core core_2(
     .clock       ( clock       ),
     .start       ( start       ),
-    .dram_in     ( dram_in2     ),   //dram to processor
-    .iram_in     ( iram_in2     ),
-    .dram_out    ( dram_out2    ),   //processor to dram
-    .pc_out      ( pc_out2      ),
-    .ar_out      ( ar_out2      ),
-    .read_en     ( read_en2     ),
-    .write_en    ( write_en2    ),
-    .control_out ( control_out2 ),
-    .state       ( state2       ),
-    .data_in_pc  ( data_in_pc2  ),
-    .alu_in_1    ( alu_in_12    ),
-    .alu_in_2    ( alu_in_22   ),
-    .alu_out     ( alu_out2     )
+    .dram_in     ( dram_in_2     ),   //dram to processor
+    .iram_in     ( iram_in_2     ),
+    .dram_out    ( dram_out_2    ),   //processor to dram
+    .pc_out      ( pc_out_2      ),
+    .ar_out      ( ar_out_2      ),
+    .read_en     ( read_en_2     ),
+    .write_en    ( write_en_2    )
 );
 
 iram iram1(
     .clk      ( clock      ),
-    .write_en ( iram_write1 ),         //or
-    .read_en  ( read_en1[1] ),          //internal
-    .addr     ( iram_add1   ),      //or
+    .write_en ( iram_write_1 ),         //or
+    .read_en  ( read_en_1[1] ),          //internal
+    .addr     ( iram_add_1   ),      //or
     .Data_in  ( Data_in_ins ),         //external 
-    .Data_out ( iram_in1    )               //internal
+    .Data_out ( iram_in_1    )               //internal
 );
 
 iram iram2(
     .clk      ( clock      ),
-    .write_en ( iram_write2 ),         //or
-    .read_en  ( read_en2[1] ),          //internal
-    .addr     ( iram_add2   ),      //or
+    .write_en ( iram_write_2 ),         //or
+    .read_en  ( read_en_2[1] ),          //internal
+    .addr     ( iram_add_2   ),      //or
     .Data_in  ( Data_in_ins ),         //external 
-    .Data_out ( iram_in2    )               //internal
+    .Data_out ( iram_in_2    )               //internal
 );
 
 dualport_ram dram(
     .clk      ( clock       ),
-    .write_en1 ( dram_write_en1 ),
-    .write_en2 ( dram_write_en2 ),     //or
-    .read_en1  ( dram_read_en1 ),
-    .read_en2   (dram_read_en2 ),     //internal
-    .addr1     ( dram_addr1   ),
-    .addr2     ( dram_addr2   ),      //or
-    .Data_in1  ( dram_store1  ),
-    .Data_in2  ( dram_store2  ),     //ot
-    .Data_out1 ( dram_in1     ),
-    .Data_out2 ( dram_in2     )       //internal
+    .write_en1 ( dram_write_en_1 ),
+    .write_en2 ( dram_write_en_2 ),     //or
+    .read_en1  ( dram_read_en_1 ),
+    .read_en2   (dram_read_en_2 ),     //internal
+    .addr1     ( dram_addr_1   ),
+    .addr2     ( dram_addr_2   ),      //or
+    .Data_in1  ( dram_store_1  ),
+    .Data_in2  ( dram_store_2  ),     //ot
+    .Data_out1 ( dram_in_1     ),
+    .Data_out2 ( dram_in_2     )       //internal
 );
 
 always @(posedge clock) begin
@@ -113,10 +97,10 @@ always @(posedge clock) begin
     if (start_2 == 1)
     begin
         // ! for  iram
-        iram_add1   <= addr_ext;
-		  iram_add2   <= addr_ext;
-        iram_write1 <= iram_write_ext1;
-        iram_write2 <= iram_write_ext2;
+        iram_add_1   <= addr_ext;
+		  iram_add_2   <= addr_ext;
+        iram_write_1 <= iram_write_ext_1;
+        iram_write_2 <= iram_write_ext_2;
     end
 
     /*
@@ -125,10 +109,10 @@ always @(posedge clock) begin
     if (start_3 == 1)
     begin
         // ! for  dram
-        dram_addr1  <= addr_ext;
-        dram_store1 <= Data_in_dram;
-        dram_write_en1 <= dram_write_ext;
-        dram_write_en2 <= 0;
+        dram_addr_1  <= addr_ext;
+        dram_store_1 <= Data_in_dram;
+        dram_write_en_1 <= dram_write_ext;
+        dram_write_en_2 <= 0;
     end
 
     /*
@@ -137,25 +121,25 @@ always @(posedge clock) begin
     if (start == 1)
     begin
         // ! for  iram
-        iram_add1 <= pc_out1[8:0];
-        iram_add2 <= pc_out2[8:0];
-        iram_write1 <= write_en_ins1;
-        iram_write2 <= write_en_ins2;
+        iram_add_1 <= pc_out_1[8:0];
+        iram_add_2 <= pc_out_2[8:0];
+        iram_write_1 <= write_en_ins_1;
+        iram_write_2 <= write_en_ins_2;
         // ! for dram
-        dram_store1 <= dram_out1;
-        dram_store2 <= dram_out2;
-        dram_addr1 <= ar_out1[8:0];
-        dram_addr2 <= ar_out2[8:0];
-        dram_write_en1 <= write_en1; 
-        dram_write_en2 <= write_en2; 
-        dram_read_en1 <= read_en1[0];
-        dram_read_en2 <= read_en2[0];
+        dram_store_1 <= dram_out_1;
+        dram_store_2 <= dram_out_2;
+        dram_addr_1 <= ar_out_1[8:0];
+        dram_addr_2 <= ar_out_2[8:0];
+        dram_write_en_1 <= write_en_1; 
+        dram_write_en_2 <= write_en_2; 
+        dram_read_en_1 <= read_en_1[0];
+        dram_read_en_2 <= read_en_2[0];
     end
 
     if (start_4 == 1)
     begin
-        dram_addr1 <= addr_ext;
-        dram_read_en1 <= read_en_ext;
+        dram_addr_1 <= addr_ext;
+        dram_read_en_1 <= read_en_ext;
 
     end
 

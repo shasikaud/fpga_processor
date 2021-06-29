@@ -64,7 +64,7 @@ file.writelines(str(matrix_2 + 1) + '\n')
 file.writelines(str(matrix_3) + '\n')
 file.close()
 
-#generate instructions list
+#generate instructions list to inddividual cores
 instructions = []
 for n in range(0, cores):
     instructions.append([])
@@ -73,41 +73,34 @@ MUL = 5120
 
 for i in range(1, param_1 + 1):
     for j in range(1, param_3 + 1):
-        core_no = (param_3*(i-1) + j)%cores
-        shift = core_no*param_2
+        core_index = (param_3*(i-1) + j)%cores
+        shift = core_index*param_2
         for k in range(1, param_2+1):
             LDR1 = 1024 + param_2*(i-1) + k
             LDR2 = 2048 + matrix_1 + param_3*(k-1) + j
             STAC = 3072 + matrix_3 + k + shift
-            instructions[core_no].append(LDR1)
-            instructions[core_no].append(LDR2)
-            instructions[core_no].append(MUL)
-            instructions[core_no].append(STAC)
+            instructions[core_index].append(LDR1)
+            instructions[core_index].append(LDR2)
+            instructions[core_index].append(MUL)
+            instructions[core_index].append(STAC)
         for t in range(1, param_2):
             LDR1 = 1024 + matrix_3 + t + shift
             LDR2 = 2048 + matrix_3 + t + 1 + shift
             STAC = 3072 + matrix_3 + t + 1 + shift
-            instructions[core_no].append(LDR1)
-            instructions[core_no].append(LDR2)
-            instructions[core_no].append(ADD)
-            instructions[core_no].append(STAC)
+            instructions[core_index].append(LDR1)
+            instructions[core_index].append(LDR2)
+            instructions[core_index].append(ADD)
+            instructions[core_index].append(STAC)
         STAC = 3072 + matrix_2 + param_3*(i-1) + j
-        instructions[core_no].append(STAC)
+        instructions[core_index].append(STAC)
 
 
-# COmmands to read result for verification(need for testing only)
-# for i in range(matrix_2+1, matrix_3+1):
-#     LDR1 = 1024 + i
-#     LDR2 = 2048 + i
-#     instructions.append(LDR1)
-#     instructions.append(LDR2)
+#write instructions to txt file (per each core)
+for core_no in range(1, cores + 1):
+    core_index = core_no%cores
+    instructions_text = '\n'. join(map(str, instructions[core_index]))
 
-
-#write instructions to txt file
-for n in range(0, cores):
-    instructions_text = '\n'. join(map(str, instructions[n]))
-
-    file = open('instructions_core_' + str(n+1) + '.txt', 'w')
+    file = open('instructions_core_' + str(core_no) + '.txt', 'w')
     file.writelines(str(0) + '\n')
     file.writelines(instructions_text)
 

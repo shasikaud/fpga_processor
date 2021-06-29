@@ -27,15 +27,15 @@ top_control u_top_control(
     .start       ( start       ),
     .addr_ext    ( addr_ext    ),     
     .start_2     ( start_2     ),
-    .iram_write_ext1(iram_write_ext1),
-    .iram_write_ext2(iram_write_ext2),
+    .iram_write_ext_1(iram_write_ext1),
+    .iram_write_ext_2(iram_write_ext2),
     .Data_in_ins ( Data_in_ins ),
     .start_3     ( start_3     ),
     .dram_write_ext (dram_write_ext),
     .Data_in_dram ( Data_in_dram),
     .start_4     ( start_4     ),
     .read_en_ext ( read_en_ext ),
-    .dram_in1       (dram_in)
+    .dram_in_1       (dram_in)
 );
 
 

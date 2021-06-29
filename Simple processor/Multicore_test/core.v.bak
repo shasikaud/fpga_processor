@@ -1,4 +1,4 @@
-module core(clock,start, dram_in, iram_in,dram_out, pc_out,ar_out, read_en, write_en);
+module core(clock,start, dram_in, iram_in,dram_out, pc_out,ar_out, read_en, write_en,control_out,state, data_in_pc,alu_in_1,alu_in_2, alu_out);
 
 input clock, start;
 input[15:0] dram_in, iram_in;
@@ -7,10 +7,10 @@ output[15:0] dram_out, pc_out,ar_out;
 output wire[1:0] read_en;
 output wire write_en;
 
-wire[19:0] control_out;
-wire[5:0] state;
+output wire[19:0] control_out;
+output wire[5:0] state;
 
-wire[15:0] data_in_pc,alu_in_1,alu_in_2, alu_out; // output for test
+output wire[15:0] data_in_pc,alu_in_1,alu_in_2, alu_out; // output for test
 
 
 wire[15:0] ir_out;
