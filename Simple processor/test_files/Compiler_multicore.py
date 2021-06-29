@@ -1,5 +1,5 @@
 #no fo cores
-cores = 2
+cores = 4
 
 #get inputs from text file
 matrix1 = []
@@ -95,7 +95,7 @@ for i in range(1, param_1 + 1):
         instructions[core_no].append(STAC)
 
 
-# Commands to read result for verification(need for testing only)
+# COmmands to read result for verification(need for testing only)
 # for i in range(matrix_2+1, matrix_3+1):
 #     LDR1 = 1024 + i
 #     LDR2 = 2048 + i

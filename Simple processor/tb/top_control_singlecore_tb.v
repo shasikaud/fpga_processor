@@ -10,14 +10,6 @@ reg dram_write_ext;  //write enable to dram externally
 reg read_en_ext;  //read enable dram externally
 reg [15:0] Data_in_ins;   //instruction to be writtern externally to iram
 reg [15:0] Data_in_dram;   //data to be writtern externally to dram
-<<<<<<< Updated upstream:Simple processor/tb/top_control_tb.v
-wire [15:0] dram_in;
-
-integer  data_file, scan_file, param_file;
-reg[8:0] final_start, final_end;
-
-
-=======
 
 
 integer  data_file,scan_file, param_file;
@@ -27,7 +19,6 @@ wire[15:0]  dram_in;
 
 
 // todo: remove for test 
->>>>>>> Stashed changes:Simple processor/tb/top_control_singlecore_tb.v
 
 `define NULL 0
 
@@ -44,11 +35,7 @@ top_control u_top_control(
     .Data_in_dram ( Data_in_dram),
     .start_4     ( start_4     ),
     .read_en_ext ( read_en_ext ),
-<<<<<<< Updated upstream:Simple processor/tb/top_control_tb.v
-    .dram_in      (dram_in)
-=======
     .dram_in       (dram_in)
->>>>>>> Stashed changes:Simple processor/tb/top_control_singlecore_tb.v
 );
 
 
@@ -102,19 +89,7 @@ initial begin
     #20;
     $fclose(data_file);
     #20
-<<<<<<< Updated upstream:Simple processor/tb/top_control_tb.v
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    param_file = $fopen("../../test_files/final.txt", "r");
-=======
     param_file = $fopen("../../test_files/final_addreses.txt", "r");
->>>>>>> Stashed changes
-=======
-    param_file = $fopen("../../test_files/final_addreses.txt", "r");
->>>>>>> Stashed changes
-=======
-    param_file = $fopen("../../test_files/final_addreses.txt", "r");
->>>>>>> Stashed changes:Simple processor/tb/top_control_singlecore_tb.v
     if (param_file == `NULL) begin
         $display("param_file handle was NULL");
         $finish;

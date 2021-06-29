@@ -11,11 +11,7 @@ reg [15:0] Data_in_ins;   //instruction to be writtern externally to iram
 reg [15:0] Data_in_dram;   //data to be writtern externally to dram
 
 
-<<<<<<< Updated upstream:Simple processor/tb/top_control_multicore_tb.v
-integer  data_file,scan_file, param_file;
-=======
 integer  data_file, scan_file, param_file;
->>>>>>> Stashed changes:Simple processor/tb/top_control_multicore_2_tb.v
 reg[8:0] final_start, final_end;
 
 wire[15:0]  dram_in;
@@ -129,19 +125,7 @@ initial begin
     #20;
     $fclose(data_file);
     #20
-<<<<<<< Updated upstream:Simple processor/tb/top_control_multicore_tb.v
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    param_file = $fopen("../../test_files/final.txt", "r");
-=======
     param_file = $fopen("../../test_files/final_addreses.txt", "r");
->>>>>>> Stashed changes
-=======
-    param_file = $fopen("../../test_files/final_addreses.txt", "r");
->>>>>>> Stashed changes
-=======
-    param_file = $fopen("../../test_files/final_addreses.txt", "r");
->>>>>>> Stashed changes:Simple processor/tb/top_control_multicore_2_tb.v
     if (param_file == `NULL) begin
         $display("param_file handle was NULL");
         $finish;

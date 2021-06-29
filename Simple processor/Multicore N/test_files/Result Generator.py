@@ -83,7 +83,7 @@ for i in range(0, rows):
     result.append(row)
 
 
-print('Result(From Processor):')
+print('Result:')
 for r in result:
     print(' '.join(r))
 
