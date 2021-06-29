@@ -222,7 +222,7 @@ initial begin
 
 
 
-    param_file = $fopen("../../test_files/final.txt", "r");
+    param_file = $fopen("../../test_files/final_addresess.txt", "r");
     if (param_file == `NULL) begin
         $display("param_file handle was NULL");
         $finish;
