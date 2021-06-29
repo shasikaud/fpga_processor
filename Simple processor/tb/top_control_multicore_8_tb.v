@@ -353,7 +353,7 @@ initial begin
         iram_write_ext3 <= 0;
         iram_write_ext4 <= 0;
         iram_write_ext5 <= 0;
-        iram_write_ext6 <= 6;
+        iram_write_ext6 <= 1;
         iram_write_ext7 <= 0;
         iram_write_ext8 <= 0;
         #40;
@@ -431,7 +431,7 @@ initial begin
 
     // ! store iram values core 8
     addr_ext = 9'd1;
-    data_file = $fopen("../../test_files/instructions_core_4.txt", "r");
+    data_file = $fopen("../../test_files/instructions_core_8.txt", "r");
     if (data_file == `NULL) begin
         $display("data_file handle was NULL");
         $finish;
@@ -481,7 +481,7 @@ initial begin
     #20
 
 
-    param_file = $fopen("../../test_files/final.txt", "r");
+    param_file = $fopen("../../test_files/final_addresess.txt", "r");
     if (param_file == `NULL) begin
         $display("param_file handle was NULL");
         $finish;
