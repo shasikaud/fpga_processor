@@ -11,11 +11,7 @@ reg [15:0] Data_in_ins;   //instruction to be writtern externally to iram
 reg [15:0] Data_in_dram;   //data to be writtern externally to dram
 
 
-<<<<<<< HEAD
-integer  data_file, data_file2, scan_file, param_file;
-=======
 integer  data_file, scan_file, param_file;
->>>>>>> dc81a41592469dd3efeb5a8d8b7f2533ddb2e6ad
 reg[8:0] final_start, final_end;
 
 wire[15:0]  dram_in;
@@ -485,11 +481,7 @@ initial begin
     #20
 
 
-<<<<<<< HEAD
-    param_file = $fopen("../../test_files/final_addresess.txt", "r");
-=======
     param_file = $fopen("../../test_files/final_addreses.txt", "r");
->>>>>>> dc81a41592469dd3efeb5a8d8b7f2533ddb2e6ad
     if (param_file == `NULL) begin
         $display("param_file handle was NULL");
         $finish;
