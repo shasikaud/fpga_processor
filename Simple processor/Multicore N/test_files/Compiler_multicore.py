@@ -107,6 +107,19 @@ for core_no in range(1, cores + 1):
 
     file.close()
 
+#count the no. of instructions per core    
+print('Instruction Count Per Core: \n')
+for core_no in range(1, cores + 1):
+    core_index = core_no%cores
+ 
+    print('Core ' + str(core_no) + ': ' + str(len(instructions[core_index])))
 
+#write the counts of the instructions per core to txt file
+file = open('instructions_count.txt', 'w')
+file.writelines('Instruction Count Per Core: \n \n')
+for core_no in range(1, cores + 1):
+    core_index = core_no%cores
 
+    file.writelines('Core ' + str(core_no) + ': ' + str(len(instructions[core_index])) + '\n')
 
+file.close()
