@@ -5,3 +5,11 @@ output_files
 simulation
 github
 github.pub
+/Simple processor/Multicore N/simulation
+/Simple processor/Multicore N/output_files
+/Simple processor/Multicore N/incremental_db
+/Simple processor/Multicore N/db
+
+*.qws
+*.rpt
+*.bak
