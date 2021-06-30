@@ -17,10 +17,6 @@ wire[15:0] ir_out;
 
 
 
-
-
-
-
 state_machine state_machine(clock, start, ir_out, state);
 
 control_unit control_Unit(clock, state, control_out);

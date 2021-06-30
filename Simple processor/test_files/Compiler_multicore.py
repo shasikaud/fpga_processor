@@ -1,5 +1,5 @@
 #no fo cores
-cores = 4
+cores = 1
 
 #get inputs from text file
 matrix1 = []

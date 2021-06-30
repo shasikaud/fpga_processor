@@ -5,6 +5,7 @@ module register(clock, data_out, data_in, read_en, write_en);
 	output reg[15:0] data_out;
 	
 	reg[15:0] data_store;
+	
 	 
 	always @(posedge clock)
 	begin
@@ -16,6 +17,7 @@ module register(clock, data_out, data_in, read_en, write_en);
 	// data_out <= data_store;
 
 
-end
+	end
+	
 
 endmodule 
