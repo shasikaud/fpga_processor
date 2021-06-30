@@ -48,18 +48,18 @@ for r in matrix2_nested:
 matrix1_test = np.array(matrix1_test)
 matrix2_test = np.array(matrix2_test)
 
-result_matrix = list(map(list,np.matmul(matrix1_test, matrix2_test)))
+result_expected = list(map(list,np.matmul(matrix1_test, matrix2_test)))
 
-for i in range(0, len(result_matrix)):
-    result_matrix[i] = list(map(str, result_matrix[i]))
+for i in range(0, len(result_expected)):
+    result_expected[i] = list(map(str, result_expected[i]))
 
 print('Result(Expected):')
-for r in result_matrix:
+for r in result_expected:
     print(' '.join(r))
 print('\n')
 
 
-#rearrange the nresult from processor
+#rearrange the result from processor
 rows = len(matrix1_nested)
 columns = len(matrix2_nested[0])
 
@@ -83,7 +83,7 @@ for i in range(0, rows):
     result.append(row)
 
 
-print('Result:')
+print('Result(From Processor):')
 for r in result:
     print(' '.join(r))
 
@@ -101,7 +101,7 @@ for r in matrix2_nested:
 
 file.writelines('\n')
 file.writelines('Result(Expected):' + '\n')
-for r in result_matrix:
+for r in result_expected:
     file.writelines(' '.join(r) +  '\n')
 
 file.writelines('\n')

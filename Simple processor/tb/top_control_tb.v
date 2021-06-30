@@ -74,7 +74,7 @@ initial begin
 
     // ! store iram values
     addr_ext = 9'd1;
-    data_file = $fopen("../../test_files/instructions.txt", "r");
+    data_file = $fopen("../../test_files/instructions_core_1.txt", "r");
     if (data_file == `NULL) begin
         $display("data_file handle was NULL");
         $finish;
@@ -101,7 +101,11 @@ initial begin
     #20;
     $fclose(data_file);
     #20
+<<<<<<< HEAD
     param_file = $fopen("../../test_files/final_addresess.txt", "r");
+=======
+    param_file = $fopen("../../test_files/final_addreses.txt", "r");
+>>>>>>> dc81a41592469dd3efeb5a8d8b7f2533ddb2e6ad
     if (param_file == `NULL) begin
         $display("param_file handle was NULL");
         $finish;

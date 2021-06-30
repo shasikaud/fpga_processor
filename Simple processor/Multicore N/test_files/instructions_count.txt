@@ -1,0 +1,10 @@
+Instruction Count Per Core: 
+ 
+Core 1: 372
+Core 2: 372
+Core 3: 372
+Core 4: 372
+Core 5: 279
+Core 6: 279
+Core 7: 279
+Core 8: 279
