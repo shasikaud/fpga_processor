@@ -4,11 +4,11 @@ module top_control_multicore_2_tb();
 
 reg clock, start, start_2, start_3, start_4;
 reg [8:0] addr_ext;
-reg iram_write_ext1, iram_write_ext2;  //write enable to iram externally
-reg dram_write_ext;  //write enable to dram externally
-reg read_en_ext;  //read enable dram externally
-reg [15:0] Data_in_ins;   //instruction to be writtern externally to iram
-reg [15:0] Data_in_dram;   //data to be writtern externally to dram
+reg iram_write_ext1, iram_write_ext2;   //write enable to iram externally
+reg dram_write_ext;                     //write enable to dram externally
+reg read_en_ext;                        //read enable dram externally
+reg [15:0] Data_in_ins;                 //instruction to be writtern externally to iram
+reg [15:0] Data_in_dram;                //data to be writtern externally to dram
 
 
 integer  data_file, scan_file, param_file;
@@ -23,19 +23,19 @@ wire[15:0]  dram_in;
 
 
 top_control_2 u_top_control(
-    .clock       ( clock       ),
-    .start       ( start       ),
-    .addr_ext    ( addr_ext    ),     
-    .start_2     ( start_2     ),
-    .iram_write_ext_1(iram_write_ext1),
-    .iram_write_ext_2(iram_write_ext2),
-    .Data_in_ins ( Data_in_ins ),
-    .start_3     ( start_3     ),
-    .dram_write_ext (dram_write_ext),
-    .Data_in_dram ( Data_in_dram),
-    .start_4     ( start_4     ),
-    .read_en_ext ( read_en_ext ),
-    .dram_in_1       (dram_in)
+    .clock           ( clock            ),
+    .start           ( start            ),
+    .addr_ext        ( addr_ext         ),     
+    .start_2         ( start_2          ),
+    .iram_write_ext_1(iram_write_ext1   ),
+    .iram_write_ext_2(iram_write_ext2   ),
+    .Data_in_ins     ( Data_in_ins      ),
+    .start_3         ( start_3          ),
+    .dram_write_ext  (dram_write_ext    ),
+    .Data_in_dram    ( Data_in_dram     ),
+    .start_4         ( start_4          ),
+    .read_en_ext     ( read_en_ext      ),
+    .dram_in_1       (dram_in           )
 );
 
 
@@ -57,7 +57,6 @@ initial begin
     #50;
     start_2 <= 1;
     #10;
-
 
     // ! store iram values
     addr_ext = 9'd1;
@@ -84,16 +83,13 @@ initial begin
         #40;
         addr_ext <= addr_ext + 9'd1;
 
-            // if (!$feof(data_file)) begin
-            //     $display(data_);
-        //use captured_data as you would any other wire or reg value;
     end
     #20;
     $fclose(data_file);
     #20
 
 
-        // ! store iram values - core 2
+    // ! store iram values - core 2
     addr_ext = 9'd1;
     data_file = $fopen("../../test_files/instructions_core_2.txt", "r");
     if (data_file == `NULL) begin
@@ -118,18 +114,11 @@ initial begin
         #40;
         addr_ext <= addr_ext + 9'd1;
 
-            // if (!$feof(data_file)) begin
-            //     $display(data_);
-        //use captured_data as you would any other wire or reg value;
     end
     #20;
     $fclose(data_file);
     #20
-<<<<<<< HEAD:Simple processor/tb/top_control_multicore_tb.v
-    param_file = $fopen("../../test_files/final_addresess.txt", "r");
-=======
     param_file = $fopen("../../test_files/final_addreses.txt", "r");
->>>>>>> dc81a41592469dd3efeb5a8d8b7f2533ddb2e6ad:Simple processor/tb/top_control_multicore_2_tb.v
     if (param_file == `NULL) begin
         $display("param_file handle was NULL");
         $finish;
@@ -173,9 +162,6 @@ initial begin
         #40;
         addr_ext <= addr_ext + 9'd1;
 
-            // if (!$feof(data_file)) begin
-            //     $display(data_);
-        //use captured_data as you would any other wire or reg value;
     end
     #20;
     $fclose(data_file);
@@ -223,7 +209,6 @@ initial begin
     iram_write_ext2 <=0;
 
     #10;
-
 
     $stop;
 
