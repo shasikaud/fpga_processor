@@ -14,7 +14,6 @@
 |State      | decimal   | binary    |   final decimal             |   
 |-----------|-----------|-----------|-------                      |
 |IDLE       |6d'0       |000_000    | 0                           |
-|CLAC       |6d'4       |000_000    | 0                           |
 |LDR1  1    |6d'5       |000_001    | 1024 + 10b(address in dec)  |
 |LDR2  1    |6d'9       |000_010    | 2048 + 10b(address in dec)  |
 |STAC  1    |6d'5       |000_011    | 3072 + 10b(address in dec)  |
