@@ -20,7 +20,6 @@
 |STAC  1    |6d'5       |000_011    | 3072 + 10b(address in dec)  |
 |ADD        |6'd15      |000_100    | 4096                        |
 |MUL        |6'd16      |000_101    | 5120                        |
-|EOF        |           |           |                             |
 ### Registers
 ---
 * AR - adress register
