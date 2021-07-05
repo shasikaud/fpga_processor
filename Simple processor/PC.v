@@ -1,28 +1,24 @@
-module PC(clock, data_out, data_in, read_en, write_en, inc);
+module PC(clock, data_out, data_in, write_en, inc);
 
-	input clock,read_en, write_en,inc;
+	input clock, write_en,inc;
 	input [15:0] data_in;
 	output reg[15:0] data_out;
 	
-	reg[15:0] data_store;
 	
 	initial begin
-	data_store <= 16'd1;
+	data_out <= 16'd1;
 	end
 	 
 	always @(posedge clock)
 	begin
 	
 	if(write_en == 1)
-	data_store <= data_in;
-
-	if(read_en == 1)
-	data_out <= data_store;
+	data_out <= data_in;
 
 	
 	if(inc == 1)
-	data_store <= data_store + 16'd1;
-	data_out <= data_store;
+	data_out <= data_out + 16'd1;
+
 
 end
 
