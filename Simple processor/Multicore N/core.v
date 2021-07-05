@@ -27,7 +27,7 @@ processor processor(clock,control_out[14:0], dram_in,iram_in,dram_out, ir_out,ar
 
 assign read_en[0] = control_out[15]; //data memory read_en
 assign read_en[1] = control_out[17]; //instruction memory read_en
-assign write_en = control_out[16]; //data memeory write_en
+assign write_en   = control_out[16]; //data memeory write_en
 
 //memory_ip data_memory(
 //	ar_out[8:0],

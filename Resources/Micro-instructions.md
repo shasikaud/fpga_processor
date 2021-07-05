@@ -8,33 +8,34 @@ IR[9:0] operand address
 ## Fetch
 * Fetch 1 : AR <= PC; read
 * Fetch 2 : PC <= PC + 1 
-<!-- * Fetch 2.5 : add latency-->
-* Fetch 3 : IR <= I_M[t]  
+* Fetch 3 : IR <= I_M[t] 
+* Fetch 4 :
+* Fetch 5 :
+* Fetch 6 : 
 
-## CLAC
-* CLAC 1 : AC <= 0;
 
 ## LDAC
-* LDAC 1: AR <= IR; read
-* LDAC 2:
-* LDAC 3: DR <= D_M[t]
-* LDAC 4: AC <= DR
-* LDAC 5:
+* LDR1 1: AR <= IR; read
+* LDR1 2:
+* LDR1 3: DR <= D_M[t]
+* LDR1 4: AC <= DR
+
+## LDAC
+* LDR2 1: AR <= IR; read
+* LDR2 2:
+* LDR2 3: DR <= D_M[t]
+* LDR2 4: AC <= DR
 ## STAC
 * STAC 1: AR <= IR;
 * STAC 2: DR <= AC; mem_write 
 * STAC 3: D_M[t] <= DR
-* STAC 4: ??? check latency
-
-## MVACR
-* MVACR 1: R <= AC;
-
-## MVRAC
-* MVRAC 1: AC <= R; 
+* STAC 4: check latency
 
 ## ADD
-* ADD 1: AC <= AC + R
+* ADD 1: AC <= R1 + R2
+* ADD 2: 
 
 ## MUL
-* MUL 1: AC <= AC x R
+* MUL 1: AC <= R1 x R2
+* MUL 2: 
 

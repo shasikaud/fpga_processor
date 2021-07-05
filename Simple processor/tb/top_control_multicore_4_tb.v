@@ -5,10 +5,10 @@ module top_control_multicore_4_tb();
 reg clock, start, start_2, start_3, start_4;
 reg [8:0] addr_ext;
 reg iram_write_ext1, iram_write_ext2, iram_write_ext3, iram_write_ext4;  //write enable to iram externally
-reg dram_write_ext;  //write enable to dram externally
-reg read_en_ext;  //read enable dram externally
-reg [15:0] Data_in_ins;   //instruction to be writtern externally to iram
-reg [15:0] Data_in_dram;   //data to be writtern externally to dram
+reg dram_write_ext;                                                      //write enable to dram externally
+reg read_en_ext;                                                         //read enable dram externally
+reg [15:0] Data_in_ins;                                                  //instruction to be writtern externally to iram
+reg [15:0] Data_in_dram;                                                 //data to be writtern externally to dram
 
 
 integer  data_file, scan_file, param_file;
@@ -92,9 +92,7 @@ initial begin
         #40;
         addr_ext <= addr_ext + 9'd1;
 
-            // if (!$feof(data_file)) begin
-            //     $display(data_);
-        //use captured_data as you would any other wire or reg value;
+;
     end
     #20;
     $fclose(data_file);
@@ -132,9 +130,6 @@ initial begin
         #40;
         addr_ext <= addr_ext + 9'd1;
 
-            // if (!$feof(data_file)) begin
-            //     $display(data_);
-        //use captured_data as you would any other wire or reg value;
     end
     #20;
     $fclose(data_file);
@@ -172,9 +167,6 @@ initial begin
         #40;
         addr_ext <= addr_ext + 9'd1;
 
-            // if (!$feof(data_file)) begin
-            //     $display(data_);
-        //use captured_data as you would any other wire or reg value;
     end
     #20;
     $fclose(data_file);
@@ -212,9 +204,6 @@ initial begin
         #40;
         addr_ext <= addr_ext + 9'd1;
 
-            // if (!$feof(data_file)) begin
-            //     $display(data_);
-        //use captured_data as you would any other wire or reg value;
     end
     #20;
     $fclose(data_file);
@@ -268,9 +257,7 @@ initial begin
         #40;
         addr_ext <= addr_ext + 9'd1;
 
-            // if (!$feof(data_file)) begin
-            //     $display(data_);
-        //use captured_data as you would any other wire or reg value;
+
     end
     #20;
     $fclose(data_file);
