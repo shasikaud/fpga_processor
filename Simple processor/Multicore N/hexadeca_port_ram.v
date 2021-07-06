@@ -5,7 +5,7 @@ module hexadecaport_ram(
     addr1,addr2,addr3,addr4,addr5,addr6,addr7,addr8,addr9,addr10,addr11,addr12,addr13,addr14,addr15,addr16,
     Data_in1,Data_in2,Data_in3,Data_in4,Data_in5,Data_in6,Data_in7,Data_in8,Data_in9,Data_in10,Data_in11,Data_in12,Data_in13,Data_in14,Data_in15,Data_in16,
     Data_out1,Data_out2,Data_out3,Data_out4,Data_out5,Data_out6,Data_out7,Data_out8,Data_out9,Data_out10,Data_out11,Data_out12,Data_out13,Data_out14,Data_out15,Data_out16
-)1
+);
 
     input clk,write_en1,write_en2,write_en3,write_en4,write_en5,write_en6,write_en7,write_en8,write_en9,write_en10,write_en11,write_en12,write_en13,write_en14,write_en15,write_en16;
     input read_en1,read_en2,read_en3,read_en4,read_en5,read_en6,read_en7,read_en8,read_en9,read_en10,read_en11,read_en12,read_en13,read_en14,read_en15,read_en16;

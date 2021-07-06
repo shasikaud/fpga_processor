@@ -1,7 +1,7 @@
 /*
 *hexadeca core processor
 */
-module top_control_8 (
+module top_control_16 (
     clock,
     start,
     addr_ext,
