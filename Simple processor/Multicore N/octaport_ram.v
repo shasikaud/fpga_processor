@@ -29,8 +29,6 @@ module octaport_ram(
         end 
   
 
-  
-
       if (write_en2 == 1) 
         begin
            octaport_ram[addr2] <= Data_in2;

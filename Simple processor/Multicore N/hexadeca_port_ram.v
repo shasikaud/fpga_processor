@@ -183,21 +183,21 @@ module hexadecaport_ram(
         end 
         end    
 
-    assign Data_out1 = octaport_ram[addr_read1];
-    assign Data_out2 = octaport_ram[addr_read2];
-    assign Data_out3 = octaport_ram[addr_read3];
-    assign Data_out4 = octaport_ram[addr_read4];
-    assign Data_out5 = octaport_ram[addr_read5];
-    assign Data_out6 = octaport_ram[addr_read6];
-    assign Data_out7 = octaport_ram[addr_read7];
-    assign Data_out8 = octaport_ram[addr_read8];
-    assign Data_out1 = octaport_ram[addr_read9];
-    assign Data_out1 = octaport_ram[addr_read10];
-    assign Data_out1 = octaport_ram[addr_read11];
-    assign Data_out1 = octaport_ram[addr_read12];
-    assign Data_out1 = octaport_ram[addr_read13];
-    assign Data_out1 = octaport_ram[addr_read14];
-    assign Data_out1 = octaport_ram[addr_read15];
-    assign Data_out1 = octaport_ram[addr_read16];
+    assign Data_out1 = hexadecaport_ram[addr_read1];
+    assign Data_out2 = hexadecaport_ram[addr_read2];
+    assign Data_out3 = hexadecaport_ram[addr_read3];
+    assign Data_out4 = hexadecaport_ram[addr_read4];
+    assign Data_out5 = hexadecaport_ram[addr_read5];
+    assign Data_out6 = hexadecaport_ram[addr_read6];
+    assign Data_out7 = hexadecaport_ram[addr_read7];
+    assign Data_out8 = hexadecaport_ram[addr_read8];
+    assign Data_out9 = hexadecaport_ram[addr_read9];
+    assign Data_out10 = hexadecaport_ram[addr_read10];
+    assign Data_out11 = hexadecaport_ram[addr_read11];
+    assign Data_out12 = hexadecaport_ram[addr_read12];
+    assign Data_out13 = hexadecaport_ram[addr_read13];
+    assign Data_out14 = hexadecaport_ram[addr_read14];
+    assign Data_out15 = hexadecaport_ram[addr_read15];
+    assign Data_out16 = hexadecaport_ram[addr_read16];
 
 endmodule
