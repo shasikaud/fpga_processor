@@ -1,0 +1,1 @@
+* Do we need to have a separate instruction for multicore selection (ISA)
