@@ -6,14 +6,6 @@ module iram(clk,write_en,read_en,addr,Data_in,Data_out);
 
     reg[15:0] singleport_ram[511:0];
     reg[8:0] addr_read;
-	 
-//	 initial begin
-//	 singleport_ram[1] <= 16'd0;
-//	 singleport_ram[2] <= 16'd1025;
-//	 singleport_ram[3] <= 16'd2050;
-//	 singleport_ram[4] <= 16'd5120;
-//	 singleport_ram[5] <= 16'd3075;
-//	 end
 
     always @(posedge clk) 
     begin

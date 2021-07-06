@@ -29,8 +29,6 @@ module quadport_ram(
         end 
   
 
-  
-
       if (write_en2 == 1) 
         begin
            quadport_ram[addr2] <= Data_in2;
@@ -41,7 +39,6 @@ module quadport_ram(
             addr_read2 <= addr2;
         end    
   
-
 
       if (write_en3 == 1) 
         begin

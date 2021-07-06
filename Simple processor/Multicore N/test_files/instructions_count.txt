@@ -1,3 +1,18 @@
 Instruction Count Per Core: 
  
-Core 1: 2604
+Core 1: 29
+Core 2: 29
+Core 3: 29
+Core 4: 29
+Core 5: 29
+Core 6: 29
+Core 7: 29
+Core 8: 29
+Core 9: 29
+Core 10: 29
+Core 11: 29
+Core 12: 29
+Core 13: 29
+Core 14: 29
+Core 15: 29
+Core 16: 29
