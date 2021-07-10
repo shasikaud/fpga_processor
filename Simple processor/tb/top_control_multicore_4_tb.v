@@ -92,7 +92,7 @@ initial begin
         #40;
         addr_ext <= addr_ext + 9'd1;
 
-;
+
     end
     #20;
     $fclose(data_file);

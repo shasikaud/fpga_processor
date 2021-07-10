@@ -1,250 +1,250 @@
-# Reading E:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
+# Reading pref.tcl
 # do Processor_run_msim_rtl_verilog.do
 # if {[file exists rtl_work]} {
 # 	vdel -lib rtl_work -all
 # }
 # vlib rtl_work
 # vmap work rtl_work
-# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
 # vmap work rtl_work 
-# Copying E:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -vlog01compat -work work +incdir+E:/GIthub/prc {E:/GIthub/prc/datapath.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:23:13 on Jun 22,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/GIthub/prc" E:/GIthub/prc/datapath.v 
+# vlog -vlog01compat -work work +incdir+D:/Academics/FPGA\ Processor\ Project/GitHub/fpga_processor {D:/Academics/FPGA Processor Project/GitHub/fpga_processor/datapath.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:04:28 on Jul 06,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Academics/FPGA Processor Project/GitHub/fpga_processor" D:/Academics/FPGA Processor Project/GitHub/fpga_processor/datapath.v 
 # -- Compiling module datapath
 # 
 # Top level modules:
 # 	datapath
-# End time: 13:23:13 on Jun 22,2021, Elapsed time: 0:00:00
+# End time: 21:04:28 on Jul 06,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+E:/GIthub/prc {E:/GIthub/prc/memory_ip.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:23:13 on Jun 22,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/GIthub/prc" E:/GIthub/prc/memory_ip.v 
+# vlog -vlog01compat -work work +incdir+D:/Academics/FPGA\ Processor\ Project/GitHub/fpga_processor {D:/Academics/FPGA Processor Project/GitHub/fpga_processor/memory_ip.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:04:28 on Jul 06,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Academics/FPGA Processor Project/GitHub/fpga_processor" D:/Academics/FPGA Processor Project/GitHub/fpga_processor/memory_ip.v 
 # -- Compiling module memory_ip
 # 
 # Top level modules:
 # 	memory_ip
-# End time: 13:23:13 on Jun 22,2021, Elapsed time: 0:00:00
+# End time: 21:04:28 on Jul 06,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+E:/GIthub/prc {E:/GIthub/prc/Register.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:23:13 on Jun 22,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/GIthub/prc" E:/GIthub/prc/Register.v 
+# vlog -vlog01compat -work work +incdir+D:/Academics/FPGA\ Processor\ Project/GitHub/fpga_processor {D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Register.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:04:29 on Jul 06,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Academics/FPGA Processor Project/GitHub/fpga_processor" D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Register.v 
 # -- Compiling module register
 # 
 # Top level modules:
 # 	register
-# End time: 13:23:13 on Jun 22,2021, Elapsed time: 0:00:00
+# End time: 21:04:29 on Jul 06,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+E:/GIthub/prc {E:/GIthub/prc/Processor.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:23:14 on Jun 22,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/GIthub/prc" E:/GIthub/prc/Processor.v 
+# vlog -vlog01compat -work work +incdir+D:/Academics/FPGA\ Processor\ Project/GitHub/fpga_processor {D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Processor.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:04:29 on Jul 06,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Academics/FPGA Processor Project/GitHub/fpga_processor" D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Processor.v 
 # -- Compiling module Processor
 # 
 # Top level modules:
 # 	Processor
-# End time: 13:23:14 on Jun 22,2021, Elapsed time: 0:00:00
+# End time: 21:04:29 on Jul 06,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+E:/GIthub/prc {E:/GIthub/prc/PC.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:23:14 on Jun 22,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/GIthub/prc" E:/GIthub/prc/PC.v 
+# vlog -vlog01compat -work work +incdir+D:/Academics/FPGA\ Processor\ Project/GitHub/fpga_processor {D:/Academics/FPGA Processor Project/GitHub/fpga_processor/PC.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:04:29 on Jul 06,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Academics/FPGA Processor Project/GitHub/fpga_processor" D:/Academics/FPGA Processor Project/GitHub/fpga_processor/PC.v 
 # -- Compiling module PC
 # 
 # Top level modules:
 # 	PC
-# End time: 13:23:14 on Jun 22,2021, Elapsed time: 0:00:00
+# End time: 21:04:29 on Jul 06,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+E:/GIthub/prc {E:/GIthub/prc/AC.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:23:14 on Jun 22,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/GIthub/prc" E:/GIthub/prc/AC.v 
+# vlog -vlog01compat -work work +incdir+D:/Academics/FPGA\ Processor\ Project/GitHub/fpga_processor {D:/Academics/FPGA Processor Project/GitHub/fpga_processor/AC.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:04:29 on Jul 06,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Academics/FPGA Processor Project/GitHub/fpga_processor" D:/Academics/FPGA Processor Project/GitHub/fpga_processor/AC.v 
 # -- Compiling module AC
 # 
 # Top level modules:
 # 	AC
-# End time: 13:23:14 on Jun 22,2021, Elapsed time: 0:00:00
+# End time: 21:04:29 on Jul 06,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+E:/GIthub/prc {E:/GIthub/prc/IR.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:23:14 on Jun 22,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/GIthub/prc" E:/GIthub/prc/IR.v 
+# vlog -vlog01compat -work work +incdir+D:/Academics/FPGA\ Processor\ Project/GitHub/fpga_processor {D:/Academics/FPGA Processor Project/GitHub/fpga_processor/IR.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:04:29 on Jul 06,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Academics/FPGA Processor Project/GitHub/fpga_processor" D:/Academics/FPGA Processor Project/GitHub/fpga_processor/IR.v 
 # -- Compiling module IR
 # 
 # Top level modules:
 # 	IR
-# End time: 13:23:14 on Jun 22,2021, Elapsed time: 0:00:00
+# End time: 21:04:29 on Jul 06,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+E:/GIthub/prc {E:/GIthub/prc/ALU.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:23:14 on Jun 22,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/GIthub/prc" E:/GIthub/prc/ALU.v 
+# vlog -vlog01compat -work work +incdir+D:/Academics/FPGA\ Processor\ Project/GitHub/fpga_processor {D:/Academics/FPGA Processor Project/GitHub/fpga_processor/ALU.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:04:30 on Jul 06,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Academics/FPGA Processor Project/GitHub/fpga_processor" D:/Academics/FPGA Processor Project/GitHub/fpga_processor/ALU.v 
 # -- Compiling module ALU
 # 
 # Top level modules:
 # 	ALU
-# End time: 13:23:14 on Jun 22,2021, Elapsed time: 0:00:00
+# End time: 21:04:30 on Jul 06,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+E:/GIthub/prc {E:/GIthub/prc/BUS.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:23:14 on Jun 22,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/GIthub/prc" E:/GIthub/prc/BUS.v 
+# vlog -vlog01compat -work work +incdir+D:/Academics/FPGA\ Processor\ Project/GitHub/fpga_processor {D:/Academics/FPGA Processor Project/GitHub/fpga_processor/BUS.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:04:30 on Jul 06,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Academics/FPGA Processor Project/GitHub/fpga_processor" D:/Academics/FPGA Processor Project/GitHub/fpga_processor/BUS.v 
 # -- Compiling module BUS
 # 
 # Top level modules:
 # 	BUS
-# End time: 13:23:14 on Jun 22,2021, Elapsed time: 0:00:00
+# End time: 21:04:30 on Jul 06,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+E:/GIthub/prc {E:/GIthub/prc/Control_Unit.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:23:14 on Jun 22,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/GIthub/prc" E:/GIthub/prc/Control_Unit.v 
+# vlog -vlog01compat -work work +incdir+D:/Academics/FPGA\ Processor\ Project/GitHub/fpga_processor {D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Control_Unit.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:04:30 on Jul 06,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Academics/FPGA Processor Project/GitHub/fpga_processor" D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Control_Unit.v 
 # -- Compiling module Control_Unit
 # 
 # Top level modules:
 # 	Control_Unit
-# End time: 13:23:14 on Jun 22,2021, Elapsed time: 0:00:00
+# End time: 21:04:30 on Jul 06,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+E:/GIthub/prc {E:/GIthub/prc/state_machine.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:23:14 on Jun 22,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/GIthub/prc" E:/GIthub/prc/state_machine.v 
+# vlog -vlog01compat -work work +incdir+D:/Academics/FPGA\ Processor\ Project/GitHub/fpga_processor {D:/Academics/FPGA Processor Project/GitHub/fpga_processor/state_machine.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:04:30 on Jul 06,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Academics/FPGA Processor Project/GitHub/fpga_processor" D:/Academics/FPGA Processor Project/GitHub/fpga_processor/state_machine.v 
 # -- Compiling module state_machine
 # 
 # Top level modules:
 # 	state_machine
-# End time: 13:23:14 on Jun 22,2021, Elapsed time: 0:00:00
+# End time: 21:04:30 on Jul 06,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+E:/GIthub/prc {E:/GIthub/prc/top_layer.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:23:14 on Jun 22,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/GIthub/prc" E:/GIthub/prc/top_layer.v 
+# vlog -vlog01compat -work work +incdir+D:/Academics/FPGA\ Processor\ Project/GitHub/fpga_processor {D:/Academics/FPGA Processor Project/GitHub/fpga_processor/top_layer.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:04:30 on Jul 06,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Academics/FPGA Processor Project/GitHub/fpga_processor" D:/Academics/FPGA Processor Project/GitHub/fpga_processor/top_layer.v 
 # -- Compiling module top_layer
 # 
 # Top level modules:
 # 	top_layer
-# End time: 13:23:14 on Jun 22,2021, Elapsed time: 0:00:00
+# End time: 21:04:30 on Jul 06,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vlog -vlog01compat -work work +incdir+E:/GIthub/prc/tb {E:/GIthub/prc/tb/test_tb2.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:23:14 on Jun 22,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/GIthub/prc/tb" E:/GIthub/prc/tb/test_tb2.v 
+# vlog -vlog01compat -work work +incdir+D:/Academics/FPGA\ Processor\ Project/GitHub/fpga_processor/tb {D:/Academics/FPGA Processor Project/GitHub/fpga_processor/tb/test_tb2.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:04:30 on Jul 06,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Academics/FPGA Processor Project/GitHub/fpga_processor/tb" D:/Academics/FPGA Processor Project/GitHub/fpga_processor/tb/test_tb2.v 
 # -- Compiling module test_tb2
 # 
 # Top level modules:
 # 	test_tb2
-# End time: 13:23:15 on Jun 22,2021, Elapsed time: 0:00:01
+# End time: 21:04:31 on Jul 06,2021, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+E:/GIthub/prc {E:/GIthub/prc/AC.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:23:15 on Jun 22,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/GIthub/prc" E:/GIthub/prc/AC.v 
+# vlog -vlog01compat -work work +incdir+D:/Academics/FPGA\ Processor\ Project/GitHub/fpga_processor {D:/Academics/FPGA Processor Project/GitHub/fpga_processor/AC.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:04:31 on Jul 06,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Academics/FPGA Processor Project/GitHub/fpga_processor" D:/Academics/FPGA Processor Project/GitHub/fpga_processor/AC.v 
 # -- Compiling module AC
 # 
 # Top level modules:
 # 	AC
-# End time: 13:23:15 on Jun 22,2021, Elapsed time: 0:00:00
+# End time: 21:04:31 on Jul 06,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+E:/GIthub/prc {E:/GIthub/prc/ALU.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:23:15 on Jun 22,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/GIthub/prc" E:/GIthub/prc/ALU.v 
+# vlog -vlog01compat -work work +incdir+D:/Academics/FPGA\ Processor\ Project/GitHub/fpga_processor {D:/Academics/FPGA Processor Project/GitHub/fpga_processor/ALU.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:04:31 on Jul 06,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Academics/FPGA Processor Project/GitHub/fpga_processor" D:/Academics/FPGA Processor Project/GitHub/fpga_processor/ALU.v 
 # -- Compiling module ALU
 # 
 # Top level modules:
 # 	ALU
-# End time: 13:23:15 on Jun 22,2021, Elapsed time: 0:00:00
+# End time: 21:04:31 on Jul 06,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+E:/GIthub/prc {E:/GIthub/prc/IR.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:23:15 on Jun 22,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/GIthub/prc" E:/GIthub/prc/IR.v 
+# vlog -vlog01compat -work work +incdir+D:/Academics/FPGA\ Processor\ Project/GitHub/fpga_processor {D:/Academics/FPGA Processor Project/GitHub/fpga_processor/IR.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:04:31 on Jul 06,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Academics/FPGA Processor Project/GitHub/fpga_processor" D:/Academics/FPGA Processor Project/GitHub/fpga_processor/IR.v 
 # -- Compiling module IR
 # 
 # Top level modules:
 # 	IR
-# End time: 13:23:15 on Jun 22,2021, Elapsed time: 0:00:00
+# End time: 21:04:31 on Jul 06,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+E:/GIthub/prc {E:/GIthub/prc/datapath.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:23:15 on Jun 22,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/GIthub/prc" E:/GIthub/prc/datapath.v 
+# vlog -vlog01compat -work work +incdir+D:/Academics/FPGA\ Processor\ Project/GitHub/fpga_processor {D:/Academics/FPGA Processor Project/GitHub/fpga_processor/datapath.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:04:31 on Jul 06,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Academics/FPGA Processor Project/GitHub/fpga_processor" D:/Academics/FPGA Processor Project/GitHub/fpga_processor/datapath.v 
 # -- Compiling module datapath
 # 
 # Top level modules:
 # 	datapath
-# End time: 13:23:15 on Jun 22,2021, Elapsed time: 0:00:00
+# End time: 21:04:31 on Jul 06,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+E:/GIthub/prc {E:/GIthub/prc/BUS.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:23:15 on Jun 22,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/GIthub/prc" E:/GIthub/prc/BUS.v 
+# vlog -vlog01compat -work work +incdir+D:/Academics/FPGA\ Processor\ Project/GitHub/fpga_processor {D:/Academics/FPGA Processor Project/GitHub/fpga_processor/BUS.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:04:31 on Jul 06,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Academics/FPGA Processor Project/GitHub/fpga_processor" D:/Academics/FPGA Processor Project/GitHub/fpga_processor/BUS.v 
 # -- Compiling module BUS
 # 
 # Top level modules:
 # 	BUS
-# End time: 13:23:15 on Jun 22,2021, Elapsed time: 0:00:00
+# End time: 21:04:31 on Jul 06,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+E:/GIthub/prc {E:/GIthub/prc/memory_ip.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:23:15 on Jun 22,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/GIthub/prc" E:/GIthub/prc/memory_ip.v 
+# vlog -vlog01compat -work work +incdir+D:/Academics/FPGA\ Processor\ Project/GitHub/fpga_processor {D:/Academics/FPGA Processor Project/GitHub/fpga_processor/memory_ip.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:04:31 on Jul 06,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Academics/FPGA Processor Project/GitHub/fpga_processor" D:/Academics/FPGA Processor Project/GitHub/fpga_processor/memory_ip.v 
 # -- Compiling module memory_ip
 # 
 # Top level modules:
 # 	memory_ip
-# End time: 13:23:15 on Jun 22,2021, Elapsed time: 0:00:00
+# End time: 21:04:32 on Jul 06,2021, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+E:/GIthub/prc {E:/GIthub/prc/PC.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:23:15 on Jun 22,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/GIthub/prc" E:/GIthub/prc/PC.v 
+# vlog -vlog01compat -work work +incdir+D:/Academics/FPGA\ Processor\ Project/GitHub/fpga_processor {D:/Academics/FPGA Processor Project/GitHub/fpga_processor/PC.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:04:32 on Jul 06,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Academics/FPGA Processor Project/GitHub/fpga_processor" D:/Academics/FPGA Processor Project/GitHub/fpga_processor/PC.v 
 # -- Compiling module PC
 # 
 # Top level modules:
 # 	PC
-# End time: 13:23:15 on Jun 22,2021, Elapsed time: 0:00:00
+# End time: 21:04:32 on Jul 06,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+E:/GIthub/prc {E:/GIthub/prc/state_machine.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:23:15 on Jun 22,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/GIthub/prc" E:/GIthub/prc/state_machine.v 
+# vlog -vlog01compat -work work +incdir+D:/Academics/FPGA\ Processor\ Project/GitHub/fpga_processor {D:/Academics/FPGA Processor Project/GitHub/fpga_processor/state_machine.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:04:32 on Jul 06,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Academics/FPGA Processor Project/GitHub/fpga_processor" D:/Academics/FPGA Processor Project/GitHub/fpga_processor/state_machine.v 
 # -- Compiling module state_machine
 # 
 # Top level modules:
 # 	state_machine
-# End time: 13:23:15 on Jun 22,2021, Elapsed time: 0:00:00
+# End time: 21:04:32 on Jul 06,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+E:/GIthub/prc {E:/GIthub/prc/Register.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:23:15 on Jun 22,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/GIthub/prc" E:/GIthub/prc/Register.v 
+# vlog -vlog01compat -work work +incdir+D:/Academics/FPGA\ Processor\ Project/GitHub/fpga_processor {D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Register.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:04:32 on Jul 06,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Academics/FPGA Processor Project/GitHub/fpga_processor" D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Register.v 
 # -- Compiling module register
 # 
 # Top level modules:
 # 	register
-# End time: 13:23:15 on Jun 22,2021, Elapsed time: 0:00:00
+# End time: 21:04:32 on Jul 06,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+E:/GIthub/prc {E:/GIthub/prc/Processor.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:23:16 on Jun 22,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/GIthub/prc" E:/GIthub/prc/Processor.v 
+# vlog -vlog01compat -work work +incdir+D:/Academics/FPGA\ Processor\ Project/GitHub/fpga_processor {D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Processor.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:04:32 on Jul 06,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Academics/FPGA Processor Project/GitHub/fpga_processor" D:/Academics/FPGA Processor Project/GitHub/fpga_processor/Processor.v 
 # -- Compiling module Processor
 # 
 # Top level modules:
 # 	Processor
-# End time: 13:23:16 on Jun 22,2021, Elapsed time: 0:00:00
+# End time: 21:04:32 on Jul 06,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  test_tb2
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" test_tb2 
-# Start time: 13:23:16 on Jun 22,2021
+# Start time: 21:04:32 on Jul 06,2021
 # Loading work.test_tb2
 # Loading work.top_layer
 # Loading work.Processor
@@ -262,8 +262,8 @@
 # Loading altera_mf_ver.altsyncram_body
 # Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
 # Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
-# ** Warning: (vsim-3015) E:/GIthub/prc/top_layer.v(120): [PCDPC] - Port size (9) does not match connection size (16) for port 'address'. The port definition is at: E:/GIthub/prc/memory_ip.v(41).
-#    Time: 0 ps  Iteration: 0  Instance: /test_tb2/u_top_layer/memory_ip_data File: E:/GIthub/prc/memory_ip.v
+# ** Warning: (vsim-3015) [PCDPC] - Port size (9) does not match connection size (16) for port 'address'. The port definition is at: D:/Academics/FPGA Processor Project/GitHub/fpga_processor/memory_ip.v(41).
+#    Time: 0 ps  Iteration: 0  Instance: /test_tb2/u_top_layer/memory_ip_data File: D:/Academics/FPGA Processor Project/GitHub/fpga_processor/top_layer.v Line: 120
 # 
 # add wave *
 # view structure
@@ -271,8 +271,13 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-# ** Note: $stop    : E:/GIthub/prc/tb/test_tb2.v(243)
-#    Time: 6455 ns  Iteration: 0  Instance: /test_tb2
-# Break in Module test_tb2 at E:/GIthub/prc/tb/test_tb2.v line 243
-# End time: 13:23:37 on Jun 22,2021, Elapsed time: 0:00:21
-# Errors: 0, Warnings: 1
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "../../test_files/test1.txt" for reading.
+# No such file or directory. (errno = ENOENT)    : D:/Academics/FPGA Processor Project/GitHub/fpga_processor/tb/test_tb2.v(97)
+#    Time: 10 ns  Iteration: 0  Instance: /test_tb2
+# data_file handle was NULL
+# ** Note: $finish    : D:/Academics/FPGA Processor Project/GitHub/fpga_processor/tb/test_tb2.v(100)
+#    Time: 10 ns  Iteration: 0  Instance: /test_tb2
+# 1
+# Break in Module test_tb2 at D:/Academics/FPGA Processor Project/GitHub/fpga_processor/tb/test_tb2.v line 100
+# End time: 21:05:01 on Jul 06,2021, Elapsed time: 0:00:29
+# Errors: 0, Warnings: 2
