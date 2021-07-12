@@ -1,7 +1,7 @@
 import numpy as np
 
 # !set the number of cores first
-cores = 8
+cores = 1
 #get inputs from text file
 matrix1 = []
 matrix2 = []
