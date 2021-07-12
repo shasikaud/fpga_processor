@@ -243,11 +243,4 @@ always @(posedge clock) begin
     end
 end
 
-
-
-
-
-
-
-
 endmodule //top_control

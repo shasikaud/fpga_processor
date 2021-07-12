@@ -158,11 +158,4 @@ always @(posedge clock) begin
 
 end
 
-
-
-
-
-
-
-
 endmodule //top_control
